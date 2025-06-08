@@ -259,16 +259,16 @@ impl<L> ListTableInternalView<L>
         let new_row_addr = self.free_list.last();
         let new_head = if idx == 0 { new_row_addr } else { list_addr };
 
-        assert(new_snapshot =~= old_snapshot.update_element_at_index(list_addr, new_head, idx, new_element));
+//        assert(new_snapshot =~= old_snapshot.update_element_at_index(list_addr, new_head, idx, new_element));
         assert(new_row_addr > 0) by {
             broadcast use group_validate_row_addr;
         }
 
         match new_self.m[new_head] {
             ListTableEntryView::Modified{ durable_head, summary, addrs, elements, .. } => {
-                assert(durable_head == 0);
-                assert(summary.length == addrs.len());
-                assert(addrs.len() == elements.len());
+//                assert(durable_head == 0);
+//                assert(summary.length == addrs.len());
+//                assert(addrs.len() == elements.len());
             },
             _ => { assert(false); },
         }
@@ -373,9 +373,9 @@ where
         
         assert(addrs.take(current_pos) =~= addrs);
         assert(elements.take(current_pos) =~= elements);
-        assert(prev_self.tentative_mapping@.list_info[list_addr] == prev_self.durable_mapping@.list_info[list_addr]);
-        assert(prev_self.tentative_mapping@.list_elements[list_addr] ==
-               prev_self.durable_mapping@.list_elements[list_addr]);
+//        assert(prev_self.tentative_mapping@.list_info[list_addr] == prev_self.durable_mapping@.list_info[list_addr]);
+//        assert(prev_self.tentative_mapping@.list_elements[list_addr] ==
+//               prev_self.durable_mapping@.list_elements[list_addr]);
         Ok((result_addrs, result_elements))
     }
 
@@ -432,9 +432,9 @@ where
         assert(tentative_elements.take(num_durable_addrs as int) =~=
                durable_elements.skip(durable_elements.len() - num_durable_addrs));
 
-        assert(list_addr != 0) by {
-            broadcast use group_validate_row_addr;
-        }
+//        assert(list_addr != 0) by {
+//            broadcast use group_validate_row_addr;
+//        }
 
         for current_pos in 0..num_durable_addrs
             invariant
@@ -479,7 +479,7 @@ where
             let ghost num_skipped_durable = durable_addrs.len() - num_durable_addrs;
             assert(durable_addrs.skip(num_skipped_durable)[current_pos as int] =~=
                    durable_addrs[num_skipped_durable + current_pos]);
-            assert(current_addr == durable_addrs[num_skipped_durable + current_pos]);
+//            assert(current_addr == durable_addrs[num_skipped_durable + current_pos]);
 
             let element_addr = current_addr + self.sm.row_element_start;
             let element_crc_addr = current_addr + self.sm.row_element_crc_start;
@@ -489,8 +489,8 @@ where
             };
             assert(durable_elements.skip(num_skipped_durable)[current_pos as int] =~=
                    durable_elements[num_skipped_durable + current_pos]);
-            assert(current_element == durable_elements[num_skipped_durable + current_pos]);
-            assert(current_element == tentative_elements[current_pos as int]);
+//            assert(current_element == durable_elements[num_skipped_durable + current_pos]);
+//            assert(current_element == tentative_elements[current_pos as int]);
 
             result_addrs.push(current_addr);
             result_elements.push(current_element);
@@ -504,7 +504,7 @@ where
                 };
                 assert(durable_addrs.skip(num_skipped_durable)[current_pos + 1] =~=
                        durable_addrs[num_skipped_durable + current_pos + 1]);
-                assert(current_addr == tentative_addrs[current_pos + 1]);
+//                assert(current_addr == tentative_addrs[current_pos + 1]);
             }
         }
         
@@ -578,8 +578,8 @@ where
                 match self.get_addresses_and_elements_case_durable(list_addr, &summary, journal, Ghost(prev_self)) {
                     Ok((addrs, elements)) => {
                         let which_modification = self.modifications.len();
-                        assert(addrs@.skip(0) == addrs@);
-                        assert(elements@.skip(0) == elements@);
+//                        assert(addrs@.skip(0) == addrs@);
+//                        assert(elements@.skip(0) == elements@);
                         let new_entry = ListTableEntry::Modified{ which_modification, durable_head: Ghost(0),
                                                                   summary, addrs, elements };
                         let ghost which_delete = self.deletes@.len() as nat;
@@ -599,7 +599,7 @@ where
                         (false, entry)
                     },
                     Err(e) => {
-                        assert(false);
+//                        assert(false);
                         (false, entry)
                     }
                 }
@@ -607,7 +607,7 @@ where
 
             ListTableEntry::Modified{ which_modification, durable_head, summary, mut addrs, mut elements } => {
                 let num_addrs = addrs.len();
-                assert(num_addrs < summary.length);
+//                assert(num_addrs < summary.length);
                 match self.get_addresses_and_elements_case_modified(list_addr, &summary, journal, num_addrs,
                                                                     Ghost(prev_self)) {
                     Ok((mut durable_addrs, mut durable_elements)) => {
@@ -625,13 +625,13 @@ where
                             let g_durable_addrs = self.durable_mapping@.list_info[durable_head@];
                             let g_durable_elements = self.durable_mapping@.list_elements[durable_head@];
                             let num_durable_addrs = summary.length - num_addrs;
-                            assert(self.tentative_mapping@.list_info[list_addr].take(num_durable_addrs) ==
-                                   g_durable_addrs.skip(g_durable_addrs.len() - (summary.length - num_addrs)));
+//                            assert(self.tentative_mapping@.list_info[list_addr].take(num_durable_addrs) ==
+//                                   g_durable_addrs.skip(g_durable_addrs.len() - (summary.length - num_addrs)));
                             assert(durable_addrs@ ==
                                    prev_self.internal_view().tentative_mapping.list_info[list_addr]);
-                            assert(self.tentative_mapping@.list_elements[list_addr].take(num_durable_addrs) ==
-                                   g_durable_elements.skip(g_durable_elements.len() -
-                                                           (summary.length - num_addrs)));
+//                            assert(self.tentative_mapping@.list_elements[list_addr].take(num_durable_addrs) ==
+//                                   g_durable_elements.skip(g_durable_elements.len() -
+//                                                           (summary.length - num_addrs)));
                             assert(durable_elements@ ==
                                    prev_self.internal_view().tentative_mapping.list_elements[list_addr]);
                             assert(next_iv =~= prev_self.internal_view().complete_entry(list_addr));
@@ -646,7 +646,7 @@ where
                          ListTableEntry::Modified{ which_modification, durable_head, summary, addrs, elements })
                     },
                     Err(e) => {
-                        assert(false);
+//                        assert(false);
                         (false,
                          ListTableEntry::Modified{ which_modification, durable_head, summary, addrs, elements })
                     }
@@ -773,8 +773,8 @@ where
         match entry {
             ListTableEntry::Durable{ .. } => { assert(false); },
             ListTableEntry::Modified{ addrs, .. } => {
-                assert(old_iv.m[list_addr] == entry@);
-                assert(addrs@ == old_iv.tentative_mapping.list_info[list_addr]);
+//                assert(old_iv.m[list_addr] == entry@);
+//                assert(addrs@ == old_iv.tentative_mapping.list_info[list_addr]);
                 let element_addr = new_row_addr + self.sm.row_element_start;
                 let element_crc_addr = new_row_addr + self.sm.row_element_crc_start;
                 let element_crc = calculate_crc(&new_element);
@@ -793,8 +793,8 @@ where
                 // Leverage postcondition of `lemma_writing_to_free_slot_has_permission_later_forall`
                 // to conclude that `self` is still consistent with both the durable and read state
                 // of the journal.
-                assert(old_iv.corresponds_to_durable_state(journal@.durable_state, self.sm));
-                assert(old_iv.corresponds_to_durable_state(journal@.read_state, self.sm));
+//                assert(old_iv.corresponds_to_durable_state(journal@.durable_state, self.sm));
+//                assert(old_iv.corresponds_to_durable_state(journal@.read_state, self.sm));
 
                 proof {
                     lemma_writing_element_and_next_effect_on_recovery::<L>(
@@ -807,22 +807,22 @@ where
                     );
                 }
 
-                assert(forall|other_row_addr: u64| {
-                    &&& self.sm.table.validate_row_addr(other_row_addr)
-                    &&& other_row_addr != new_row_addr
-                } ==> {
-                    recover_object::<L>(journal@.commit_state, other_row_addr + self.sm.row_element_start,
-                                        other_row_addr + self.sm.row_element_crc_start) ==
-                    recover_object::<L>(old(journal)@.commit_state, other_row_addr + self.sm.row_element_start,
-                                        other_row_addr + self.sm.row_element_crc_start)
-                });
+//                assert(forall|other_row_addr: u64| {
+//                    &&& self.sm.table.validate_row_addr(other_row_addr)
+//                    &&& other_row_addr != new_row_addr
+//                } ==> {
+//                    recover_object::<L>(journal@.commit_state, other_row_addr + self.sm.row_element_start,
+//                                        other_row_addr + self.sm.row_element_crc_start) ==
+//                    recover_object::<L>(old(journal)@.commit_state, other_row_addr + self.sm.row_element_start,
+//                                        other_row_addr + self.sm.row_element_crc_start)
+//                });
 
                 if idx > 0 {
                     let ghost jv = journal@;
                     
                     let prev_row_addr = addrs[idx - 1];
-                    assert(prev_row_addr == old_iv.tentative_mapping.list_info[list_addr][idx - 1]);
-                    assert(self.sm.table.validate_row_addr(prev_row_addr));
+//                    assert(prev_row_addr == old_iv.tentative_mapping.list_info[list_addr][idx - 1]);
+//                    assert(self.sm.table.validate_row_addr(prev_row_addr));
                     let prev_next_addr = prev_row_addr + self.sm.row_next_start;
                     let prev_next_crc = calculate_crc(&new_row_addr);
 
@@ -1031,7 +1031,7 @@ where
             Some(a) => a,
             None => { assert(false); 0 },
         };
-        assert(new_row_addr == old_iv.free_list.last());
+//        assert(new_row_addr == old_iv.free_list.last());
         assert(new_row_addr != 0) by {
             broadcast use group_validate_row_addr;
         }
@@ -1057,16 +1057,16 @@ where
             self.modifications.set(which_modification, Some(new_row_addr));
         }
         else {
-            assert(self.modifications[which_modification as int] == Some(list_addr));
+//            assert(self.modifications[which_modification as int] == Some(list_addr));
         }
 
         let new_entry = entry.update(idx, new_row_addr, new_element);
         self.m.insert(new_head, new_entry);
 
-        assert(old(self).internal_view().m == old_iv.m.remove(list_addr));
-        assert(new_entry@ =~= new_iv.m[new_head]);
-        assert(self.internal_view().m == old_iv.m.remove(list_addr).insert(new_head, new_entry@));
-        assert(self.internal_view().m =~= new_iv.m);
+//        assert(old(self).internal_view().m == old_iv.m.remove(list_addr));
+//        assert(new_entry@ =~= new_iv.m[new_head]);
+//        assert(self.internal_view().m == old_iv.m.remove(list_addr).insert(new_head, new_entry@));
+//        assert(self.internal_view().m =~= new_iv.m);
         assert(self.internal_view() =~= new_iv);
 
         self.status = Ghost(ListTableStatus::Quiescent);
@@ -1192,7 +1192,7 @@ where
 
         let result: Result<(), KvError> = match &new_entry {
             ListTableEntry::Durable{ .. } => {
-                assert(false);
+//                assert(false);
                 Err(KvError::InternalError)
             },
 

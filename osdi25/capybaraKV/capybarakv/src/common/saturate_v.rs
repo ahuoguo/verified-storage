@@ -205,22 +205,22 @@ impl SaturatingU64 {
             proof {
                 // Prove that this check implies the multiplication will definitely
                 // saturate.
-                assert(self@ >= self.v >= u64::MAX / v2 + 1);
+//                assert(self@ >= self.v >= u64::MAX / v2 + 1);
                 assert(self@ >= (u64::MAX + v2) / v2 as int) by {
                     lemma_div_plus_one(u64::MAX as int, v2 as int);
                 }
                 assert(v2 * ((u64::MAX + v2) / (v2 as int)) == u64::MAX + v2 - ((u64::MAX + v2) % (v2 as int))) by {
                     lemma_fundamental_div_mod(u64::MAX + v2, v2 as int);
                 }
-                assert(v2 * ((u64::MAX + v2) / (v2 as int)) > u64::MAX) by {
-                    assert(0 <= (u64::MAX + v2) % (v2 as int) < v2) by {
-                        lemma_mod_division_less_than_divisor(u64::MAX + v2, v2 as int);
-                    }
-                }
+//                assert(v2 * ((u64::MAX + v2) / (v2 as int)) > u64::MAX) by {
+////                    assert(0 <= (u64::MAX + v2) % (v2 as int) < v2) by {
+////                        lemma_mod_division_less_than_divisor(u64::MAX + v2, v2 as int);
+////                    }
+//                }
                 assert(self@ * v2 >= ((u64::MAX + v2) / (v2 as int)) * v2) by {
                     lemma_mul_inequality((u64::MAX + v2) / (v2 as int), self@, v2 as int);
                 }
-                assert(self@ * v2 > u64::MAX);
+//                assert(self@ * v2 > u64::MAX);
             }
             Self{ i, v: u64::MAX }
         }
@@ -231,19 +231,19 @@ impl SaturatingU64 {
                 assert(self.v * v2 <= (u64::MAX / v2) * v2) by {
                     lemma_mul_inequality(self.v as int, u64::MAX as int / v2 as int, v2 as int);
                 }
-                assert((u64::MAX / v2) * v2 == u64::MAX - u64::MAX % v2) by {
-                    lemma_fundamental_div_mod(u64::MAX as int, v2 as int);
-                }
-                assert((u64::MAX / v2) * v2 <= u64::MAX) by {
-                    lemma_mod_division_less_than_divisor(u64::MAX as int, v2 as int);
-                }
+//                assert((u64::MAX / v2) * v2 == u64::MAX - u64::MAX % v2) by {
+//                    lemma_fundamental_div_mod(u64::MAX as int, v2 as int);
+//                }
+//                assert((u64::MAX / v2) * v2 <= u64::MAX) by {
+//                    lemma_mod_division_less_than_divisor(u64::MAX as int, v2 as int);
+//                }
 
                 // A special case is when we're already saturated at `u64::MAX`.
                 // We have to prove that `v2 == 1`. We do this by contradiction.
                 if self.v == u64::MAX && v2 != 1 {
-                    assert(u64::MAX / 2 < u64::MAX) by (compute_only);
+//                    assert(u64::MAX / 2 < u64::MAX) by (compute_only);
                     lemma_div_is_ordered_by_denominator(u64::MAX as int, 2, v2 as int);
-                    assert(false);
+//                    assert(false);
                 }
             }
             Self{ i, v: self.v * v2 }

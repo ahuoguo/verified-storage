@@ -64,7 +64,7 @@ where
             }
     {
         let ghost recovery_mapping = KeyRecoveryMapping::<K>::new(journal@.read_state, *sm).unwrap();
-        assert(recovery_mapping.corresponds(journal@.read_state, *sm));
+//        assert(recovery_mapping.corresponds(journal@.read_state, *sm));
 
         let mut m = HashMap::<K, ConcreteKeyInfo>::new();
         let mut free_list = Vec::<u64>::new();

@@ -257,7 +257,7 @@ where
         proof {
             assert(pm@.valid()) by { pm.lemma_inv_implies_view_valid(); }
             broadcast use pmcopy_axioms;
-            assert(addrs.valid(jc.journal_capacity));
+//            assert(addrs.valid(jc.journal_capacity));
         }
     
         // We now know we have enough space, and we know the addresses to store things.

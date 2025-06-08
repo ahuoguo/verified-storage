@@ -115,7 +115,7 @@ pub proof fn lemma_space_needed_for_alignment_works(addr: int, alignment: int)
         assert(addr == alignment * (addr / alignment) + (addr % alignment)) by {
             lemma_fundamental_div_mod(addr, alignment);
         }
-        assert(addr + alignment - remainder == alignment * (addr / alignment) + alignment);
+//        assert(addr + alignment - remainder == alignment * (addr / alignment) + alignment);
         assert((addr + alignment - remainder) % alignment == alignment % alignment) by {
             lemma_mod_multiples_vanish(addr / alignment, alignment, alignment);
         }

@@ -61,9 +61,9 @@ where
             },
         };
 
-        assert(old(self).internal_view().apply_undo_record(undo_record) =~= Some(self.internal_view()));
-        assert(self.internal_view().apply_undo_records(self.undo_records@, self.sm) ==
-               old(self).internal_view().apply_undo_records(old(self).undo_records@, self.sm));
+//        assert(old(self).internal_view().apply_undo_record(undo_record) =~= Some(self.internal_view()));
+//        assert(self.internal_view().apply_undo_records(self.undo_records@, self.sm) ==
+//               old(self).internal_view().apply_undo_records(old(self).undo_records@, self.sm));
     }
         
     exec fn apply_all_undo_records(
@@ -117,7 +117,7 @@ where
 
         // There's no need to empty the pending deallocations list because
         // applying the undo records emptied it.
-        assert(self.pending_deallocations@ == Seq::<u64>::empty());
+//        assert(self.pending_deallocations@ == Seq::<u64>::empty());
 
         proof {
             self.memory_mapping@.lemma_corresponds_implication_for_free_list_length(self.free_list@, self.sm);

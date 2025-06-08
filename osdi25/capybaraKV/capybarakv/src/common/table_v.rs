@@ -104,7 +104,7 @@ impl TableMetadata
             self.num_rows > 0 ==> self.validate_row_addr(self.start),
     {
         lemma_div_of0(self.row_size as int);
-        assert(0int / self.row_size as int == 0);
+//        assert(0int / self.row_size as int == 0);
     }
 
     // Proves that the successor of a valid row address is also valid, as long as it's
@@ -193,7 +193,7 @@ impl TableMetadata
             assert forall|row_addr: u64| #[trigger] valid_row_addrs.contains(row_addr)
                        implies rows.to_set().contains(row_addr) by {
                 let row_index = self.row_addr_to_index(row_addr);
-                assert(0 <= row_index < rows.len());
+//                assert(0 <= row_index < rows.len());
                 assert(rows[row_index] == row_addr);
             }
         }

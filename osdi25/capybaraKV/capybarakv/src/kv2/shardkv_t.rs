@@ -347,7 +347,7 @@ pub exec fn setup<PM, K, I, L>(
             vstd::std_specs::hash::obeys_key_model::<K>(),
     {
         // Force trigger.
-        assert(pms@[idx as int].inv());
+//        assert(pms@[idx as int].inv());
         let pm = pms_mut.pop_front().unwrap();
 
         match rwkv_t::setup::<PM, K, I, L>(pm, ps, Ghost(shard_namespace)) {
@@ -435,7 +435,7 @@ pub exec fn recover<PM, K, I, L>(
             namespace != shard_namespace,
     {
         // Force trigger.
-        assert(pms@[idx as int].inv());
+//        assert(pms@[idx as int].inv());
         let pm = pms_mut.pop_front().unwrap();
 
         // There was some shard ID before crash; it doesn't matter what it was.

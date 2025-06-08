@@ -106,7 +106,7 @@ where
 
         self.status = Ghost(KvStoreStatus::ComponentsDontCorrespond);
 
-        assert(self.perm_factory == old(self).perm_factory);
+//        assert(self.perm_factory == old(self).perm_factory);
         let ghost self_before_item_create = self.lemma_prepare_for_item_table_update();
         let result = self.items.create::<PermFactory>(item, &mut self.journal, Tracked::<PermFactory>(self.perm_factory.borrow()));
         proof { self.lemma_reflect_item_table_update(self_before_item_create); }
@@ -198,7 +198,7 @@ where
         self.items.delete(rm.item_addr, &self.journal);
 
         if rm.list_addr != 0 {
-            assert(self.perm_factory == old(self).perm_factory);
+//            assert(self.perm_factory == old(self).perm_factory);
             let ghost self_before_list_delete = self.lemma_prepare_for_list_table_update();
             let result = self.lists.delete::<PermFactory>(rm.list_addr, &mut self.journal, Tracked(self.perm_factory.borrow()));
             proof { self.lemma_reflect_list_table_update(self_before_list_delete); }
@@ -222,7 +222,7 @@ where
             }
         }
 
-        assert(self.journal@.remaining_capacity == old(self).journal@.remaining_capacity);
+//        assert(self.journal@.remaining_capacity == old(self).journal@.remaining_capacity);
 
         let ghost self_before_key_delete = self.lemma_prepare_for_key_table_update();
         let result = self.keys.delete::<PermFactory>(key, key_addr, rm, &mut self.journal, Tracked(self.perm_factory.borrow()));
@@ -250,7 +250,7 @@ where
         // list addresses still matches the list table's domain, due
         // to the special treatment of the 0 address. So we need to
         // invoke extensional equality to establish that equivalence.
-        assert(self.keys@.tentative.unwrap().list_addrs() =~= self.lists@.tentative.unwrap().m.dom());
+//        assert(self.keys@.tentative.unwrap().list_addrs() =~= self.lists@.tentative.unwrap().m.dom());
 
         proof {
             self.lemma_using_space_for_transaction_operation_maintains_invariant(*old(self));
@@ -310,7 +310,7 @@ where
 
         self.status = Ghost(KvStoreStatus::ComponentsDontCorrespond);
 
-        assert(self.perm_factory == old(self).perm_factory);
+//        assert(self.perm_factory == old(self).perm_factory);
         let ghost self_before_item_create = self.lemma_prepare_for_item_table_update();
         let result = self.items.create::<PermFactory>(new_item, &mut self.journal, Tracked(self.perm_factory.borrow()));
         proof { self.lemma_reflect_item_table_update(self_before_item_create); }

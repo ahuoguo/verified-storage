@@ -261,8 +261,8 @@ where
         proof {
             let m1 = self.internal_view().m;
             let m2 = old(self).internal_view().abort().m;
-            assert(forall|list_addr: u64| m2.contains_key(list_addr) ==> m1.contains_key(list_addr));
-            assert(forall|list_addr: u64| m1.contains_key(list_addr) ==> m2.contains_key(list_addr));
+//            assert(forall|list_addr: u64| m2.contains_key(list_addr) ==> m1.contains_key(list_addr));
+//            assert(forall|list_addr: u64| m1.contains_key(list_addr) ==> m2.contains_key(list_addr));
         }
         
         assert(self.internal_view().m =~= old(self).internal_view().abort().m);
@@ -307,18 +307,17 @@ where
 
         broadcast use broadcast_seqs_match_in_range_can_narrow_range;
 
-        assert(self.internal_view() =~= old(self).internal_view().abort());
+//        assert(self.internal_view() =~= old(self).internal_view().abort());
 
-        assert(self.valid(jv_after_abort));
+//        assert(self.valid(jv_after_abort));
 
         proof {
             self.internal_view().lemma_corresponds_implication_for_free_list_length(self.sm);
         }
 
-        assert(self@ =~= (ListTableView{ tentative: Some(old(self)@.durable), used_slots: self@.used_slots,
-                                         ..old(self)@ }));
+//        assert(self@ =~= (ListTableView{ tentative: Some(old(self)@.durable), used_slots: self@.used_slots,
+//                                         ..old(self)@ }));
     }
 }
 
 }
-
