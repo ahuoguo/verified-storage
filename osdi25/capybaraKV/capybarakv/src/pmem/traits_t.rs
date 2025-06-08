@@ -63,6 +63,10 @@ unsafe impl PmSafe for f32 {}
 unsafe impl PmSafe for f64 {}
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
     #[verifier::external_trait_specification]
     pub trait ExPmSafe {
         type ExternalTraitSpecificationFor: PmSafe;

@@ -10,6 +10,10 @@ use vstd::prelude::*;
 use vstd::proph::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 // ProphecyVec implements a sequence of prophecy variables, each of type T.
 // ProphecyVec can be viewed in spec mode as a Seq<T>, and can be resolved

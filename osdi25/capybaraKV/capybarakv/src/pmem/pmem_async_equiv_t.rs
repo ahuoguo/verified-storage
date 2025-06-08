@@ -21,6 +21,10 @@ use vstd::prelude::*;
 use vstd::proph::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 // PMRegionProph implements the correspondence between PersistentMemoryRegion
 // and PersistentMemoryRegionAsync.  In particular, PMRegionProph keeps the

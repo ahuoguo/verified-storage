@@ -21,8 +21,11 @@ use super::super::spec_t::*;
 use vstd::std_specs::hash::*;
 
 verus! {
-
-broadcast use group_hash_axioms;
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties,
+              group_hash_axioms};
 impl<PM, K> KeyTable<PM, K>
 where
     PM: PersistentMemoryRegion,

@@ -15,6 +15,10 @@ use super::inv_v::*;
 use super::super::spec_t::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 pub(super) proof fn lemma_writing_element_and_next_effect_on_recovery<L>(
     s1: Seq<u8>,

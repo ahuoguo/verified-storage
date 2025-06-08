@@ -51,6 +51,10 @@ use vstd::prelude::*;
 use deps_hack::rand::Rng;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
     // This is the specification that `MultiLogImpl` provides for data
     // bytes it reads. It says that those bytes are correct unless

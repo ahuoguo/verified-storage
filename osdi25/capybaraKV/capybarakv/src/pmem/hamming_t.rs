@@ -8,6 +8,10 @@ use vstd::seq_lib::*;
 use vstd::relations::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
     // Computes the sum of the given sequence of natural numbers
     pub open spec fn sum(l: Seq<nat>) -> nat {
         l.fold_right(|i, s: nat| { s+i as nat }, 0)

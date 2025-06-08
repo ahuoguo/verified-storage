@@ -42,6 +42,10 @@ use builtin_macros::*;
 use vstd::prelude::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
     
     // An `AbstractLogState` is an abstraction of a single log, of
     // which an abstract multilog is composed. Its fields are:

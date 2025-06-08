@@ -174,6 +174,10 @@ impl Drop for MemoryMappedFile {
 
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 // The `MemoryMappedFileSection` struct represents a section of a memory-mapped file.
 // It contains a reference to the `MemoryMappedFile` it's a section of so that the

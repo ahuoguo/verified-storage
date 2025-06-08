@@ -30,6 +30,10 @@ use vstd::prelude::*;
 use vstd::slice::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
     // This structure, `LogInfo`, is used by `UntrustedMultiLogImpl`
     // to store information about a single log. Its fields are:

@@ -19,6 +19,10 @@ use super::super::spec_t::*;
 use vstd::arithmetic::overflow::CheckedU64;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 impl<PM, K> KeyTable<PM, K>
 where
