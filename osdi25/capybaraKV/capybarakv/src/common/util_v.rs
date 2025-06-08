@@ -10,6 +10,10 @@ use crate::pmem::traits_t::{size_of, PmSized, ConstPmSized, UnsafeSpecPmSized, P
 use crate::pmem::pmemutil_v::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 // Computes the maximum value in a sequence of natural numbers.
 pub open spec fn nat_seq_max(seq: Seq<nat>) -> nat 

@@ -8,6 +8,10 @@ use crate::pmem::pmemutil_v::*;
 use super::recover_v::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 // We have to make this struct public, with all its fields public, so
 // that it can implement the View trait. We need it to do so to enable

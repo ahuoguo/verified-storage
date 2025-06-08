@@ -75,6 +75,10 @@ use super::inv_v::*;
 use super::spec_t::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 // This structure represents a permission to transition the state of
 // the persistent storage from one state (represented as a sequence of

@@ -18,6 +18,10 @@ use vstd::prelude::*;
 use deps_hack::crc64fast::Digest;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
     // Helper struct to hide the external crc64fast Digest type
     // from Verus while still keeping ghost state associated with it

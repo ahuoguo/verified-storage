@@ -13,6 +13,10 @@ use crate::pmem::pmemutil_v::*;
 use super::subrange_v::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 /// Recovers an object of type T from a sequence of bytes, verifying its CRC.
 /// Returns Some(T) if recovery is successful, otherwise None.

@@ -21,8 +21,11 @@ use vstd::slice::slice_to_vec;
 use vstd::std_specs::hash::*;
 
 verus! {
-
-broadcast use vstd::std_specs::hash::group_hash_axioms;
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties,
+              vstd::std_specs::hash::group_hash_axioms};
 
 impl<PM, K> KeyTable<PM, K>
 where

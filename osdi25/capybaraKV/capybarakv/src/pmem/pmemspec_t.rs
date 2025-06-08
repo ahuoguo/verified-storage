@@ -54,6 +54,10 @@ use vstd::prelude::*;
 use deps_hack::crc64fast::Digest;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
     // This function is used to copy bytes from a slice to a newly-allocated vector.
     // `std::slice::copy_from_slice` requires that the source and destination have the

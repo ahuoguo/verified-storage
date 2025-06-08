@@ -18,6 +18,10 @@ use vstd::arithmetic::div_mod::{lemma_div_is_ordered_by_denominator, lemma_div_p
 use vstd::arithmetic::mul::lemma_mul_inequality;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 pub struct SaturatingU64 {
     i: Ghost<int>,

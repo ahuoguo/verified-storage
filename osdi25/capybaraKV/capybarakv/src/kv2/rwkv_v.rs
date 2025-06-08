@@ -20,6 +20,10 @@ use vstd::modes::*;
 use std::sync::Arc;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 #[verifier::reject_recursive_types(K)]
 #[verifier::reject_recursive_types(I)]

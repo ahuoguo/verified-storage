@@ -14,6 +14,10 @@ use crate::pmem::traits_t::{size_of, PmSized, ConstPmSized, UnsafeSpecPmSized, P
 use crate::pmem::pmemutil_v::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 // Extracts a subrange of a sequence starting at index `i` with length `len`.
 pub open spec fn extract_section<T>(s: Seq<T>, i: int, len: nat) -> Seq<T>

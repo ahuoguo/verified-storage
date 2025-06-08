@@ -14,6 +14,10 @@ use vstd::seq_lib::*;
 use vstd::relations::*;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
     // Functions related to multi-indexing of a sequence.
 
     // Indicates if the given integer is a valid index for the given sequence.

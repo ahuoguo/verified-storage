@@ -18,6 +18,10 @@ use vstd::bytes::u64_from_le_bytes;
 use vstd::slice::slice_subrange;
 
 verus! {
+broadcast use {vstd::seq_lib::group_seq_properties,
+              vstd::set_lib::group_set_properties,
+              vstd::map_lib::group_map_properties,
+              vstd::multiset::group_multiset_properties};
 
 impl <PM> Journal<PM>
 where
