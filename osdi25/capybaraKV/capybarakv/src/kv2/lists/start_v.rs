@@ -108,8 +108,8 @@ where
             broadcast use group_hash_axioms;
             broadcast use group_validate_row_addr;
 
-            assert(sm.table.validate_row_addr(current_addr));
-            assert(row_addrs.contains(current_addr));
+//            assert(sm.table.validate_row_addr(current_addr));
+//            assert(row_addrs.contains(current_addr));
             row_addrs_used.insert(current_addr);
 
             let next_addr =
@@ -219,7 +219,7 @@ where
 
             let list_addr = list_addrs[which_list];
             assert(list_addrs@.to_set().contains(list_addr));
-            assert(mapping.list_info.contains_key(list_addr));
+//            assert(mapping.list_info.contains_key(list_addr));
             match Self::read_list(journal, sm, Ghost(list_addrs@.to_set()), Ghost(mapping),
                                   &mut row_addrs_used, list_addr) {
                 Ok(summary) => { m.insert(list_addr, ListTableEntry::Durable{ summary }); },
@@ -401,7 +401,7 @@ where
         };
 
         let ghost recovered_state = Self::recover(journal@.read_state, list_addrs@.to_set(), *sm).unwrap();
-        assert(recovered_state.m.dom() =~= list_addrs@.to_set());
+//        assert(recovered_state.m.dom() =~= list_addrs@.to_set());
 
         proof {
             lists.internal_view().lemma_corresponds_implication_for_free_list_length(*sm);
@@ -412,4 +412,3 @@ where
 }
 
 }
-

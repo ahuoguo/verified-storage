@@ -214,7 +214,7 @@ where
                 return Err(KvError::OutOfSpace);
             },
             _ => {
-                assert(false);
+//                assert(false);
                 self.must_abort = Ghost(true);
                 return Err(KvError::InternalError);
             }
@@ -378,7 +378,7 @@ where
 
         let cki = ConcreteKeyInfo{ row_addr, rm };
         self.m.insert(k.clone_provable(), cki);
-        assert(self.m@.remove(*k) =~= old(self).m@);
+//        assert(self.m@.remove(*k) =~= old(self).m@);
 
         let undo_record = KeyUndoRecord::UndoCreate{ row_addr, k: *k };
         assert(self.internal_view().apply_undo_record(undo_record) =~= Some(old(self).internal_view()));
@@ -386,7 +386,7 @@ where
         assert(self.internal_view().apply_undo_records(self.undo_records@, self.sm) ==
                old(self).internal_view().apply_undo_records(old(self).undo_records@, self.sm)) by {
             assert(self.undo_records@.drop_last() =~= old(self).undo_records@);
-            assert(self.undo_records@.last() =~= undo_record);
+//            assert(self.undo_records@.last() =~= undo_record);
         }
 
         self.status = Ghost(KeyTableStatus::Quiescent);
@@ -396,7 +396,7 @@ where
             broadcast use group_validate_row_addr;
         }
 
-        assert(self.valid(journal@));
+//        assert(self.valid(journal@));
         assert(self@.tentative =~= Some(old(self)@.tentative.unwrap().create(*k, item_addr)));
         Ok(())
     }
@@ -464,20 +464,20 @@ where
                 return Err(KvError::OutOfSpace);
             },
             _ => {
-                assert(false);
+//                assert(false);
                 self.must_abort = Ghost(true);
                 return Err(KvError::InternalError);
             }
         };
 
-        assert(self.memory_mapping@.valid(self.sm));
-        assert(self.memory_mapping == old(self).memory_mapping);
+//        assert(self.memory_mapping@.valid(self.sm));
+//        assert(self.memory_mapping == old(self).memory_mapping);
         self.memory_mapping =
             Ghost(self.memory_mapping@.delete(row_addr, *k, rm, self.pending_deallocations@.len()));
-        assert(self.memory_mapping@.undo_delete(row_addr, *k, rm) =~= Some(old(self).memory_mapping@));
+//        assert(self.memory_mapping@.undo_delete(row_addr, *k, rm) =~= Some(old(self).memory_mapping@));
 
         self.m.remove(k);
-        assert(self.m@.insert(*k, ConcreteKeyInfo{ row_addr, rm }) == old(self).m@);
+//        assert(self.m@.insert(*k, ConcreteKeyInfo{ row_addr, rm }) == old(self).m@);
         self.pending_deallocations.push(row_addr);
 
         let undo_record = KeyUndoRecord::UndoDelete{ row_addr, k: *k, rm };
@@ -486,7 +486,7 @@ where
         assert(self.internal_view().apply_undo_records(self.undo_records@, self.sm) ==
                old(self).internal_view().apply_undo_records(old(self).undo_records@, self.sm)) by {
             assert(self.undo_records@.drop_last() =~= old(self).undo_records@);
-            assert(self.undo_records@.last() =~= undo_record);
+//            assert(self.undo_records@.last() =~= undo_record);
         }
 
         proof {
@@ -494,7 +494,7 @@ where
             broadcast use group_validate_row_addr;
         }
 
-        assert(self.valid(journal@));
+//        assert(self.valid(journal@));
         assert(self@.tentative =~= Some(old(self)@.tentative.unwrap().delete(*k)));
         Ok(())
     }
@@ -577,7 +577,7 @@ where
                 return Err(KvError::OutOfSpace);
             },
             _ => {
-                assert(false);
+//                assert(false);
                 self.status = Ghost(KeyTableStatus::Quiescent);
                 self.must_abort = Ghost(true);
                 return Err(KvError::InternalError);
@@ -595,7 +595,7 @@ where
                 return Err(KvError::OutOfSpace);
             },
             _ => {
-                assert(false);
+//                assert(false);
                 self.status = Ghost(KeyTableStatus::Quiescent);
                 self.must_abort = Ghost(true);
                 return Err(KvError::InternalError);
@@ -671,13 +671,13 @@ where
             Err(e) => { return Err(e); },
         }
 
-        assert(self.memory_mapping@.valid(self.sm));
-        assert(self.memory_mapping == old(self).memory_mapping);
+//        assert(self.memory_mapping@.valid(self.sm));
+//        assert(self.memory_mapping == old(self).memory_mapping);
         self.memory_mapping = Ghost(self.memory_mapping@.update(row_addr, *k, new_rm, former_rm));
-        assert(self.memory_mapping@.undo_update(row_addr, *k, former_rm) =~= Some(old(self).memory_mapping@));
+//        assert(self.memory_mapping@.undo_update(row_addr, *k, former_rm) =~= Some(old(self).memory_mapping@));
 
         self.m.insert(k.clone_provable(), ConcreteKeyInfo{ row_addr, rm: new_rm });
-        assert(self.m@.insert(*k, ConcreteKeyInfo{ row_addr, rm: former_rm }) == old(self).m@);
+//        assert(self.m@.insert(*k, ConcreteKeyInfo{ row_addr, rm: former_rm }) == old(self).m@);
 
         let undo_record = KeyUndoRecord::UndoUpdate{ row_addr, k: *k, former_rm: former_rm };
         assert(self.internal_view().apply_undo_record(undo_record) =~= Some(old(self).internal_view()));
@@ -685,7 +685,7 @@ where
         assert(self.internal_view().apply_undo_records(self.undo_records@, self.sm) ==
                old(self).internal_view().apply_undo_records(old(self).undo_records@, self.sm)) by {
             assert(self.undo_records@.drop_last() =~= old(self).undo_records@);
-            assert(self.undo_records@.last() =~= undo_record);
+//            assert(self.undo_records@.last() =~= undo_record);
         }
 
         proof {
@@ -695,7 +695,7 @@ where
 
         self.status = Ghost(KeyTableStatus::Quiescent);
 
-        assert(self.valid(journal@));
+//        assert(self.valid(journal@));
         assert(self@.tentative =~= Some(old(self)@.tentative.unwrap().update(*k, new_rm, former_rm)));
         Ok(())
     }
@@ -715,7 +715,7 @@ where
 
         let keys = self.m.keys();
         let mut result = Vec::<K>::new();
-        assert(result@ =~= keys@.1.take(0));
+//        assert(result@ =~= keys@.1.take(0));
 
         for k in iter: keys
             invariant
@@ -726,8 +726,8 @@ where
         }
 
         assert(result@.to_set() =~= self@.tentative.unwrap().key_info.dom()) by {
-            assert(keys@.1.to_set() == self.m@.dom());
-            assert(keys@.1.take(keys@.1.len() as int) =~= keys@.1);
+//            assert(keys@.1.to_set() == self.m@.dom());
+//            assert(keys@.1.take(keys@.1.len() as int) =~= keys@.1);
             assert(self.m@.dom() =~= self@.tentative.unwrap().key_info.dom());
         }
 

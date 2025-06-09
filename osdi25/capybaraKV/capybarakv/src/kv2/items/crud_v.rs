@@ -213,7 +213,7 @@ where
             },
             Some(a) => a,
         };
-        assert(old(self).free_list@[self.free_list@.len() as int] == row_addr);
+//        assert(old(self).free_list@[self.free_list@.len() as int] == row_addr);
 
         let item_addr = row_addr + self.sm.row_item_start;
         let item_crc_addr = row_addr + self.sm.row_item_crc_start;

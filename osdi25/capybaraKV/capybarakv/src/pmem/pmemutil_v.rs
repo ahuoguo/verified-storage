@@ -151,11 +151,11 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         digest.write_bytes(data1_c);
         digest.write_bytes(data2_c);
         proof {
-            assert(digest.bytes_in_digest() =~= data1_c@ + data2_c@);
+//            assert(digest.bytes_in_digest() =~= data1_c@ + data2_c@);
         }
         let computed_crc = digest.sum64();
 
-        assert(computed_crc == spec_crc_u64(data1_c@ + data2_c@));
+//        assert(computed_crc == spec_crc_u64(data1_c@ + data2_c@));
 
         // Check whether the CRCs match. This is done in an external body function so that we can convert the maybe-corrupted
         // CRC to a u64 for comparison to the computed CRC.
@@ -260,7 +260,7 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         }
         
         let cdb_val = cdb_c.extract_cdb(Ghost(true_cdb_bytes), Ghost(cdb_addrs), Ghost(pmc));
-        assert(cdb_val.spec_to_bytes() == cdb_c@);
+//        assert(cdb_val.spec_to_bytes() == cdb_c@);
 
         // If the read encoded CDB is one of the expected ones, translate
         // it into a boolean; otherwise, indicate corruption.
@@ -316,7 +316,7 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         // Then, we just have to reason about this one written chunk. There are two cases:
         // (1) the chunk isn't flushed at all and (2) the chunk is entirely flushed.
 
-        assert(chunk_trigger(chunk));
+//        assert(chunk_trigger(chunk));
         if chunk_corresponds(new_durable_state, durable_state, chunk) {
             assert forall|addr: int| 0 <= addr < new_durable_state.len()
                 implies #[trigger] new_durable_state[addr] == durable_state[addr] by {
@@ -417,7 +417,7 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         ensures
             recover_fn(new_durable_state) == recover_fn(durable_state)
     {
-        assert(new_durable_state.len() == durable_state.len());
+//        assert(new_durable_state.len() == durable_state.len());
         assert forall|i: int| 0 <= i < durable_state.len() && !addrs.contains(i)
             implies new_durable_state[i] == durable_state[i] by {
             lemma_auto_can_result_from_partial_write_effect();
@@ -555,7 +555,7 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         ensures 
             mem1.subrange(i, j).subrange(k - i, l - i) == mem1.subrange(k, l) 
     {
-        assert(mem1.subrange(k, l) == mem1.subrange(i + k - i, i + l - i));
+//        assert(mem1.subrange(k, l) == mem1.subrange(i + k - i, i + l - i));
         assert(mem1.subrange(i, j).subrange(k - i, l - i) == mem1.subrange(i + k - i, i + l - i));
     }
 

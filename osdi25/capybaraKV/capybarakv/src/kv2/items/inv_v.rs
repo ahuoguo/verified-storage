@@ -208,11 +208,11 @@ impl<I> ItemTableInternalView<I>
             self.as_durable_snapshot().m.dom().finite(),
             self.as_durable_snapshot().m.dom().len() == sm.table.num_rows - self.free_list.len(),
     {
-        assert forall|pos: int| 0 <= pos < self.free_list.len() implies
-            self.row_info.contains_key(#[trigger] self.free_list[pos]) by {
-            assert(self.row_info[self.free_list[pos]] is InFreeList);
-            assert(self.row_info.contains_key(self.free_list[pos]));
-        }
+//        assert forall|pos: int| 0 <= pos < self.free_list.len() implies
+//            self.row_info.contains_key(#[trigger] self.free_list[pos]) by {
+////            assert(self.row_info[self.free_list[pos]] is InFreeList);
+////            assert(self.row_info.contains_key(self.free_list[pos]));
+//        }
 
         let free_row_addrs = Set::<u64>::new(
             |row_addr: u64| self.row_info.contains_key(row_addr) && self.row_info[row_addr] is InFreeList
@@ -236,7 +236,7 @@ impl<I> ItemTableInternalView<I>
         }
 
         assert(valid_row_addrs.len() == free_row_addrs.len() + item_row_addrs.len()) by {
-            assert(free_row_addrs.disjoint(item_row_addrs));
+//            assert(free_row_addrs.disjoint(item_row_addrs));
             assert(free_row_addrs + item_row_addrs =~= valid_row_addrs);
             vstd::set_lib::lemma_set_disjoint_lens(free_row_addrs, item_row_addrs);
         }
@@ -247,7 +247,7 @@ impl<I> ItemTableInternalView<I>
         }
 
         assert(item_row_addrs =~= self.as_durable_snapshot().m.dom());
-        assert(item_row_addrs.len() == sm.table.num_rows - self.free_list.len());
+//        assert(item_row_addrs.len() == sm.table.num_rows - self.free_list.len());
     }
 }
 

@@ -113,7 +113,7 @@ impl<PMRegion> PMRegionProph<PMRegion>
         // our prophecies to the same values.
         let mut durability = mself.durability;
         let dlen = durability.len();
-        assert(durability@ == mself.durability@.subrange(0, dlen as int));
+//        assert(durability@ == mself.durability@.subrange(0, dlen as int));
         assert forall |j| 0 <= j < dlen implies #[trigger] predictions_vec[j].len() == size_to_chunks(mself.pm@.len() as int) by {
             assert(write_chunk_durability[j].len() == size_to_chunks(mself.pm@.len() as int));
         }
@@ -135,12 +135,12 @@ impl<PMRegion> PMRegionProph<PMRegion>
             let p = durability.pop_front().unwrap();
             assert(durability@ == mself.durability@.subrange(i as int + 1, dlen as int));
             assert(predictions_vec[i as int].len() == size_to_chunks(mself.pm@.len() as int));
-            assert(mself.durability@[i as int]@.len() == size_to_chunks(mself.pm@.len() as int));
+//            assert(mself.durability@[i as int]@.len() == size_to_chunks(mself.pm@.len() as int));
             p.resolve(&predictions_vec[i]);
         }
 
         assert forall |i| 0 <= i < dlen implies #[trigger] deep_view(mself.durability)[i] == predictions_vec.deep_view()[i] by {
-            assert(deep_view(mself.durability)[i] == mself.durability@[i]@);
+//            assert(deep_view(mself.durability)[i] == mself.durability@[i]@);
             assert(predictions_vec.deep_view()[i] == predictions_vec@[i]@);
         }
         assert(deep_view(mself.durability) =~= predictions_vec.deep_view());
@@ -148,7 +148,7 @@ impl<PMRegion> PMRegionProph<PMRegion>
         // With the propecies resolved, prove that our prophecy-based
         // durable_state is the same as the arbitrary crash state that
         // we picked above from PersistentMemoryRegionAsync.
-        assert(mself@.durable_state == crash_state);
+//        assert(mself@.durable_state == crash_state);
     }
 }
 

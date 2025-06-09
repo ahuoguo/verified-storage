@@ -222,7 +222,7 @@ where
         let ghost self_before_list_append = self.lemma_prepare_for_list_table_update();
         let result =
             if former_rm.list_addr == 0 {
-                assert(end_of_range(Seq::<L>::empty()) == 0);
+//                assert(end_of_range(Seq::<L>::empty()) == 0);
                 self.lists.create_singleton::<PermFactory>(new_list_element, &mut self.journal, Tracked(self.perm_factory.borrow()))
             }
             else {
@@ -524,7 +524,7 @@ where
 
         self.status = Ghost(KvStoreStatus::ComponentsDontCorrespond);
 
-        assert(self.perm_factory == old(self).perm_factory);
+//        assert(self.perm_factory == old(self).perm_factory);
         let ghost self_before_list_update = self.lemma_prepare_for_list_table_update();
         let result = self.lists.update::<PermFactory>(former_rm.list_addr, idx, new_list_element, &mut self.journal, Tracked(self.perm_factory.borrow()));
         proof { self.lemma_reflect_list_table_update(self_before_list_update); }
@@ -650,7 +650,7 @@ where
 
         self.status = Ghost(KvStoreStatus::ComponentsDontCorrespond);
 
-        assert(self.perm_factory == old(self).perm_factory);
+//        assert(self.perm_factory == old(self).perm_factory);
         let ghost self_before_list_update = self.lemma_prepare_for_list_table_update();
         let result = self.lists.update::<PermFactory>(former_rm.list_addr, idx, new_list_element, &mut self.journal, Tracked(self.perm_factory.borrow()));
         proof { self.lemma_reflect_list_table_update(self_before_list_update); }
@@ -788,13 +788,13 @@ where
         if trim_length == 0 {
             self.used_key_slots = Ghost(self.used_key_slots@ + 1);
             self.used_transaction_operation_slots = Ghost(self.used_transaction_operation_slots@ + 1);
-            assert(self@.tentative.read_item_and_list(*key).unwrap().1.skip(trim_length as int) =~=
-                   self@.tentative.read_item_and_list(*key).unwrap().1);
+//            assert(self@.tentative.read_item_and_list(*key).unwrap().1.skip(trim_length as int) =~=
+//                   self@.tentative.read_item_and_list(*key).unwrap().1);
             assert(self@.tentative.trim_list(*key, trim_length as nat).unwrap() =~= self@.tentative);
             proof {
                 self.lemma_using_space_for_transaction_operation_maintains_invariant(*old(self));
             }
-            assert(self.perm_factory == old(self).perm_factory);
+//            assert(self.perm_factory == old(self).perm_factory);
             return Ok(());
         }
 
@@ -804,7 +804,7 @@ where
 
         self.status = Ghost(KvStoreStatus::ComponentsDontCorrespond);
 
-        assert(self.perm_factory == old(self).perm_factory);
+//        assert(self.perm_factory == old(self).perm_factory);
         let ghost self_before_list_trim = self.lemma_prepare_for_list_table_update();
         let result = self.lists.trim::<PermFactory>(former_rm.list_addr, trim_length, &mut self.journal,
                                      Tracked(self.perm_factory.borrow()));
@@ -916,10 +916,10 @@ where
             None => { return Err(KvError::KeyNotFound); },
         };
         if trim_length == 0 {
-            assert(self@.tentative.read_item_and_list(*key).unwrap().1.skip(trim_length as int) =~=
-                   self@.tentative.read_item_and_list(*key).unwrap().1);
-            assert(self@.tentative.trim_list_and_update_item(*key, trim_length as nat, *new_item) =~=
-                   self@.tentative.update_item(*key, *new_item));
+//            assert(self@.tentative.read_item_and_list(*key).unwrap().1.skip(trim_length as int) =~=
+//                   self@.tentative.read_item_and_list(*key).unwrap().1);
+//            assert(self@.tentative.trim_list_and_update_item(*key, trim_length as nat, *new_item) =~=
+//                   self@.tentative.update_item(*key, *new_item));
             return self.tentatively_update_item(key, &new_item);
         }
 
@@ -929,7 +929,7 @@ where
 
         self.status = Ghost(KvStoreStatus::ComponentsDontCorrespond);
 
-        assert(self.perm_factory == old(self).perm_factory);
+//        assert(self.perm_factory == old(self).perm_factory);
         let ghost self_before_list_trim = self.lemma_prepare_for_list_table_update();
         let result = self.lists.trim::<PermFactory>(former_rm.list_addr, trim_length, &mut self.journal,
                                      Tracked(self.perm_factory.borrow()));
@@ -1000,7 +1000,7 @@ where
         self.used_transaction_operation_slots = Ghost(self.used_transaction_operation_slots@ + 1);
 
         let ghost old_item_addrs = old(self).keys@.tentative.unwrap().item_addrs();
-        assert(new_rm.item_addr != former_rm.item_addr);
+//        assert(new_rm.item_addr != former_rm.item_addr);
         assert(old_item_addrs.insert(new_rm.item_addr).remove(former_rm.item_addr) =~=
                old_item_addrs.remove(former_rm.item_addr).insert(new_rm.item_addr));
         assert(self@.tentative =~= old(self)@.tentative.trim_list_and_update_item(*key, trim_length as nat,

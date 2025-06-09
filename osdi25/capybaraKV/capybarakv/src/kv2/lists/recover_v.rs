@@ -208,7 +208,7 @@ impl<L> ListRecoveryMapping<L>
                 self.lemma_uniqueness_list(other, s, list_addrs, sm, head);
             }
         }
-        assert(self.row_info =~= other.row_info);
+//        assert(self.row_info =~= other.row_info);
         assert(self.list_elements =~= other.list_elements) by {
             assert forall|head: u64| #[trigger] self.list_elements.contains_key(head) implies {
                 &&& other.list_elements.contains_key(head)

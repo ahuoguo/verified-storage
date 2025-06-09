@@ -101,7 +101,7 @@ pub(super) proof fn lemma_journal_entries_valid_implies_one_valid(
 {
     if which_entry > 0 {
         lemma_journal_entries_valid_implies_one_valid(entries.skip(1), sm, which_entry - 1);
-        assert(entries[which_entry] =~= entries.skip(1)[which_entry - 1]);
+//        assert(entries[which_entry] =~= entries.skip(1)[which_entry - 1]);
     }
 }
 
@@ -250,7 +250,7 @@ pub(super) proof fn lemma_apply_journal_entries_only_affects_app_area(
 
     if 0 < entries.len() {
         let state_next = apply_journal_entry(state, entries[0], sm).unwrap();
-        assert(seqs_match_except_in_range(state, state_next, sm.app_area_start as int, sm.app_area_end as int));
+//        assert(seqs_match_except_in_range(state, state_next, sm.app_area_start as int, sm.app_area_end as int));
         lemma_apply_journal_entries_only_affects_app_area(state_next, vm, sm, entries.skip(1));
     }
 }
@@ -401,7 +401,7 @@ pub(super) proof fn lemma_addresses_in_entry_dont_affect_recovery(
             state, s2, vm, sm, entries, which_entry
         );
         lemma_apply_journal_entries_success_implies_bounded_addrs_for_entry(sm, state, entries, which_entry);
-        assert(forall|i| 0 <= i < sm.app_area_start ==> !addrs.contains(i));
+//        assert(forall|i| 0 <= i < sm.app_area_start ==> !addrs.contains(i));
         assert(state.subrange(0, sm.app_area_start as int) =~= s2.subrange(0, sm.app_area_start as int));
         assert(seqs_match_in_range(state, s2, 0, sm.app_area_start as int));
         broadcast use broadcast_seqs_match_in_range_can_narrow_range;
@@ -450,8 +450,8 @@ pub(super) proof fn lemma_parse_journal_entry_relation_to_next(entries_bytes: Se
 {
     let (entry, num_bytes) = parse_journal_entry(entries_bytes.skip(start)).unwrap();
     assert(entries_bytes.skip(start + num_bytes) =~= entries_bytes.skip(start).skip(num_bytes));
-    assert(parse_journal_entries(entries_bytes.skip(start + num_bytes)).unwrap() =~=
-           parse_journal_entries(entries_bytes.skip(start)).unwrap().skip(1));
+//    assert(parse_journal_entries(entries_bytes.skip(start + num_bytes)).unwrap() =~=
+//           parse_journal_entries(entries_bytes.skip(start)).unwrap().skip(1));
 }
 
 pub(super) proof fn lemma_parse_journal_entry_implications(
@@ -509,13 +509,13 @@ pub(super) proof fn lemma_parse_journal_entries_append(
         let length_bytes = extract_section(new_entries_bytes, u64::spec_size_of() as int, u64::spec_size_of());
         assert(length_bytes =~= (new_entry.bytes_to_write.len() as u64).spec_to_bytes());
         let data_offset = u64::spec_size_of() + u64::spec_size_of();
-        assert(extract_section(new_entries_bytes, data_offset as int, new_entry.bytes_to_write.len())
-               =~= new_entry.bytes_to_write);
-        assert(parse_journal_entry(new_entries_bytes) == Some((new_entry, new_entries_bytes.len() as int)));
-        assert(entries =~= Seq::<JournalEntry>::empty());
+//        assert(extract_section(new_entries_bytes, data_offset as int, new_entry.bytes_to_write.len())
+//               =~= new_entry.bytes_to_write);
+//        assert(parse_journal_entry(new_entries_bytes) == Some((new_entry, new_entries_bytes.len() as int)));
+//        assert(entries =~= Seq::<JournalEntry>::empty());
         assert(parse_journal_entries(new_entries_bytes.skip(new_entries_bytes.len() as int))
                == Some(Seq::<JournalEntry>::empty()));
-        assert(Seq::<JournalEntry>::empty().push(new_entry) =~= seq![new_entry] + Seq::<JournalEntry>::empty());
+//        assert(Seq::<JournalEntry>::empty().push(new_entry) =~= seq![new_entry] + Seq::<JournalEntry>::empty());
     }
     else {
         let (entry, num_bytes) = parse_journal_entry(entries_bytes).unwrap();
@@ -528,10 +528,10 @@ pub(super) proof fn lemma_parse_journal_entries_append(
         assert(length_bytes =~= extract_section(entries_bytes, u64::spec_size_of() as int, u64::spec_size_of()));
         let length = u64::spec_from_bytes(length_bytes);
         let data_offset = u64::spec_size_of() + u64::spec_size_of();
-        assert(extract_section(new_entries_bytes, data_offset as int, length as nat) =~=
-               extract_section(entries_bytes, data_offset as int, length as nat));
+//        assert(extract_section(new_entries_bytes, data_offset as int, length as nat) =~=
+//               extract_section(entries_bytes, data_offset as int, length as nat));
         assert(alt_entry == entry);
-        assert(alt_num_bytes == num_bytes);
+//        assert(alt_num_bytes == num_bytes);
 
         lemma_parse_journal_entries_append(entries_bytes.skip(num_bytes), remaining_entries, new_entry);
         assert(entries_bytes.skip(num_bytes)
@@ -662,7 +662,7 @@ pub(super) proof fn lemma_space_needed_for_journal_entries_list_monotonic(entrie
     if i < j {
         lemma_space_needed_for_journal_entries_list_monotonic(entries, i + 1, j);
         assert(entries.take(i + 1).drop_last() =~= entries.take(i));
-        assert(entries.take(i + 1).last() =~= entries[i]);
+//        assert(entries.take(i + 1).last() =~= entries[i]);
     }
 }
 
@@ -674,7 +674,7 @@ pub(super) proof fn lemma_space_needed_for_journal_entries_list_increases(entrie
            == space_needed_for_journal_entries_list(entries.take(i)) + entries[i].space_needed()
 {
     assert(entries.take(i + 1).drop_last() =~= entries.take(i));
-    assert(entries.take(i + 1).last() =~= entries[i]);
+//    assert(entries.take(i + 1).last() =~= entries[i]);
 }
 
 pub(super) proof fn lemma_space_needed_for_journal_entries_list_at_least_num_entries(entries: Seq<JournalEntry>)
@@ -706,17 +706,17 @@ pub(super) proof fn lemma_effect_of_append_on_apply_journal_entries(
 {
     if entries.len() == 0 {
         let s_next = apply_journal_entry(s, new_entry, sm).unwrap();
-        assert(entries.push(new_entry)[0] == new_entry);
-        assert(apply_journal_entry(s, entries.push(new_entry)[0], sm) == Some(s_next));
+//        assert(entries.push(new_entry)[0] == new_entry);
+//        assert(apply_journal_entry(s, entries.push(new_entry)[0], sm) == Some(s_next));
         assert(apply_journal_entries(s_next, entries.push(new_entry).skip(1), sm) == Some(s_next));
     }
     else {
         reveal(update_bytes);
-        assert(entries.push(new_entry)[0] == entries[0]);
+//        assert(entries.push(new_entry)[0] == entries[0]);
         let s_next = apply_journal_entry(s, entries[0], sm).unwrap();
-        assert(apply_journal_entry(s, entries.push(new_entry)[0], sm) == Some(s_next));
+//        assert(apply_journal_entry(s, entries.push(new_entry)[0], sm) == Some(s_next));
         lemma_effect_of_append_on_apply_journal_entries(s_next, entries.skip(1), new_entry, sm);
-        assert(entries.push(new_entry).skip(1) =~= entries.skip(1).push(new_entry));
+//        assert(entries.push(new_entry).skip(1) =~= entries.skip(1).push(new_entry));
     }
 }
 

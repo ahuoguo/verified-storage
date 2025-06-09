@@ -72,11 +72,11 @@ where
         broadcast use group_can_result_from_write_effect;
         
         proof {
-            assert forall|s| can_result_from_partial_write(s, self.powerpm@.durable_state, addr as int, bytes_to_write@)
-                implies #[trigger] perm.permits(self.powerpm@.durable_state, s) by {
-                assert(seqs_match_except_in_range(s, self.powerpm@.durable_state, addr as int,
-                                                  addr + bytes_to_write@.len()));
-            }
+//            assert forall|s| can_result_from_partial_write(s, self.powerpm@.durable_state, addr as int, bytes_to_write@)
+//                implies #[trigger] perm.permits(self.powerpm@.durable_state, s) by {
+////                assert(seqs_match_except_in_range(s, self.powerpm@.durable_state, addr as int,
+////                                                  addr + bytes_to_write@.len()));
+//            }
         }
         self.powerpm.write::<Perm>(addr, bytes_to_write, Tracked(perm));
         assert({
@@ -202,19 +202,19 @@ where
                                                             concrete_entry@, self.sm);
         }
 
-        assert(journaled_addrs_complete(self.entries@, self.journaled_addrs@)) by {
-            assert forall|entry, addr| #![trigger self.entries@.contains(entry), self.journaled_addrs@.contains(addr)]
-                   self.entries@.contains(entry) && entry.start <= addr < entry.end()
-                   implies self.journaled_addrs@.contains(addr) by {
-                if !old(self).entries@.contains(entry) { // triggers journaled_addrs_complete(old(self).entries@, ...)
-                    assert(entry == concrete_entry@);
-                }
-            }
-        }
+//        assert(journaled_addrs_complete(self.entries@, self.journaled_addrs@)) by {
+////            assert forall|entry, addr| #![trigger self.entries@.contains(entry), self.journaled_addrs@.contains(addr)]
+////                   self.entries@.contains(entry) && entry.start <= addr < entry.end()
+////                   implies self.journaled_addrs@.contains(addr) by {
+////                if !old(self).entries@.contains(entry) { // triggers journaled_addrs_complete(old(self).entries@, ...)
+//////                    assert(entry == concrete_entry@);
+////                }
+////            }
+//        }
 
         assert(space_needed_for_journal_entries_list(self.entries@) ==
                space_needed_for_journal_entries_list(old(self).entries@) + concrete_entry@.space_needed()) by {
-            assert(self.entries@.last() == concrete_entry@);
+//            assert(self.entries@.last() == concrete_entry@);
             assert(self.entries@.drop_last() =~= old(self).entries@);
         }
 
