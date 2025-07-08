@@ -133,10 +133,10 @@ impl<L> ListTableInternalView<L>
         let old_snapshot = self.tentative_mapping.as_snapshot();
         let new_snapshot = new_self.tentative_mapping.as_snapshot();
 
-        assert(new_snapshot =~= old_snapshot.delete(list_addr));
+//        assert(new_snapshot =~= old_snapshot.delete(list_addr));
 
-        assert(self.delete(list_addr).tentative_mapping.as_snapshot() =~=
-               self.tentative_mapping.as_snapshot().delete(list_addr));
+//        assert(self.delete(list_addr).tentative_mapping.as_snapshot() =~=
+//               self.tentative_mapping.as_snapshot().delete(list_addr));
     }
 }
 
@@ -172,7 +172,7 @@ where
         let ghost addrs = self.durable_mapping@.list_info[list_addr];
         let pm = journal.get_pm_region_ref();
 
-        assert(addrs.take(current_pos) =~= Seq::<u64>::empty());
+//        assert(addrs.take(current_pos) =~= Seq::<u64>::empty());
         assert(list_addr != 0) by {
             broadcast use group_validate_row_addr;
         }
@@ -198,7 +198,7 @@ where
                 broadcast use pmcopy_axioms;
             }
 
-            assert(addrs.take(current_pos).push(current_addr) =~= addrs.take(current_pos + 1));
+//            assert(addrs.take(current_pos).push(current_addr) =~= addrs.take(current_pos + 1));
             result.push(current_addr);
 
             let next_addr = current_addr + self.sm.row_next_start;
@@ -212,8 +212,8 @@ where
             }
         }
         
-        assert(addrs.take(current_pos) =~= addrs);
-        assert(self.tentative_mapping@.list_info[list_addr] == self.durable_mapping@.list_info[list_addr]);
+//        assert(addrs.take(current_pos) =~= addrs);
+//        assert(self.tentative_mapping@.list_info[list_addr] == self.durable_mapping@.list_info[list_addr]);
         Ok(result)
     }
 
@@ -253,10 +253,10 @@ where
         let ghost tentative_addrs = self.tentative_mapping@.list_info[list_addr];
         let pm = journal.get_pm_region_ref();
 
-        assert(tentative_addrs.take(current_pos as int) =~= Seq::<u64>::empty());
-        assert(list_addr != 0) by {
-            broadcast use group_validate_row_addr;
-        }
+//        assert(tentative_addrs.take(current_pos as int) =~= Seq::<u64>::empty());
+//        assert(list_addr != 0) by {
+//            broadcast use group_validate_row_addr;
+//        }
 
         let num_durable_addrs = summary.length - addrs.len();
         while current_pos < num_durable_addrs
@@ -286,8 +286,8 @@ where
                 broadcast use pmcopy_axioms;
             }
 
-            assert(tentative_addrs.take(current_pos as int).push(current_addr) =~=
-                   tentative_addrs.take(current_pos + 1));
+//            assert(tentative_addrs.take(current_pos as int).push(current_addr) =~=
+//                   tentative_addrs.take(current_pos + 1));
             result.push(current_addr);
 
             let next_addr = current_addr + self.sm.row_next_start;
@@ -300,9 +300,9 @@ where
             current_pos = current_pos + 1;
         }
 
-        assert(tentative_addrs == result@ + addrs@) by {
-            assert(tentative_addrs =~= tentative_addrs.take(summary.length - addrs.len()) + addrs@);
-        }
+//        assert(tentative_addrs == result@ + addrs@) by {
+////            assert(tentative_addrs =~= tentative_addrs.take(summary.length - addrs.len()) + addrs@);
+//        }
 
         let mut addrs_cloned = addrs.clone();
         result.append(&mut addrs_cloned);
@@ -332,7 +332,7 @@ where
 
         match self.m.get(&list_addr) {
             None => {
-                assert(false);
+//                assert(false);
                 Err(KvError::InternalError)
             },
             Some(ListTableEntry::<L>::Durable{ ref summary }) =>
@@ -426,4 +426,3 @@ where
 }
 
 }
-

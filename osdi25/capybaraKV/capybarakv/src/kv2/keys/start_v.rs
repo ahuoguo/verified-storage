@@ -67,7 +67,7 @@ where
             }
     {
         let ghost recovery_mapping = KeyRecoveryMapping::<K>::new(journal@.read_state, *sm).unwrap();
-        assert(recovery_mapping.corresponds(journal@.read_state, *sm));
+//        assert(recovery_mapping.corresponds(journal@.read_state, *sm));
 
         let mut m = HashMap::<K, ConcreteKeyInfo>::new();
         let mut free_list = Vec::<u64>::new();
@@ -190,14 +190,14 @@ where
                 if rm.list_addr != 0 {
                     list_addrs.push(rm.list_addr);
                     // Make any trigger about the new list trigger a fact about the old list.
-                    assert(forall|list_addr: u64| #[trigger] list_addrs@.contains(list_addr) ==>
-                           old_list_addrs.contains(list_addr) || list_addr == rm.list_addr);
-                    assert forall|list_addr: u64| #[trigger] old_list_addrs.contains(list_addr) implies
-                           list_addrs@.contains(list_addr) by {
-                        let i = choose|i: int| 0 <= i < old_list_addrs.len() && #[trigger] old_list_addrs[i] == list_addr;
-                        assert(list_addrs@[i] == old_list_addrs[i]);
-                    }
-                    assert(list_addrs@[list_addrs@.len() - 1] == rm.list_addr);
+//                    assert(forall|list_addr: u64| #[trigger] list_addrs@.contains(list_addr) ==>
+//                           old_list_addrs.contains(list_addr) || list_addr == rm.list_addr);
+//                    assert forall|list_addr: u64| #[trigger] old_list_addrs.contains(list_addr) implies
+//                           list_addrs@.contains(list_addr) by {
+//                        let i = choose|i: int| 0 <= i < old_list_addrs.len() && #[trigger] old_list_addrs[i] == list_addr;
+////                        assert(list_addrs@[i] == old_list_addrs[i]);
+//                    }
+//                    assert(list_addrs@[list_addrs@.len() - 1] == rm.list_addr);
                 }
             }
             else {
@@ -230,9 +230,9 @@ where
         };
 
         let ghost recovered_state = Self::recover(journal@.read_state, *sm).unwrap();
-        assert(keys@.durable =~= recovered_state);
-        assert(item_addrs@ =~= recovered_state.item_addrs());
-        assert(list_addrs@.to_set() =~= recovered_state.list_addrs());
+//        assert(keys@.durable =~= recovered_state);
+//        assert(item_addrs@ =~= recovered_state.item_addrs());
+//        assert(list_addrs@.to_set() =~= recovered_state.list_addrs());
 
         proof {
             memory_mapping.lemma_corresponds_implication_for_free_list_length(free_list@, *sm);
@@ -243,4 +243,3 @@ where
 }
 
 }
-

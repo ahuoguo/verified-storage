@@ -115,10 +115,10 @@ pub(super) proof fn lemma_writing_next_and_crc_together_effect_on_recovery<L>(
                             next_addr as int, next_addr + u64::spec_size_of() + u64::spec_size_of(),
                             next_addr + u64::spec_size_of(),
                             next_addr + u64::spec_size_of() + u64::spec_size_of());
-    assert(bytes_written.subrange(0, u64::spec_size_of() as int) =~= next.spec_to_bytes());
-    assert(bytes_written.subrange(u64::spec_size_of() as int, (u64::spec_size_of() + u64::spec_size_of()) as int)
-           =~= spec_crc_bytes(next.spec_to_bytes()));
-    assert(recover_object::<u64>(s2, next_addr, next_addr + u64::spec_size_of()) =~= Some(next));
+//    assert(bytes_written.subrange(0, u64::spec_size_of() as int) =~= next.spec_to_bytes());
+//    assert(bytes_written.subrange(u64::spec_size_of() as int, (u64::spec_size_of() + u64::spec_size_of()) as int)
+//           =~= spec_crc_bytes(next.spec_to_bytes()));
+//    assert(recover_object::<u64>(s2, next_addr, next_addr + u64::spec_size_of()) =~= Some(next));
 }
 
 impl<PM, L> ListTable<PM, L>
@@ -153,13 +153,13 @@ where
         broadcast use group_validate_row_addr;
         broadcast use broadcast_seqs_match_in_range_can_narrow_range;
 
-        assert(iv.row_info[row_addr] is InFreeList);
-        assert(iv.corresponds_to_durable_state(s2, sm));
+//        assert(iv.row_info[row_addr] is InFreeList);
+//        assert(iv.corresponds_to_durable_state(s2, sm));
 
         let list_addrs = iv.durable_mapping.list_elements.dom();
         iv.durable_mapping.lemma_corresponds_implies_equals_new(s1, list_addrs, sm);
         iv.durable_mapping.lemma_corresponds_implies_equals_new(s2, list_addrs, sm);
-        assert(Self::recover(s2, list_addrs, sm) =~= Self::recover(s1, list_addrs, sm));
+//        assert(Self::recover(s2, list_addrs, sm) =~= Self::recover(s1, list_addrs, sm));
     }
 
     pub(super) proof fn lemma_writing_to_free_slot_has_permission_later_forall<PermFactory>(
@@ -304,8 +304,7 @@ pub(super) proof fn lemma_push_commutes_with_skip<T>(s: Seq<T>, skip_amount: int
     ensures
         s.skip(skip_amount).push(pushed_element) == s.push(pushed_element).skip(skip_amount),
 {
-    assert(s.skip(skip_amount).push(pushed_element) =~= s.push(pushed_element).skip(skip_amount));
+//    assert(s.skip(skip_amount).push(pushed_element) =~= s.push(pushed_element).skip(skip_amount));
 }
 
 }
-

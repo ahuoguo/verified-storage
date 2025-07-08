@@ -141,7 +141,7 @@ where
                 Err(_) => false,
             },
     {
-        assert(self@.tentative.get_keys() =~= self.keys@.tentative.unwrap().key_info.dom());
+//        assert(self@.tentative.get_keys() =~= self.keys@.tentative.unwrap().key_info.dom());
         Ok(self.keys.get_keys(&self.journal))
     }
 

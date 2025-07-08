@@ -56,7 +56,7 @@ impl<T: Structural> ProphecyVec<T> {
         let mut pv = self.v;
         let len = v.len();
 
-        assert(self.v@.subrange(0, len as int) == pv@);
+//        assert(self.v@.subrange(0, len as int) == pv@);
 
         for i in 0..len
             invariant
@@ -69,7 +69,7 @@ impl<T: Structural> ProphecyVec<T> {
         {
             let iproph = pv.remove(0);
             iproph.resolve(&v[i]);
-            assert(self.v@.subrange(i+1 as int, len as int) == pv@);
+//            assert(self.v@.subrange(i+1 as int, len as int) == pv@);
         }
     }
 }
@@ -96,7 +96,7 @@ pub proof fn flush_selective_committed(v: PersistentMemoryRegionAsyncView)
             state_at_last_flush: apply_write_selective(v.state_at_last_flush, w0, d0),
             outstanding_writes: v.outstanding_writes.skip(1),
         };
-        assert(v_new.committed() == v.committed());
+//        assert(v_new.committed() == v.committed());
         flush_selective_committed(v_new);
         let ghost write_chunk_durability1 = Seq::new(v_new.outstanding_writes.len(), |i| Seq::new(size_to_chunks(v.len() as int) as nat, |j| false));
         assert(write_chunk_durability1 == write_chunk_durability.skip(1));
@@ -185,8 +185,8 @@ pub proof fn flush_push(v: PersistentMemoryRegionAsyncView, w: Write)
             state_at_last_flush: apply_write(v.state_at_last_flush, w0),
             outstanding_writes: v.outstanding_writes.skip(1),
         };
-        assert(v.write(w.addr, w.data).outstanding_writes.skip(1) ==
-               flushed_one.write(w.addr, w.data).outstanding_writes);
+//        assert(v.write(w.addr, w.data).outstanding_writes.skip(1) ==
+//               flushed_one.write(w.addr, w.data).outstanding_writes);
         flush_push(flushed_one, w);
     }
 }
@@ -208,7 +208,7 @@ pub proof fn flush_selective_push(v: PersistentMemoryRegionAsyncView, durability
         outstanding_writes: v.write(w.addr, w.data).outstanding_writes.skip(1),
     };
 
-    assert(v.write(w.addr, w.data).flush_selective(durability.push(d)) == v0.flush_selective(durability.push(d).skip(1)));
+//    assert(v.write(w.addr, w.data).flush_selective(durability.push(d)) == v0.flush_selective(durability.push(d).skip(1)));
 
     if v.outstanding_writes.len() == 0 {
         assert(v0.flush_selective(durability.push(d).skip(1)) == v0.state_at_last_flush);
@@ -220,13 +220,13 @@ pub proof fn flush_selective_push(v: PersistentMemoryRegionAsyncView, durability
             outstanding_writes: v.outstanding_writes.skip(1),
         };
 
-        assert(v.flush_selective(durability) == v1.flush_selective(durability.skip(1)));
-        assert(v0 == v1.write(w.addr, w.data));
-        assert(durability.skip(1).push(d) == durability.push(d).skip(1));
+//        assert(v.flush_selective(durability) == v1.flush_selective(durability.skip(1)));
+//        assert(v0 == v1.write(w.addr, w.data));
+//        assert(durability.skip(1).push(d) == durability.push(d).skip(1));
 
         flush_selective_push(v1, durability.skip(1), w, d);
 
-        assert(v1.write(w.addr, w.data).flush_selective(durability.skip(1).push(d)) == apply_write_selective(v1.flush_selective(durability.skip(1)), w, d));
+//        assert(v1.write(w.addr, w.data).flush_selective(durability.skip(1).push(d)) == apply_write_selective(v1.flush_selective(durability.skip(1)), w, d));
     } 
 }
 

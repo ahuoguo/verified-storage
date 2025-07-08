@@ -108,7 +108,7 @@ broadcast use {vstd::seq_lib::group_seq_properties,
             lemma_multiset_commutative(S(s)[idx1rec], seq![s[i]]);
 
             seq![s[i]].to_multiset_ensures();
-            assert(seq![s[i]].first() == s[i]);
+//            assert(seq![s[i]].first() == s[i]);
 
             assert(S(s)[idx1] =~= seq![s[i]] + S(s)[idx1rec]);
             assert(S(s)[idx2rec] =~= S(s)[idx2].remove(idx2pos));
@@ -148,13 +148,13 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         assert(s.remove(i) == s1 + s2.drop_first());
 
         sum_concat(s1, s2);
-        assert(sum(s) == sum(s1) + sum(s2));
+//        assert(sum(s) == sum(s1) + sum(s2));
         sum_concat(s1, s2.drop_first());
-        assert(sum(s.remove(i)) == sum(s1) + sum(s2.drop_first()));
+//        assert(sum(s.remove(i)) == sum(s1) + sum(s2.drop_first()));
 
         s2.lemma_fold_right_alt(|i, s: nat| { s+i as nat }, 0);
         s2.drop_first().lemma_fold_right_alt(|i, s: nat| { s+i as nat }, 0);
-        assert(sum(s2) == s2[0] + sum(s2.drop_first()));
+//        assert(sum(s2) == s2[0] + sum(s2.drop_first()));
     }
 
     pub proof fn sum_indexes(s: Seq<nat>, idx: Seq<int>)

@@ -153,7 +153,7 @@ impl<K> KeyRecoveryMapping<K>
         ensures
             self == other,
     { 
-        assert(self =~= other);
+//        assert(self =~= other);
     }
 
     pub(super) proof fn lemma_corresponds_implies_equals_new(self, s: Seq<u8>, sm: KeyTableStaticMetadata)

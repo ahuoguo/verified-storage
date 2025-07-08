@@ -67,9 +67,9 @@ pub proof fn lemma_seqs_flatten_equal_suffix(s: Seq<Seq<u8>>)
 {
     if s.len() == 1 {
         let last = s[0];
-        assert(s == seq![last]);
+//        assert(s == seq![last]);
         seq![last].lemma_flatten_one_element();
-        assert(seq![last].flatten() == last);
+//        assert(seq![last].flatten() == last);
     }
     else {
         let first = s[0];
@@ -80,8 +80,8 @@ pub proof fn lemma_seqs_flatten_equal_suffix(s: Seq<Seq<u8>>)
         assert(middle == suffix.subrange(0, suffix.len() - 1));
 
         lemma_seqs_flatten_equal_suffix(suffix);
-        assert(suffix.flatten() == middle.flatten() + last);
-        assert(first + suffix.flatten() == first + middle.flatten() + last);
+//        assert(suffix.flatten() == middle.flatten() + last);
+//        assert(first + suffix.flatten() == first + middle.flatten() + last);
     }
 }
 
@@ -98,7 +98,7 @@ pub proof fn lemma_injective_map_is_invertible<K, V>(map: Map<K, V>)
     assert(map.invert().dom() == map.values());
     lemma_injective_map_inverse(map);
     lemma_injective_map_inverse(map.invert());
-    assert(map =~= map.invert().invert());
+//    assert(map =~= map.invert().invert());
 }
 
 // Proves that if a map `map` is injective, then `map.invert()` maps
@@ -123,9 +123,9 @@ pub proof fn lemma_injective_map_inverse<K, V>(map: Map<K, V>)
             // so that cannot be true.
             let k_prime = map.invert()[v];
             assert(map.contains_pair(k, v));
-            assert(map.contains_pair(k_prime, v));
-            assert(k != k_prime);
-            assert(false);
+//            assert(map.contains_pair(k_prime, v));
+//            assert(k != k_prime);
+//            assert(false);
         }
     }
 }
@@ -145,10 +145,10 @@ pub proof fn lemma_seq_len_when_no_dup_and_all_values_in_range(s: Seq<int>, min:
     s.unique_seq_to_set();
     // because s_set only has values between min and max, it's a subset 
     // of the set containing all values between min and max
-    assert(s_set.subset_of(set_int_range(min, max)));
+//    assert(s_set.subset_of(set_int_range(min, max)));
     lemma_int_range(min, max);
     lemma_len_subset(s_set, set_int_range(min, max));
-    assert(s.len() <= set_int_range(min, max).len());
+//    assert(s.len() <= set_int_range(min, max).len());
 }
 
 // This executable function clones a vector of objects of type `T`
@@ -159,17 +159,17 @@ pub exec fn clone_pmcopy_vec<T: PmCopy>(v: &Vec<T>) -> (result: Vec<T>)
         result@ == v@,
 {
     let mut result = Vec::<T>::new();
-    assert(v@.take(0int) =~= Seq::<T>::empty());
+//    assert(v@.take(0int) =~= Seq::<T>::empty());
     for pos in 0..v.len()
         invariant
             result@ == v@.take(pos as int),
         decreases
             v.len() - pos
     {
-        assert(v@.take(pos as int).push(v@[pos as int]) =~= v@.take(pos + 1));
+//        assert(v@.take(pos as int).push(v@[pos as int]) =~= v@.take(pos + 1));
         result.push(v[pos].clone_provable());
     }
-    assert(v@.take(v@.len() as int) =~= v@);
+//    assert(v@.take(v@.len() as int) =~= v@);
     result
 }
 
@@ -181,7 +181,7 @@ pub exec fn extend_vec_u8_from_slice(v: &mut Vec<u8>, s: &[u8])
         v@ == old(v)@ + s@,
 {
     v.extend_from_slice(s);
-    assert(v@ =~= old(v)@ + s@);
+//    assert(v@ =~= old(v)@ + s@);
 }
 
 
@@ -198,20 +198,20 @@ pub proof fn lemma_set_to_seq_contains_iff_set_contains<A>(s: Set<A>, v: A)
     if s.len() != 0 {
         let x = s.choose();
         let s2 = s.remove(x).to_seq();
-        assert(s.to_seq() == Seq::<A>::empty().push(x) + s2);
+//        assert(s.to_seq() == Seq::<A>::empty().push(x) + s2);
         if v == x {
-            assert(s.contains(v));
-            assert(s.to_seq()[0] == v);
-            assert(s.to_seq().contains(v));
+//            assert(s.contains(v));
+//            assert(s.to_seq()[0] == v);
+//            assert(s.to_seq().contains(v));
         }
         else {
             lemma_set_to_seq_contains_iff_set_contains(s.remove(x), v);
             if s.contains(v) {
-                assert(s.remove(x).contains(v));
-                assert(s.remove(x).to_seq().contains(v));
+//                assert(s.remove(x).contains(v));
+//                assert(s.remove(x).to_seq().contains(v));
                 let i = choose|i: int| 0 <= i < s2.len() && s2[i] == v;
-                assert(s.to_seq()[i + 1] == v);
-                assert(s.to_seq().contains(v));
+//                assert(s.to_seq()[i + 1] == v);
+//                assert(s.to_seq().contains(v));
             }
         }
     }
@@ -283,21 +283,21 @@ pub proof fn lemma_bijection_makes_sets_have_equal_size<A, B>(
 
     assert(q2.to_set() =~= s2) by {
         assert forall|y: B| #[trigger] q2.to_set().contains(y) implies s2.contains(y) by {
-            assert(q2.contains(y));
+//            assert(q2.contains(y));
             let i = choose|i: int| 0 <= i < q2.len() && q2[i] == y;
-            assert(y == f(q1[i]));
+//            assert(y == f(q1[i]));
             assert(q1.contains(q1[i]));
-            assert(s1.contains(q1[i]));
-            assert(s2.contains(f(q1[i]))); // by bijectivity
+//            assert(s1.contains(q1[i]));
+//            assert(s2.contains(f(q1[i]))); // by bijectivity
         }
         assert forall|y: B| #[trigger] s2.contains(y) implies q2.to_set().contains(y) by {
-            assert(s1.contains(g(y))); // by bijectivity
+//            assert(s1.contains(g(y))); // by bijectivity
             let x = g(y);
             assert(q1.contains(x));
             let i = choose|i: int| 0 <= i < q1.len() && q1[i] == x;
             assert(q2[i] == f(x));
-            assert(q2.to_set().contains(f(x)));
-            assert(f(x) == y);
+//            assert(q2.to_set().contains(f(x)));
+//            assert(f(x) == y);
         }
     }
 
@@ -305,12 +305,12 @@ pub proof fn lemma_bijection_makes_sets_have_equal_size<A, B>(
 
     assert(q2.no_duplicates()) by {
         assert forall|i: int, j: int| 0 <= i < q2.len() && 0 <= j < q2.len() && i != j implies q2[i] != q2[j] by {
-            assert(q2[i] == f(q1[i]) && q2[j] == f(q1[j]));
+//            assert(q2[i] == f(q1[i]) && q2[j] == f(q1[j]));
             assert(q1.contains(q1[i]) && q1.contains(q1[j]));
-            assert(s1.contains(q1[i]) && s1.contains(q1[j]));
+//            assert(s1.contains(q1[i]) && s1.contains(q1[j]));
             let x1 = g(q2[i]);
             let x2 = g(q2[j]);
-            assert(x1 == q1[i] && x2 == q1[j]);
+//            assert(x1 == q1[i] && x2 == q1[j]);
         }
     }
 
@@ -372,14 +372,14 @@ pub proof fn lemma_filter_preserves_no_duplicates<A>(s: Seq<A>, pred: spec_fn(A)
     reveal(Seq::filter);
     if s.len() > 0 {
         lemma_filter_preserves_no_duplicates(s.drop_last(), pred);
-        assert(s.drop_last().filter(pred).no_duplicates());
+//        assert(s.drop_last().filter(pred).no_duplicates());
         if s.drop_last().filter(pred).contains(s.last()) {
             lemma_if_filter_contains_then_original_contains(s.drop_last(), pred, s.last());
-            assert(s.drop_last().contains(s.last()));
+//            assert(s.drop_last().contains(s.last()));
             let i = choose|i: int| 0 <= i < s.drop_last().len() && s.drop_last()[i] == s.last();
             let j = s.len() - 1;
-            assert(0 <= i < s.len() && 0 <= j < s.len() && i != j && s[i] == s[j]);
-            assert(false);
+//            assert(0 <= i < s.len() && 0 <= j < s.len() && i != j && s[i] == s[j]);
+//            assert(false);
         }
     }
 }
@@ -436,18 +436,18 @@ pub proof fn lemma_two_seqs_with_no_duplicates_and_same_to_set_are_permutations<
     
     broadcast use to_multiset_contains;
     assert forall|x| m1.contains(x) implies m2.contains(x) && m2.count(x) == m1.count(x) by {
-        assert(s1.contains(x));
-        assert(s1.to_set().contains(x));
+//        assert(s1.contains(x));
+//        assert(s1.to_set().contains(x));
         assert(s2.to_set().contains(x));
-        assert(s2.contains(x));
+//        assert(s2.contains(x));
     }
     assert forall|x| m2.contains(x) implies m1.contains(x) && m2.count(x) == m1.count(x) by {
-        assert(s2.contains(x));
-        assert(s2.to_set().contains(x));
+//        assert(s2.contains(x));
+//        assert(s2.to_set().contains(x));
         assert(s1.to_set().contains(x));
-        assert(s1.contains(x));
+//        assert(s1.contains(x));
     }
-    assert(m1 =~= m2);
+//    assert(m1 =~= m2);
 }
 
 }

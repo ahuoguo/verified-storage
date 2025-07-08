@@ -113,9 +113,9 @@ impl<PM> PoWERApplication<PM> for ExampleApp
                 <Self as PoWERApplication<PM>>::valid(*self, power_pm@.durable_state),
                 forall |s1, s2| <Self as PoWERApplication<PM>>::valid(*self, s2) ==> #[trigger] perm_factory.permits(s1, s2),
         {
-            assert forall |s1, s2| <Self as PoWERApplication<PM>>::valid(*self, s1) && can_result_from_partial_write(s2, s1, self.addr as int, seq![self.val0]) implies #[trigger] perm_factory.permits(s1, s2) by {
-                crate::pmem::pmemutil_v::lemma_can_result_from_partial_write_effect(s2, s1, self.addr as int, seq![self.val0]);
-            }
+//            assert forall |s1, s2| <Self as PoWERApplication<PM>>::valid(*self, s1) && can_result_from_partial_write(s2, s1, self.addr as int, seq![self.val0]) implies #[trigger] perm_factory.permits(s1, s2) by {
+//                crate::pmem::pmemutil_v::lemma_can_result_from_partial_write_effect(s2, s1, self.addr as int, seq![self.val0]);
+//            }
 
             assert forall |s1, s2| <Self as PoWERApplication<PM>>::valid(*self, s1) && can_result_from_partial_write(s2, s1, self.addr as int, seq![self.val1]) implies #[trigger] perm_factory.permits(s1, s2) by {
                 crate::pmem::pmemutil_v::lemma_can_result_from_partial_write_effect(s2, s1, self.addr as int, seq![self.val1]);

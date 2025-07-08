@@ -325,11 +325,11 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         digest.write_bytes(data1_c);
         digest.write_bytes(data2_c);
         proof {
-            assert(digest.bytes_in_digest() =~= data1_c@ + data2_c@);
+//            assert(digest.bytes_in_digest() =~= data1_c@ + data2_c@);
         }
         let computed_crc = digest.sum64();
 
-        assert(computed_crc == spec_crc_u64(data1_c@ + data2_c@));
+//        assert(computed_crc == spec_crc_u64(data1_c@ + data2_c@));
 
         // Check whether the CRCs match. This is done in an external body function so that we can convert the maybe-corrupted
         // CRC to a u64 for comparison to the computed CRC.
@@ -348,8 +348,8 @@ broadcast use {vstd::seq_lib::group_seq_properties,
                 pmc.maybe_corrupted_zero(crc_c@, true_crc_bytes);
                 assert(extract_bytes(data_c, 0, data1_c@.len()) == data1_c@);
                 assert(extract_bytes(data_c, data1_c@.len(), data2_c@.len()) == data2_c@);
-                assert(data1_c@ == true_bytes1);
-                assert(data2_c@ == true_bytes2);
+//                assert(data1_c@ == true_bytes1);
+//                assert(data2_c@ == true_bytes2);
             }
 
             if {
@@ -360,8 +360,8 @@ broadcast use {vstd::seq_lib::group_seq_properties,
                                         crc_c@, true_crc_bytes, crc_addrs);
                 assert(extract_bytes(data_c, 0, data1_c@.len()) == data1_c@);
                 assert(extract_bytes(data_c, data1_c@.len(), data2_c@.len()) == data2_c@);
-                assert(data1_c@ == true_bytes1);
-                assert(data2_c@ == true_bytes2);
+//                assert(data1_c@ == true_bytes1);
+//                assert(data2_c@ == true_bytes2);
             }
         }
         crcs_match
@@ -434,7 +434,7 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         }
         
         let cdb_val = cdb_c.extract_cdb(Ghost(true_cdb_bytes), Ghost(cdb_addrs), Ghost(pmc));
-        assert(cdb_val.spec_to_bytes() == cdb_c@);
+//        assert(cdb_val.spec_to_bytes() == cdb_c@);
 
         // If the read encoded CDB is one of the expected ones, translate
         // it into a boolean; otherwise, indicate corruption.
@@ -490,13 +490,13 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         // Then, we just have to reason about this one written chunk. There are two cases:
         // (1) the chunk isn't flushed at all and (2) the chunk is entirely flushed.
 
-        assert(chunk_trigger(chunk));
+//        assert(chunk_trigger(chunk));
         if chunk_corresponds(new_durable_state, durable_state, chunk) {
             assert forall|addr: int| 0 <= addr < new_durable_state.len()
                 implies #[trigger] new_durable_state[addr] == durable_state[addr] by {
                 assert(chunk_trigger(addr / const_persistence_chunk_size()));
             }
-            assert(new_durable_state =~= durable_state);
+//            assert(new_durable_state =~= durable_state);
         }
         else {
             assert forall|addr: int| 0 <= addr < new_durable_state.len()
@@ -504,7 +504,7 @@ broadcast use {vstd::seq_lib::group_seq_properties,
                         update_bytes(durable_state, write_addr, bytes_to_write)[addr] by {
                 assert(chunk_trigger(addr / const_persistence_chunk_size()));
             }
-            assert(new_durable_state =~= update_bytes(durable_state, write_addr, bytes_to_write));
+//            assert(new_durable_state =~= update_bytes(durable_state, write_addr, bytes_to_write));
         }
     }
 
@@ -591,7 +591,7 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         ensures
             recover_fn(new_durable_state) == recover_fn(durable_state)
     {
-        assert(new_durable_state.len() == durable_state.len());
+//        assert(new_durable_state.len() == durable_state.len());
         assert forall|i: int| 0 <= i < durable_state.len() && !addrs.contains(i)
             implies new_durable_state[i] == durable_state[i] by {
             lemma_auto_can_result_from_partial_write_effect();
@@ -704,8 +704,8 @@ broadcast use {vstd::seq_lib::group_seq_properties,
             mem.subrange(pos2 as int, pos3 as int) ==
             mem.subrange(pos1 as int, pos4 as int).subrange(pos2 - pos1, pos3 - pos1)
     {
-        assert(mem.subrange(pos2 as int, pos3 as int) =~=
-               mem.subrange(pos1 as int, pos4 as int).subrange(pos2 - pos1, pos3 - pos1));
+//        assert(mem.subrange(pos2 as int, pos3 as int) =~=
+//               mem.subrange(pos1 as int, pos4 as int).subrange(pos2 - pos1, pos3 - pos1));
     }
 
     // This lemma proves that a subrange of a subrange is equal to the result of a single call to
@@ -716,11 +716,11 @@ broadcast use {vstd::seq_lib::group_seq_properties,
                0 <= s1 <= e1 <= mem.len() && 0 <= s2 <= e2 <= e1 - s1 ==>
                mem.subrange(s1, e1).subrange(s2, e2) == mem.subrange(s1 + s2, s1 + e2)
     {
-        assert forall|s1: int, e1: int, s2: int, e2: int|
-               0 <= s1 <= e1 <= mem.len() && 0 <= s2 <= e2 <= e1 - s1 implies
-               mem.subrange(s1, e1).subrange(s2, e2) == mem.subrange(s1 + s2, s1 + e2) by {
-            mem.lemma_slice_of_slice(s1, e1, s2, e2);
-        }
+//        assert forall|s1: int, e1: int, s2: int, e2: int|
+//               0 <= s1 <= e1 <= mem.len() && 0 <= s2 <= e2 <= e1 - s1 implies
+//               mem.subrange(s1, e1).subrange(s2, e2) == mem.subrange(s1 + s2, s1 + e2) by {
+//            mem.lemma_slice_of_slice(s1, e1, s2, e2);
+//        }
     }
 
     pub proof fn lemma_smaller_range_of_seq_is_subrange(mem1: Seq<u8>, i: int, j: int, k: int, l: int)
@@ -729,17 +729,17 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         ensures 
             mem1.subrange(i, j).subrange(k - i, l - i) == mem1.subrange(k, l) 
     {
-        assert(mem1.subrange(k, l) == mem1.subrange(i + k - i, i + l - i));
-        assert(mem1.subrange(i, j).subrange(k - i, l - i) == mem1.subrange(i + k - i, i + l - i));
+//        assert(mem1.subrange(k, l) == mem1.subrange(i + k - i, i + l - i));
+//        assert(mem1.subrange(i, j).subrange(k - i, l - i) == mem1.subrange(i + k - i, i + l - i));
     }
 
     pub proof fn lemma_auto_smaller_range_of_seq_is_subrange(mem1: Seq<u8>)
         ensures 
             forall |i: int, j, k: int, l: int| 0 <= i <= k <= l <= j <= mem1.len() ==> mem1.subrange(i, j).subrange(k - i, l - i) == mem1.subrange(k, l) 
     {
-        assert forall |i: int, j, k: int, l: int| 0 <= i <= k <= l <= j <= mem1.len() implies mem1.subrange(i, j).subrange(k - i, l - i) == mem1.subrange(k, l) by {
-            lemma_smaller_range_of_seq_is_subrange(mem1, i, j, k, l);
-        }
+//        assert forall |i: int, j, k: int, l: int| 0 <= i <= k <= l <= j <= mem1.len() implies mem1.subrange(i, j).subrange(k - i, l - i) == mem1.subrange(k, l) by {
+//            lemma_smaller_range_of_seq_is_subrange(mem1, i, j, k, l);
+//        }
     }
 
     // This lemma proves that doing an update followed by a subrange gives you the
@@ -751,7 +751,7 @@ broadcast use {vstd::seq_lib::group_seq_properties,
         ensures
             (#[trigger] update_bytes(s, addr, bytes)).subrange(addr, addr + bytes.len()) == bytes
     {
-        assert(update_bytes(s, addr, bytes).subrange(addr, addr + bytes.len()) =~= bytes);
+//        assert(update_bytes(s, addr, bytes).subrange(addr, addr + bytes.len()) =~= bytes);
     }
 
     pub open spec fn no_outstanding_writes(v: PersistentMemoryRegionView) -> bool

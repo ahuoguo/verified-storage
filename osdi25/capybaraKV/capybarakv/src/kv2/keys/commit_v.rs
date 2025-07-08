@@ -52,16 +52,15 @@ where
         broadcast use broadcast_seqs_match_in_range_can_narrow_range;
         broadcast use group_validate_row_addr;
 
-        assert(self.valid(jv_after_commit));
+//        assert(self.valid(jv_after_commit));
 
         proof {
             self.memory_mapping@.lemma_corresponds_implication_for_free_list_length(self.free_list@, self.sm);
         }
 
-        assert(self@ =~= (KeyTableView{ durable: old(self)@.tentative.unwrap(), used_slots: self@.used_slots,
-                                        ..old(self)@ }));
+//        assert(self@ =~= (KeyTableView{ durable: old(self)@.tentative.unwrap(), used_slots: self@.used_slots,
+//                                        ..old(self)@ }));
     }
 }
 
 }
-

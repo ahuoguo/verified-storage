@@ -160,7 +160,7 @@ pub proof fn lemma_can_result_from_write_effect_on_read_state(
 
     assert(s1.subrange(0, start) =~= s2.subrange(0, start));
     assert(s1.subrange(end, s1.len() as int) =~= s2.subrange(end, s2.len() as int));
-    assert(v2.read_state.subrange(start, end) =~= bytes);
+//    assert(v2.read_state.subrange(start, end) =~= bytes);
 }
 
 
@@ -233,8 +233,8 @@ pub proof fn lemma_subrange_subrange<T>(s: Seq<T>, outer_start: int, outer_end: 
 
 
 {
-    assert(s.subrange(inner_start, inner_end) =~=
-           s.subrange(outer_start, outer_end).subrange(inner_start - outer_start, inner_end - outer_start));
+//    assert(s.subrange(inner_start, inner_end) =~=
+//           s.subrange(outer_start, outer_end).subrange(inner_start - outer_start, inner_end - outer_start));
 }
 
 // Proves, in a way that can be used by broadcast, that a subrange of a subrange is equivalent to a single
@@ -272,7 +272,7 @@ pub broadcast proof fn broadcast_update_bytes_effect(s1: Seq<u8>, addr: int, byt
 {
     let end = addr + bytes.len();
     let s2 = update_bytes(s1, addr, bytes);
-    assert(s2.subrange(addr, end) =~= bytes);
+//    assert(s2.subrange(addr, end) =~= bytes);
     assert(s2.subrange(0, addr) =~= s1.subrange(0, addr));
     assert(s2.subrange(end, s1.len() as int) =~= s1.subrange(end, s1.len() as int));
 }
@@ -309,7 +309,7 @@ pub broadcast proof fn lemma_concatenate_subranges<T>(s: Seq<T>, pos1: int, pos2
     ensures
         s.subrange(pos1, pos3) == #[trigger] s.subrange(pos1, pos2) + #[trigger] s.subrange(pos2, pos3),
 {
-    assert(s.subrange(pos1, pos3) =~= s.subrange(pos1, pos2) + s.subrange(pos2, pos3));
+//    assert(s.subrange(pos1, pos3) =~= s.subrange(pos1, pos2) + s.subrange(pos2, pos3));
 }
 
 // Proves that concatenating three consecutive subranges gives the same result as a single subrange
@@ -321,8 +321,8 @@ pub proof fn lemma_concatenate_three_subranges<T>(s: Seq<T>, pos1: int, pos2: in
         s.subrange(pos1, pos4) ==
             s.subrange(pos1, pos2) + s.subrange(pos2, pos3) + s.subrange(pos3, pos4),
 {
-    assert(s.subrange(pos1, pos4) =~=
-               s.subrange(pos1, pos2) + s.subrange(pos2, pos3) + s.subrange(pos3, pos4));
+//    assert(s.subrange(pos1, pos4) =~=
+//               s.subrange(pos1, pos2) + s.subrange(pos2, pos3) + s.subrange(pos3, pos4));
 }
 
 // Proves that concatenating four consecutive subranges is equivalent to a single subrange operation.
@@ -334,9 +334,9 @@ pub proof fn lemma_concatenate_four_subranges<T>(s: Seq<T>, pos1: int, pos2: int
             s.subrange(pos1, pos2) + s.subrange(pos2, pos3) + s.subrange(pos3, pos4)
             + s.subrange(pos4, pos5),
 {
-    assert(s.subrange(pos1, pos5) =~=
-               s.subrange(pos1, pos2) + s.subrange(pos2, pos3) + s.subrange(pos3, pos4)
-               + s.subrange(pos4, pos5));
+//    assert(s.subrange(pos1, pos5) =~=
+//               s.subrange(pos1, pos2) + s.subrange(pos2, pos3) + s.subrange(pos3, pos4)
+//               + s.subrange(pos4, pos5));
 }
 
 // Proves, in a way that can be used by broadcast, that if two sequences match in a range,
@@ -400,4 +400,3 @@ pub broadcast group group_update_bytes_effect {
 }
 
 }
-

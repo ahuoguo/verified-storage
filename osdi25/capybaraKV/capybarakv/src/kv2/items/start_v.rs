@@ -151,8 +151,8 @@ where
         
         let ghost recovered_state = Self::recover(journal@.read_state, item_addrs@, *sm).unwrap();
         assert(items@.durable =~= recovered_state);
-        assert(items@.tentative == Some(recovered_state));
-        assert(recovered_state.m.dom() =~= item_addrs@);
+//        assert(items@.tentative == Some(recovered_state));
+//        assert(recovered_state.m.dom() =~= item_addrs@);
 
         proof {
             items.internal_view().lemma_corresponds_implication_for_free_list_length(*sm);

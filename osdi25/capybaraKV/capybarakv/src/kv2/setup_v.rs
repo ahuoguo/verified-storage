@@ -87,7 +87,7 @@ where
         let item_table_end = key_table_end.add_checked(&item_table_size);
         let list_table_size = ListTable::<PM, L>::space_needed_for_setup(ps, &item_table_end);
         let list_table_end = item_table_end.add_checked(&list_table_size);
-        assert(list_table_end@ == Self::spec_space_needed_for_setup(*ps));
+//        assert(list_table_end@ == Self::spec_space_needed_for_setup(*ps));
         if list_table_end.is_overflowed() {
             Err(KvError::OutOfSpace)
         }
@@ -127,7 +127,7 @@ where
         let sm_crc = calculate_crc(sm);
         pm.serialize_and_write(sm_addr, sm);
         pm.serialize_and_write(sm_crc_addr, &sm_crc);
-        assert(recover_static_metadata::<K, I, L>(pm@.read_state, *jc) =~= Some(*sm));
+//        assert(recover_static_metadata::<K, I, L>(pm@.read_state, *jc) =~= Some(*sm));
     }
     
     pub exec fn setup(pm: &mut PM, ps: &SetupParameters) -> (result: Result<(), KvError>)
@@ -254,7 +254,7 @@ where
             );
         }
     
-        assert(recover_kv::<PM, K, I, L>(pm@.read_state, jc) =~= Some(RecoveredKvStore::<K, I, L>::init(*ps)));
+//        assert(recover_kv::<PM, K, I, L>(pm@.read_state, jc) =~= Some(RecoveredKvStore::<K, I, L>::init(*ps)));
         Ok(())
     }
 }

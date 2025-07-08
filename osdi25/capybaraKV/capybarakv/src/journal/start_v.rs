@@ -41,7 +41,7 @@ where
         let journal_version_metadata_end = size_of::<JournalVersionMetadata>() as u64;
         let journal_version_metadata_crc_addr = exec_round_up_to_alignment::<u64>(journal_version_metadata_end);
     
-        assert(spec_journal_version_metadata_start() == 0);
+//        assert(spec_journal_version_metadata_start() == 0);
         exec_recover_object(pm, 0, journal_version_metadata_crc_addr)
     }
     
@@ -58,27 +58,27 @@ where
             }
     {
         if vm.version_number != 1 {
-            assert(false);
+//            assert(false);
             return None;
         }
     
         if vm.program_guid != JOURNAL_PROGRAM_GUID {
-            assert(false);
+//            assert(false);
             return None;
         }
     
         let journal_version_metadata_end = size_of::<JournalVersionMetadata>() as u64;
         let journal_version_metadata_crc_addr = exec_round_up_to_alignment::<u64>(journal_version_metadata_end);
-        assert(journal_version_metadata_crc_addr == spec_journal_version_metadata_crc_start());
+//        assert(journal_version_metadata_crc_addr == spec_journal_version_metadata_crc_start());
         let journal_version_metadata_crc_end = journal_version_metadata_crc_addr + size_of::<u64>() as u64;
-        assert(journal_version_metadata_crc_end == spec_journal_version_metadata_crc_end());
+//        assert(journal_version_metadata_crc_end == spec_journal_version_metadata_crc_end());
         let journal_static_metadata_start =
             exec_round_up_to_alignment::<JournalStaticMetadata>(journal_version_metadata_crc_end);
-        assert(journal_static_metadata_start == spec_journal_static_metadata_start());
+//        assert(journal_static_metadata_start == spec_journal_static_metadata_start());
         let journal_static_metadata_end = journal_static_metadata_start + size_of::<JournalStaticMetadata>() as u64;
-        assert(journal_static_metadata_end == spec_journal_static_metadata_end());
+//        assert(journal_static_metadata_end == spec_journal_static_metadata_end());
         let journal_static_metadata_crc_start = exec_round_up_to_alignment::<u64>(journal_static_metadata_end);
-        assert(journal_static_metadata_crc_start == spec_journal_static_metadata_crc_start());
+//        assert(journal_static_metadata_crc_start == spec_journal_static_metadata_crc_start());
     
         exec_recover_object(pm, journal_static_metadata_start, journal_static_metadata_crc_start)
     }
@@ -193,9 +193,9 @@ where
         proof {
             lemma_addresses_in_entry_dont_affect_recovery(powerpm@.durable_state, vm, *sm,
                                                           entries_bytes, entries, num_entries_installed);
-            assert(entries[num_entries_installed].fits(*sm)) by {
-                lemma_journal_entries_valid_implies_one_valid(entries, *sm, num_entries_installed);
-            }
+//            assert(entries[num_entries_installed].fits(*sm)) by {
+//                lemma_journal_entries_valid_implies_one_valid(entries, *sm, num_entries_installed);
+//            }
             assert forall|s| can_result_from_partial_write(s, powerpm@.durable_state, write_addr as int, bytes_to_write@)
                 implies #[trigger] perm_factory.permits(powerpm@.durable_state, s) by {
                 lemma_if_addresses_unreachable_in_recovery_then_recovery_unchanged_by_write(
@@ -203,7 +203,7 @@ where
                     entries[num_entries_installed as int].addrs(),
                     |s| recover_journal(s),
                 );
-                assert(recover_journal(s) == recover_journal(powerpm@.durable_state));
+//                assert(recover_journal(s) == recover_journal(powerpm@.durable_state));
                 Self::lemma_recover_doesnt_change_size(powerpm@.durable_state);
             }
         }
@@ -218,12 +218,12 @@ where
                     |s| recover_journal(s),
                 );
             }
-            assert(Some(powerpm@.read_state) ==
-                   apply_journal_entry(old(powerpm)@.read_state, entries[num_entries_installed], *sm));
-            assert(recover_journal(powerpm@.durable_state) == recover_journal(old(powerpm)@.durable_state));
-            assert(recover_journal_length(powerpm@.durable_state, *sm) == Some(entries_bytes.len() as u64));
+//            assert(Some(powerpm@.read_state) ==
+//                   apply_journal_entry(old(powerpm)@.read_state, entries[num_entries_installed], *sm));
+//            assert(recover_journal(powerpm@.durable_state) == recover_journal(old(powerpm)@.durable_state));
+//            assert(recover_journal_length(powerpm@.durable_state, *sm) == Some(entries_bytes.len() as u64));
     
-            assert(entries.skip(num_entries_installed)[0] =~= entries[num_entries_installed]);
+//            assert(entries.skip(num_entries_installed)[0] =~= entries[num_entries_installed]);
             assert(entries.skip(num_entries_installed).skip(1) =~= entries.skip(num_entries_installed + 1));
         }
     }
@@ -276,8 +276,8 @@ where
         let twice_u64_size: usize = u64_size + u64_size;
         let ghost commit_state = apply_journal_entries(powerpm@.read_state, entries, *sm).unwrap();
     
-        assert(entries.skip(0) =~= entries);
-        assert(entries_bytes@.skip(0) =~= entries_bytes@);
+//        assert(entries.skip(0) =~= entries);
+//        assert(entries_bytes@.skip(0) =~= entries_bytes@);
         proof {
             lemma_apply_journal_entries_some_iff_journal_entries_valid(old(powerpm)@.read_state, entries, *sm);
         }
@@ -328,26 +328,26 @@ where
             
             let ghost durable_state_at_start_of_loop = powerpm@.durable_state;
     
-            assert(start + twice_u64_size <= end);
-            assert(parse_journal_entry(entries_bytes@.skip(start as int)) is Some);
-            assert(parse_journal_entry(entries_bytes@.skip(start as int)).unwrap().0 == entries[num_entries_installed]);
+//            assert(start + twice_u64_size <= end);
+//            assert(parse_journal_entry(entries_bytes@.skip(start as int)) is Some);
+//            assert(parse_journal_entry(entries_bytes@.skip(start as int)).unwrap().0 == entries[num_entries_installed]);
             let entries_bytes_slice = entries_bytes.as_slice();
             let addr = u64_from_le_bytes(slice_subrange(entries_bytes_slice, start, start + u64_size));
             let len = u64_from_le_bytes(slice_subrange(entries_bytes_slice, start + u64_size, start + twice_u64_size));
             assert(entries_bytes_slice@.subrange(start as int, (start + u64_size) as int) ==
                    extract_section(entries_bytes@.skip(start as int), 0, u64::spec_size_of()));
-            assert(addr == u64::spec_from_bytes(extract_section(entries_bytes@.skip(start as int),
-                                                                0, u64::spec_size_of())));
+//            assert(addr == u64::spec_from_bytes(extract_section(entries_bytes@.skip(start as int),
+//                                                                0, u64::spec_size_of())));
             assert(entries_bytes_slice@.subrange((start + u64_size) as int, (start + u64_size + u64_size) as int) ==
                    extract_section(entries_bytes@.skip(start as int), u64::spec_size_of() as int, u64::spec_size_of()));
-            assert(len == u64::spec_from_bytes(extract_section(entries_bytes@.skip(start as int),
-                                                               u64::spec_size_of() as int, u64::spec_size_of())));
-            assert(start + twice_u64_size + len as usize <= end);
+//            assert(len == u64::spec_from_bytes(extract_section(entries_bytes@.skip(start as int),
+//                                                               u64::spec_size_of() as int, u64::spec_size_of())));
+//            assert(start + twice_u64_size + len as usize <= end);
             let bytes_to_write = slice_subrange(entries_bytes_slice, start + twice_u64_size,
                                                 start + twice_u64_size + len as usize);
-            assert(bytes_to_write@ == extract_section(entries_bytes@.skip(start as int),
-                                                     (u64::spec_size_of() + u64::spec_size_of()) as int,
-                                                     len as nat));
+//            assert(bytes_to_write@ == extract_section(entries_bytes@.skip(start as int),
+//                                                     (u64::spec_size_of() + u64::spec_size_of()) as int,
+//                                                     len as nat));
             let ghost entry = JournalEntry{ start: addr as int, bytes_to_write: bytes_to_write@ };
             proof {
                 lemma_parse_journal_entry_implications(entries_bytes@, entries, start as int, num_entries_installed);
@@ -358,8 +358,8 @@ where
                                                                     Ghost(entries_bytes@), Ghost(num_entries_installed),
                                                                     Ghost(entries), Ghost(commit_state));
             proof {
-                assert(entries.skip(num_entries_installed) =~= seq![entries[num_entries_installed as int]] +
-                       entries.skip(num_entries_installed + 1));
+//                assert(entries.skip(num_entries_installed) =~= seq![entries[num_entries_installed as int]] +
+//                       entries.skip(num_entries_installed + 1));
                 num_entries_installed = num_entries_installed + 1;
             }
             
@@ -408,20 +408,20 @@ where
         proof {
             broadcast use pmcopy_axioms;
             broadcast use group_update_bytes_effect;
-            assert(sm.committed_cdb_start as int % const_persistence_chunk_size() == 0);
-            assert(new_cdb.spec_to_bytes().len() == const_persistence_chunk_size()); // uses pmcopy_axioms
-            assert(spec_recovery_equivalent_for_app(powerpm@.durable_state, powerpm@.durable_state));
-            assert(perm_factory.permits(powerpm@.durable_state, powerpm@.durable_state));
-            assert(recover_version_metadata(new_state) == Some(vm));
-            assert(recover_static_metadata(new_state, vm) == Some(*sm));
-            assert(recover_committed_cdb(new_state, *sm) == Some(false)); // uses pmcopy_axioms
-            assert(spec_recovery_equivalent_for_app(new_state, old(powerpm)@.durable_state));
+//            assert(sm.committed_cdb_start as int % const_persistence_chunk_size() == 0);
+//            assert(new_cdb.spec_to_bytes().len() == const_persistence_chunk_size()); // uses pmcopy_axioms
+//            assert(spec_recovery_equivalent_for_app(powerpm@.durable_state, powerpm@.durable_state));
+//            assert(perm_factory.permits(powerpm@.durable_state, powerpm@.durable_state));
+//            assert(recover_version_metadata(new_state) == Some(vm));
+//            assert(recover_static_metadata(new_state, vm) == Some(*sm));
+//            assert(recover_committed_cdb(new_state, *sm) == Some(false)); // uses pmcopy_axioms
+//            assert(spec_recovery_equivalent_for_app(new_state, old(powerpm)@.durable_state));
             lemma_auto_only_two_crash_states_introduced_by_aligned_chunk_write();
         }
         let tracked perm = perm_factory.grant_permission();
         powerpm.serialize_and_write::<PermFactory::Perm, u64>(sm.committed_cdb_start, &new_cdb, Tracked(perm));
         powerpm.flush();
-        assert(powerpm@.read_state == new_state);
+//        assert(powerpm@.read_state == new_state);
     }
 
     pub exec fn start<PermFactory>(
@@ -476,7 +476,7 @@ where
             app_area_end: sm.app_area_end,
         };
 
-        assert(Self::recover(powerpm@.durable_state).unwrap().constants.app_area_end == powerpm@.len());
+//        assert(Self::recover(powerpm@.durable_state).unwrap().constants.app_area_end == powerpm@.len());
         if cdb {
             let journal_length = Self::read_journal_length(pm, Ghost(vm), &sm).ok_or(JournalError::CRCError)?;
             let entries_bytes =

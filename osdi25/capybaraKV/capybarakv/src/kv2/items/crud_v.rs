@@ -79,8 +79,8 @@ where
         broadcast use group_validate_row_addr;
         broadcast use broadcast_seqs_match_in_range_can_narrow_range;
 
-        assert(Self::recover(s2, iv.as_durable_snapshot().m.dom(), sm) =~=
-               Self::recover(s1, iv.as_durable_snapshot().m.dom(), sm));
+//        assert(Self::recover(s2, iv.as_durable_snapshot().m.dom(), sm) =~=
+//               Self::recover(s1, iv.as_durable_snapshot().m.dom(), sm));
     }
 
     proof fn lemma_writing_to_free_slot_has_permission_later_forall<PermFactory>(
@@ -213,7 +213,7 @@ where
             },
             Some(a) => a,
         };
-        assert(old(self).free_list@[self.free_list@.len() as int] == row_addr);
+//        assert(old(self).free_list@[self.free_list@.len() as int] == row_addr);
 
         let item_addr = row_addr + self.sm.row_item_start;
         let item_crc_addr = row_addr + self.sm.row_item_crc_start;
@@ -226,8 +226,8 @@ where
             ItemRowDisposition::InPendingAllocationList{ pos: self.pending_allocations.len() as nat, item: *item };
         self.row_info = Ghost(self.row_info@.insert(row_addr, disposition));
         self.pending_allocations.push(row_addr);
-        assert(self@.durable =~= old(self)@.durable);
-        assert(self@.tentative =~= Some(old(self)@.tentative.unwrap().create(row_addr, *item)));
+//        assert(self@.durable =~= old(self)@.durable);
+//        assert(self@.tentative =~= Some(old(self)@.tentative.unwrap().create(row_addr, *item)));
         Ok(row_addr)
     }
 
@@ -258,8 +258,8 @@ where
         };
         self.row_info = Ghost(self.row_info@.insert(row_addr, disposition));
         self.pending_deallocations.push(row_addr);
-        assert(self@.durable =~= old(self)@.durable);
-        assert(self@.tentative =~= Some(old(self)@.tentative.unwrap().delete(row_addr)));
+//        assert(self@.durable =~= old(self)@.durable);
+//        assert(self@.tentative =~= Some(old(self)@.tentative.unwrap().delete(row_addr)));
     }
 
 }

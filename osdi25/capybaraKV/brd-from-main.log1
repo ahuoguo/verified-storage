@@ -1,0 +1,1977 @@
+    Finished `release` profile [optimized] target(s) in 1.53s
+     Running `/local/abai/verus/source/target/release/minimize -d ./tmp /local/abai/verified-storage/osdi25/capybaraKV/capybarakv/src/lib.d`
+original verification time: 59083ms
+minimization of ./tmp/0/lib.rs is completed
+minimization of ./tmp/1/common/mod.rs is completed
+minimization of ./tmp/8/journal/mod.rs is completed
+commenting out line Lines { lines: 123..=123 } in "./tmp/3/common/recover_v.rs"
+verus failed with time: 9010ms, reverting
+commenting out line Lines { lines: 127..=127 } in "./tmp/3/common/recover_v.rs"
+verus failed with time: 9921ms, reverting
+commenting out line Lines { lines: 157..=157 } in "./tmp/3/common/recover_v.rs"
+verus failed with time: 10048ms, reverting
+commenting out line Lines { lines: 182..=182 } in "./tmp/3/common/recover_v.rs"
+verus failed with time: 14221ms, reverting
+commenting out line Lines { lines: 186..=186 } in "./tmp/3/common/recover_v.rs"
+verus failed with time: 11919ms, reverting
+minimization of ./tmp/3/common/recover_v.rs is completed
+commenting out line Lines { lines: 84..=84 } in "./tmp/5/common/subrange_v.rs"
+verus failed with time: 101289ms, reverting
+commenting out line Lines { lines: 118..=120 } in "./tmp/2/common/align_v.rs"
+verus failed with time: 107444ms, reverting
+commenting out line Lines { lines: 62..=62 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 112080ms, keeping it commented out
+commenting out line Lines { lines: 69..=69 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 115759ms, keeping it commented out
+commenting out line Lines { lines: 110..=110 } in "./tmp/6/common/table_v.rs"
+verus succeeded with time: 118788ms, keeping it commented out
+commenting out line Lines { lines: 211..=211 } in "./tmp/4/common/saturate_v.rs"
+verus succeeded with time: 118959ms, keeping it commented out
+commenting out line Lines { lines: 103..=103 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 111018ms, keeping it commented out
+commenting out line Lines { lines: 85..=86 } in "./tmp/5/common/subrange_v.rs"
+verus failed with time: 109848ms, reverting
+commenting out line Lines { lines: 121..=121 } in "./tmp/2/common/align_v.rs"
+verus succeeded with time: 115328ms, keeping it commented out
+commenting out line Lines { lines: 63..=63 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 113815ms, keeping it commented out
+commenting out line Lines { lines: 133..=135 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 109990ms, reverting
+commenting out line Lines { lines: 212..=214 } in "./tmp/4/common/saturate_v.rs"
+verus failed with time: 109997ms, reverting
+commenting out line Lines { lines: 71..=71 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 115626ms, keeping it commented out
+commenting out line Lines { lines: 201..=201 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 117091ms, keeping it commented out
+commenting out line Lines { lines: 106..=106 } in "./tmp/5/common/subrange_v.rs"
+verus failed with time: 106889ms, reverting
+commenting out line Lines { lines: 136..=139 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 104095ms, reverting
+commenting out line Lines { lines: 122..=124 } in "./tmp/2/common/align_v.rs"
+verus failed with time: 110715ms, reverting
+minimization of ./tmp/2/common/align_v.rs is completed
+minimization of ./tmp/11/journal/impl_v.rs is completed
+minimization of ./tmp/12/journal/inv_v.rs is completed
+minimization of ./tmp/13/journal/recover_v.rs is completed
+commenting out line Lines { lines: 215..=217 } in "./tmp/4/common/saturate_v.rs"
+verus failed with time: 106487ms, reverting
+commenting out line Lines { lines: 79..=79 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 107423ms, reverting
+commenting out line Lines { lines: 137..=142 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 112382ms, keeping it commented out
+commenting out line Lines { lines: 211..=211 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 120282ms, keeping it commented out
+commenting out line Lines { lines: 107..=107 } in "./tmp/5/common/subrange_v.rs"
+verus failed with time: 105781ms, reverting
+commenting out line Lines { lines: 157..=160 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 108236ms, reverting
+commenting out line Lines { lines: 261..=261 } in "./tmp/14/journal/setup_v.rs"
+verus failed with time: 108426ms, reverting
+commenting out line Lines { lines: 219..=221 } in "./tmp/4/common/saturate_v.rs"
+verus succeeded with time: 115567ms, keeping it commented out
+commenting out line Lines { lines: 150..=155 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 113774ms, keeping it commented out
+commenting out line Lines { lines: 82..=82 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 113997ms, keeping it commented out
+commenting out line Lines { lines: 228..=228 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 118060ms, keeping it commented out
+commenting out line Lines { lines: 160..=160 } in "./tmp/5/common/subrange_v.rs"
+verus failed with time: 108491ms, reverting
+commenting out line Lines { lines: 183..=186 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 107586ms, reverting
+commenting out line Lines { lines: 263..=263 } in "./tmp/14/journal/setup_v.rs"
+verus succeeded with time: 115841ms, keeping it commented out
+minimization of ./tmp/14/journal/setup_v.rs is completed
+minimization of ./tmp/15/journal/spec_v.rs is completed
+commenting out line Lines { lines: 83..=83 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 110292ms, keeping it commented out
+commenting out line Lines { lines: 218..=222 } in "./tmp/4/common/saturate_v.rs"
+verus succeeded with time: 115444ms, keeping it commented out
+commenting out line Lines { lines: 164..=169 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 113033ms, keeping it commented out
+commenting out line Lines { lines: 161..=161 } in "./tmp/5/common/subrange_v.rs"
+verus failed with time: 103464ms, reverting
+commenting out line Lines { lines: 252..=252 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 115325ms, keeping it commented out
+commenting out line Lines { lines: 182..=187 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 108030ms, reverting
+commenting out line Lines { lines: 43..=43 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 112363ms, keeping it commented out
+commenting out line Lines { lines: 97..=97 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 109266ms, reverting
+commenting out line Lines { lines: 223..=225 } in "./tmp/4/common/saturate_v.rs"
+verus failed with time: 110170ms, reverting
+commenting out line Lines { lines: 179..=182 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 114993ms, keeping it commented out
+commenting out line Lines { lines: 286..=292 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 104795ms, reverting
+commenting out line Lines { lines: 162..=162 } in "./tmp/5/common/subrange_v.rs"
+verus succeeded with time: 117756ms, keeping it commented out
+commenting out line Lines { lines: 191..=195 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 103345ms, reverting
+commenting out line Lines { lines: 60..=60 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 111588ms, keeping it commented out
+commenting out line Lines { lines: 100..=100 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 111850ms, keeping it commented out
+commenting out line Lines { lines: 183..=184 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 107847ms, reverting
+commenting out line Lines { lines: 226..=226 } in "./tmp/4/common/saturate_v.rs"
+verus succeeded with time: 115007ms, keeping it commented out
+commenting out line Lines { lines: 326..=326 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 104498ms, reverting
+commenting out line Lines { lines: 235..=236 } in "./tmp/5/common/subrange_v.rs"
+verus succeeded with time: 113664ms, keeping it commented out
+commenting out line Lines { lines: 199..=199 } in "./tmp/6/common/table_v.rs"
+verus succeeded with time: 111651ms, keeping it commented out
+commenting out line Lines { lines: 124..=124 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 106123ms, reverting
+commenting out line Lines { lines: 185..=189 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 106729ms, reverting
+commenting out line Lines { lines: 65..=65 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 114753ms, keeping it commented out
+commenting out line Lines { lines: 234..=236 } in "./tmp/4/common/saturate_v.rs"
+verus failed with time: 107897ms, reverting
+commenting out line Lines { lines: 403..=403 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 112230ms, keeping it commented out
+commenting out line Lines { lines: 274..=274 } in "./tmp/5/common/subrange_v.rs"
+verus succeeded with time: 112330ms, keeping it commented out
+commenting out line Lines { lines: 200..=200 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 110008ms, reverting
+commenting out line Lines { lines: 125..=125 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 115332ms, keeping it commented out
+commenting out line Lines { lines: 190..=191 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 114722ms, keeping it commented out
+commenting out line Lines { lines: 71..=71 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 114599ms, keeping it commented out
+commenting out line Lines { lines: 237..=239 } in "./tmp/4/common/saturate_v.rs"
+verus succeeded with time: 115699ms, keeping it commented out
+commenting out line Lines { lines: 404..=404 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 104409ms, reverting
+commenting out line Lines { lines: 196..=201 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 102208ms, reverting
+commenting out line Lines { lines: 275..=275 } in "./tmp/5/common/subrange_v.rs"
+verus failed with time: 104993ms, reverting
+commenting out line Lines { lines: 172..=192 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 106969ms, reverting
+commenting out line Lines { lines: 126..=126 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 118009ms, keeping it commented out
+commenting out line Lines { lines: 240..=242 } in "./tmp/4/common/saturate_v.rs"
+verus succeeded with time: 116304ms, keeping it commented out
+commenting out line Lines { lines: 73..=73 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 117851ms, keeping it commented out
+commenting out line Lines { lines: 405..=405 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 106927ms, reverting
+commenting out line Lines { lines: 190..=202 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 104305ms, reverting
+commenting out line Lines { lines: 276..=276 } in "./tmp/5/common/subrange_v.rs"
+verus failed with time: 104073ms, reverting
+commenting out line Lines { lines: 237..=238 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 113883ms, keeping it commented out
+commenting out line Lines { lines: 127..=127 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 115303ms, keeping it commented out
+commenting out line Lines { lines: 247..=247 } in "./tmp/4/common/saturate_v.rs"
+verus succeeded with time: 113986ms, keeping it commented out
+commenting out line Lines { lines: 76..=76 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 115554ms, keeping it commented out
+commenting out line Lines { lines: 395..=407 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 105395ms, reverting
+commenting out line Lines { lines: 225..=228 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 104743ms, reverting
+commenting out line Lines { lines: 311..=311 } in "./tmp/5/common/subrange_v.rs"
+verus succeeded with time: 112305ms, keeping it commented out
+commenting out line Lines { lines: 239..=239 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 112528ms, keeping it commented out
+commenting out line Lines { lines: 114..=129 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 105943ms, reverting
+commenting out line Lines { lines: 78..=78 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 113518ms, keeping it commented out
+commenting out line Lines { lines: 249..=249 } in "./tmp/4/common/saturate_v.rs"
+verus succeeded with time: 118606ms, keeping it commented out
+minimization of ./tmp/4/common/saturate_v.rs is completed
+commenting out line Lines { lines: 451..=451 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 105575ms, reverting
+commenting out line Lines { lines: 271..=273 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 102952ms, reverting
+commenting out line Lines { lines: 323..=324 } in "./tmp/5/common/subrange_v.rs"
+verus succeeded with time: 111772ms, keeping it commented out
+commenting out line Lines { lines: 276..=278 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 107857ms, reverting
+commenting out line Lines { lines: 147..=147 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 110241ms, keeping it commented out
+commenting out line Lines { lines: 80..=80 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 116097ms, keeping it commented out
+commenting out line Lines { lines: 76..=77 } in "./tmp/17/journal/write_v.rs"
+verus succeeded with time: 112911ms, keeping it commented out
+commenting out line Lines { lines: 452..=453 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 111721ms, keeping it commented out
+commenting out line Lines { lines: 274..=276 } in "./tmp/6/common/table_v.rs"
+verus failed with time: 104236ms, reverting
+minimization of ./tmp/6/common/table_v.rs is completed
+minimization of ./tmp/18/kv2/mod.rs is completed
+commenting out line Lines { lines: 336..=338 } in "./tmp/5/common/subrange_v.rs"
+verus succeeded with time: 113809ms, keeping it commented out
+minimization of ./tmp/5/common/subrange_v.rs is completed
+minimization of ./tmp/20/kv2/commit_v.rs is completed
+commenting out line Lines { lines: 281..=281 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 113125ms, keeping it commented out
+commenting out line Lines { lines: 150..=150 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 116032ms, keeping it commented out
+commenting out line Lines { lines: 195..=197 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 109485ms, keeping it commented out
+commenting out line Lines { lines: 74..=78 } in "./tmp/17/journal/write_v.rs"
+verus succeeded with time: 114076ms, keeping it commented out
+commenting out line Lines { lines: 37..=37 } in "./tmp/19/kv2/abort_v.rs"
+verus succeeded with time: 108109ms, keeping it commented out
+minimization of ./tmp/19/kv2/abort_v.rs is completed
+commenting out line Lines { lines: 477..=477 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 114798ms, keeping it commented out
+commenting out line Lines { lines: 58..=58 } in "./tmp/22/kv2/crud_v.rs"
+verus failed with time: 9928ms, reverting
+commenting out line Lines { lines: 274..=274 } in "./tmp/21/kv2/concurrentspec_t.rs"
+verus failed with time: 101541ms, reverting
+commenting out line Lines { lines: 409..=409 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 111838ms, keeping it commented out
+commenting out line Lines { lines: 161..=161 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 109271ms, keeping it commented out
+commenting out line Lines { lines: 89..=89 } in "./tmp/17/journal/write_v.rs"
+verus failed with time: 106002ms, reverting
+commenting out line Lines { lines: 205..=205 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 112148ms, keeping it commented out
+commenting out line Lines { lines: 507..=507 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 107802ms, reverting
+commenting out line Lines { lines: 342..=342 } in "./tmp/21/kv2/concurrentspec_t.rs"
+verus failed with time: 102448ms, reverting
+commenting out line Lines { lines: 112..=112 } in "./tmp/22/kv2/crud_v.rs"
+verus succeeded with time: 117977ms, keeping it commented out
+commenting out line Lines { lines: 124..=124 } in "./tmp/22/kv2/crud_v.rs"
+verus failed with time: 12055ms, reverting
+commenting out line Lines { lines: 141..=141 } in "./tmp/22/kv2/crud_v.rs"
+verus failed with time: 12050ms, reverting
+commenting out line Lines { lines: 410..=410 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 111809ms, keeping it commented out
+commenting out line Lines { lines: 168..=168 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 110905ms, keeping it commented out
+commenting out line Lines { lines: 87..=90 } in "./tmp/17/journal/write_v.rs"
+verus failed with time: 102948ms, reverting
+commenting out line Lines { lines: 198..=207 } in "./tmp/16/journal/start_v.rs"
+verus failed with time: 101069ms, reverting
+commenting out line Lines { lines: 509..=509 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 108285ms, reverting
+commenting out line Lines { lines: 404..=404 } in "./tmp/21/kv2/concurrentspec_t.rs"
+verus failed with time: 101879ms, reverting
+commenting out line Lines { lines: 148..=148 } in "./tmp/22/kv2/crud_v.rs"
+verus succeeded with time: 112205ms, keeping it commented out
+commenting out line Lines { lines: 402..=413 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 108807ms, reverting
+commenting out line Lines { lines: 171..=171 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 113745ms, keeping it commented out
+commenting out line Lines { lines: 81..=95 } in "./tmp/17/journal/write_v.rs"
+verus failed with time: 109189ms, reverting
+commenting out line Lines { lines: 213..=219 } in "./tmp/16/journal/start_v.rs"
+verus failed with time: 109741ms, reverting
+commenting out line Lines { lines: 624..=624 } in "./tmp/21/kv2/concurrentspec_t.rs"
+verus failed with time: 105331ms, reverting
+commenting out line Lines { lines: 511..=512 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 113231ms, keeping it commented out
+commenting out line Lines { lines: 204..=204 } in "./tmp/22/kv2/crud_v.rs"
+verus succeeded with time: 115855ms, keeping it commented out
+commenting out line Lines { lines: 224..=224 } in "./tmp/22/kv2/crud_v.rs"
+verus failed with time: 11258ms, reverting
+commenting out line Lines { lines: 420..=420 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 114980ms, keeping it commented out
+commenting out line Lines { lines: 194..=202 } in "./tmp/17/journal/write_v.rs"
+verus failed with time: 105332ms, reverting
+commenting out line Lines { lines: 183..=183 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 110442ms, keeping it commented out
+commenting out line Lines { lines: 220..=221 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 112809ms, keeping it commented out
+commenting out line Lines { lines: 699..=699 } in "./tmp/21/kv2/concurrentspec_t.rs"
+verus failed with time: 106337ms, reverting
+commenting out line Lines { lines: 513..=513 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 109167ms, keeping it commented out
+commenting out line Lines { lines: 228..=228 } in "./tmp/22/kv2/crud_v.rs"
+verus succeeded with time: 115287ms, keeping it commented out
+commenting out line Lines { lines: 419..=424 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 105513ms, reverting
+commenting out line Lines { lines: 244..=244 } in "./tmp/22/kv2/crud_v.rs"
+verus failed with time: 9480ms, reverting
+commenting out line Lines { lines: 200..=200 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 114965ms, keeping it commented out
+commenting out line Lines { lines: 209..=209 } in "./tmp/17/journal/write_v.rs"
+verus succeeded with time: 119315ms, keeping it commented out
+commenting out line Lines { lines: 222..=222 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 114542ms, keeping it commented out
+commenting out line Lines { lines: 773..=773 } in "./tmp/21/kv2/concurrentspec_t.rs"
+verus failed with time: 103333ms, reverting
+commenting out line Lines { lines: 514..=514 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 111795ms, keeping it commented out
+commenting out line Lines { lines: 415..=425 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 110888ms, reverting
+commenting out line Lines { lines: 249..=249 } in "./tmp/22/kv2/crud_v.rs"
+verus succeeded with time: 113900ms, keeping it commented out
+commenting out line Lines { lines: 202..=202 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 117157ms, keeping it commented out
+commenting out line Lines { lines: 205..=211 } in "./tmp/17/journal/write_v.rs"
+verus succeeded with time: 117965ms, keeping it commented out
+commenting out line Lines { lines: 223..=223 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 115796ms, keeping it commented out
+commenting out line Lines { lines: 848..=848 } in "./tmp/21/kv2/concurrentspec_t.rs"
+verus failed with time: 108845ms, reverting
+commenting out line Lines { lines: 515..=516 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 104054ms, reverting
+commenting out line Lines { lines: 429..=429 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 116857ms, keeping it commented out
+commenting out line Lines { lines: 256..=256 } in "./tmp/22/kv2/crud_v.rs"
+verus succeeded with time: 117160ms, keeping it commented out
+commenting out line Lines { lines: 204..=212 } in "./tmp/17/journal/write_v.rs"
+verus succeeded with time: 113617ms, keeping it commented out
+commenting out line Lines { lines: 203..=203 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 117608ms, keeping it commented out
+commenting out line Lines { lines: 225..=225 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 114924ms, keeping it commented out
+commenting out line Lines { lines: 915..=915 } in "./tmp/21/kv2/concurrentspec_t.rs"
+verus failed with time: 113355ms, reverting
+commenting out line Lines { lines: 517..=517 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 118130ms, keeping it commented out
+commenting out line Lines { lines: 505..=505 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 116207ms, keeping it commented out
+commenting out line Lines { lines: 316..=316 } in "./tmp/22/kv2/crud_v.rs"
+verus succeeded with time: 117140ms, keeping it commented out
+commenting out line Lines { lines: 985..=985 } in "./tmp/21/kv2/concurrentspec_t.rs"
+verus failed with time: 111498ms, reverting
+minimization of ./tmp/21/kv2/concurrentspec_t.rs is completed
+commenting out line Lines { lines: 226..=226 } in "./tmp/16/journal/start_v.rs"
+verus failed with time: 114147ms, reverting
+commenting out line Lines { lines: 331..=331 } in "./tmp/22/kv2/crud_v.rs"
+verus failed with time: 7706ms, reverting
+commenting out line Lines { lines: 204..=204 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 118894ms, keeping it commented out
+commenting out line Lines { lines: 216..=216 } in "./tmp/17/journal/write_v.rs"
+verus succeeded with time: 120946ms, keeping it commented out
+commenting out line Lines { lines: 93..=93 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 8241ms, reverting
+commenting out line Lines { lines: 350..=350 } in "./tmp/22/kv2/crud_v.rs"
+verus failed with time: 8210ms, reverting
+commenting out line Lines { lines: 525..=525 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 109106ms, reverting
+commenting out line Lines { lines: 104..=104 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 9521ms, reverting
+commenting out line Lines { lines: 510..=512 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 114642ms, keeping it commented out
+commenting out line Lines { lines: 278..=278 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 112430ms, keeping it commented out
+commenting out line Lines { lines: 217..=217 } in "./tmp/17/journal/write_v.rs"
+verus failed with time: 111633ms, reverting
+commenting out line Lines { lines: 527..=527 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 107207ms, reverting
+commenting out line Lines { lines: 209..=209 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 116071ms, keeping it commented out
+commenting out line Lines { lines: 360..=361 } in "./tmp/22/kv2/crud_v.rs"
+verus failed with time: 114092ms, reverting
+commenting out line Lines { lines: 224..=224 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 121088ms, keeping it commented out
+commenting out line Lines { lines: 260..=260 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 12508ms, reverting
+commenting out line Lines { lines: 337..=337 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 14751ms, reverting
+commenting out line Lines { lines: 521..=521 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 111964ms, keeping it commented out
+commenting out line Lines { lines: 214..=218 } in "./tmp/17/journal/write_v.rs"
+verus failed with time: 106722ms, reverting
+minimization of ./tmp/17/journal/write_v.rs is completed
+minimization of ./tmp/24/kv2/impl_t.rs is completed
+commenting out line Lines { lines: 279..=279 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 114215ms, keeping it commented out
+commenting out line Lines { lines: 210..=210 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 111446ms, keeping it commented out
+commenting out line Lines { lines: 530..=531 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 113587ms, keeping it commented out
+commenting out line Lines { lines: 362..=362 } in "./tmp/22/kv2/crud_v.rs"
+verus succeeded with time: 112556ms, keeping it commented out
+minimization of ./tmp/22/kv2/crud_v.rs is completed
+minimization of ./tmp/26/kv2/inv_v.rs is completed
+minimization of ./tmp/27/kv2/items/mod.rs is completed
+commenting out line Lines { lines: 346..=346 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 121160ms, keeping it commented out
+commenting out line Lines { lines: 426..=426 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 11729ms, reverting
+commenting out line Lines { lines: 445..=445 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 11787ms, reverting
+commenting out line Lines { lines: 513..=522 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 107012ms, reverting
+commenting out line Lines { lines: 330..=330 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 109457ms, keeping it commented out
+commenting out line Lines { lines: 532..=532 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 104447ms, reverting
+commenting out line Lines { lines: 143..=143 } in "./tmp/25/kv2/impl_v.rs"
+verus succeeded with time: 114785ms, keeping it commented out
+minimization of ./tmp/25/kv2/impl_v.rs is completed
+commenting out line Lines { lines: 212..=212 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 111184ms, keeping it commented out
+commenting out line Lines { lines: 69..=69 } in "./tmp/28/kv2/items/abort_v.rs"
+verus succeeded with time: 112279ms, keeping it commented out
+commenting out line Lines { lines: 456..=457 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 109038ms, reverting
+commenting out line Lines { lines: 527..=533 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 109842ms, reverting
+commenting out line Lines { lines: 331..=331 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 112513ms, keeping it commented out
+commenting out line Lines { lines: 533..=533 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 119056ms, keeping it commented out
+commenting out line Lines { lines: 68..=68 } in "./tmp/29/kv2/items/commit_v.rs"
+verus succeeded with time: 117753ms, keeping it commented out
+commenting out line Lines { lines: 213..=213 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 117819ms, keeping it commented out
+commenting out line Lines { lines: 75..=76 } in "./tmp/28/kv2/items/abort_v.rs"
+verus succeeded with time: 116387ms, keeping it commented out
+minimization of ./tmp/28/kv2/items/abort_v.rs is completed
+commenting out line Lines { lines: 458..=459 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 115051ms, keeping it commented out
+commenting out line Lines { lines: 534..=534 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 112470ms, keeping it commented out
+commenting out line Lines { lines: 332..=332 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 108613ms, keeping it commented out
+commenting out line Lines { lines: 536..=540 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 109709ms, reverting
+commenting out line Lines { lines: 74..=75 } in "./tmp/29/kv2/items/commit_v.rs"
+verus succeeded with time: 109650ms, keeping it commented out
+minimization of ./tmp/29/kv2/items/commit_v.rs is completed
+minimization of ./tmp/31/kv2/items/impl_v.rs is completed
+commenting out line Lines { lines: 234..=236 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 109808ms, reverting
+commenting out line Lines { lines: 81..=82 } in "./tmp/30/kv2/items/crud_v.rs"
+verus succeeded with time: 116629ms, keeping it commented out
+commenting out line Lines { lines: 526..=526 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 117413ms, keeping it commented out
+commenting out line Lines { lines: 535..=535 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 118141ms, keeping it commented out
+commenting out line Lines { lines: 554..=554 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 9589ms, reverting
+commenting out line Lines { lines: 336..=337 } in "./tmp/16/journal/start_v.rs"
+verus failed with time: 111158ms, reverting
+commenting out line Lines { lines: 574..=574 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 8302ms, reverting
+commenting out line Lines { lines: 267..=269 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 105640ms, reverting
+commenting out line Lines { lines: 594..=594 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 111692ms, reverting
+commenting out line Lines { lines: 212..=212 } in "./tmp/32/kv2/items/inv_v.rs"
+verus succeeded with time: 116786ms, keeping it commented out
+commenting out line Lines { lines: 127..=143 } in "./tmp/30/kv2/items/crud_v.rs"
+verus failed with time: 105060ms, reverting
+commenting out line Lines { lines: 536..=536 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 114261ms, keeping it commented out
+commenting out line Lines { lines: 270..=272 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 108872ms, reverting
+commenting out line Lines { lines: 338..=339 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 118987ms, keeping it commented out
+commenting out line Lines { lines: 583..=584 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 117217ms, keeping it commented out
+commenting out line Lines { lines: 591..=595 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 114659ms, reverting
+commenting out line Lines { lines: 213..=213 } in "./tmp/32/kv2/items/inv_v.rs"
+verus succeeded with time: 119586ms, keeping it commented out
+commenting out line Lines { lines: 215..=215 } in "./tmp/30/kv2/items/crud_v.rs"
+verus succeeded with time: 121249ms, keeping it commented out
+commenting out line Lines { lines: 538..=538 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 116220ms, keeping it commented out
+commenting out line Lines { lines: 340..=341 } in "./tmp/16/journal/start_v.rs"
+verus failed with time: 110032ms, reverting
+commenting out line Lines { lines: 285..=285 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 113977ms, keeping it commented out
+commenting out line Lines { lines: 590..=596 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 109570ms, reverting
+commenting out line Lines { lines: 652..=652 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 116814ms, keeping it commented out
+commenting out line Lines { lines: 680..=680 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 9735ms, reverting
+commenting out line Lines { lines: 210..=214 } in "./tmp/32/kv2/items/inv_v.rs"
+verus succeeded with time: 118561ms, keeping it commented out
+commenting out line Lines { lines: 228..=228 } in "./tmp/30/kv2/items/crud_v.rs"
+verus succeeded with time: 114521ms, keeping it commented out
+commenting out line Lines { lines: 697..=697 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 10878ms, reverting
+commenting out line Lines { lines: 716..=716 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 10479ms, reverting
+commenting out line Lines { lines: 539..=540 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 101435ms, reverting
+commenting out line Lines { lines: 640..=646 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 104048ms, reverting
+commenting out line Lines { lines: 342..=343 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 108844ms, keeping it commented out
+commenting out line Lines { lines: 287..=287 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 110748ms, keeping it commented out
+commenting out line Lines { lines: 227..=227 } in "./tmp/32/kv2/items/inv_v.rs"
+verus failed with time: 107773ms, reverting
+commenting out line Lines { lines: 229..=229 } in "./tmp/30/kv2/items/crud_v.rs"
+verus succeeded with time: 114617ms, keeping it commented out
+commenting out line Lines { lines: 727..=728 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 107236ms, reverting
+commenting out line Lines { lines: 590..=590 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 117847ms, keeping it commented out
+commenting out line Lines { lines: 663..=663 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 105151ms, reverting
+commenting out line Lines { lines: 288..=288 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 105331ms, reverting
+commenting out line Lines { lines: 344..=344 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 113696ms, keeping it commented out
+commenting out line Lines { lines: 226..=229 } in "./tmp/32/kv2/items/inv_v.rs"
+verus failed with time: 107478ms, reverting
+commenting out line Lines { lines: 260..=260 } in "./tmp/30/kv2/items/crud_v.rs"
+verus succeeded with time: 115166ms, keeping it commented out
+commenting out line Lines { lines: 729..=731 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 114814ms, keeping it commented out
+commenting out line Lines { lines: 635..=637 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 115530ms, keeping it commented out
+commenting out line Lines { lines: 664..=664 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 112613ms, keeping it commented out
+commenting out line Lines { lines: 289..=289 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 113609ms, keeping it commented out
+commenting out line Lines { lines: 347..=349 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 113224ms, keeping it commented out
+commenting out line Lines { lines: 230..=232 } in "./tmp/32/kv2/items/inv_v.rs"
+verus failed with time: 106117ms, reverting
+commenting out line Lines { lines: 261..=261 } in "./tmp/30/kv2/items/crud_v.rs"
+verus succeeded with time: 115840ms, keeping it commented out
+minimization of ./tmp/30/kv2/items/crud_v.rs is completed
+commenting out line Lines { lines: 790..=791 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 115203ms, keeping it commented out
+commenting out line Lines { lines: 675..=675 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 105599ms, reverting
+commenting out line Lines { lines: 661..=662 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 112074ms, keeping it commented out
+commenting out line Lines { lines: 353..=353 } in "./tmp/16/journal/start_v.rs"
+verus failed with time: 109001ms, reverting
+commenting out line Lines { lines: 290..=290 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 117098ms, keeping it commented out
+commenting out line Lines { lines: 233..=235 } in "./tmp/32/kv2/items/inv_v.rs"
+verus failed with time: 106547ms, reverting
+commenting out line Lines { lines: 88..=88 } in "./tmp/33/kv2/items/recover_v.rs"
+verus succeeded with time: 115681ms, keeping it commented out
+commenting out line Lines { lines: 792..=792 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 113769ms, keeping it commented out
+commenting out line Lines { lines: 676..=676 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 109572ms, keeping it commented out
+commenting out line Lines { lines: 663..=664 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 112663ms, keeping it commented out
+commenting out line Lines { lines: 284..=291 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 107486ms, reverting
+commenting out line Lines { lines: 360..=361 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 112932ms, keeping it commented out
+commenting out line Lines { lines: 238..=238 } in "./tmp/32/kv2/items/inv_v.rs"
+verus succeeded with time: 114004ms, keeping it commented out
+commenting out line Lines { lines: 107..=107 } in "./tmp/33/kv2/items/recover_v.rs"
+verus succeeded with time: 111768ms, keeping it commented out
+minimization of ./tmp/33/kv2/items/recover_v.rs is completed
+commenting out line Lines { lines: 796..=796 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 116003ms, keeping it commented out
+commenting out line Lines { lines: 708..=708 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 114226ms, keeping it commented out
+commenting out line Lines { lines: 665..=666 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 114795ms, keeping it commented out
+commenting out line Lines { lines: 410..=410 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 109338ms, keeping it commented out
+commenting out line Lines { lines: 239..=239 } in "./tmp/32/kv2/items/inv_v.rs"
+verus failed with time: 102353ms, reverting
+commenting out line Lines { lines: 293..=293 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 115682ms, keeping it commented out
+commenting out line Lines { lines: 64..=64 } in "./tmp/34/kv2/items/setup_v.rs"
+verus succeeded with time: 113641ms, keeping it commented out
+commenting out line Lines { lines: 806..=806 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 113983ms, keeping it commented out
+commenting out line Lines { lines: 831..=831 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 10953ms, reverting
+commenting out line Lines { lines: 851..=851 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 10632ms, reverting
+commenting out line Lines { lines: 709..=709 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 113104ms, keeping it commented out
+commenting out line Lines { lines: 237..=241 } in "./tmp/32/kv2/items/inv_v.rs"
+verus failed with time: 105452ms, reverting
+commenting out line Lines { lines: 657..=667 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 113052ms, keeping it commented out
+commenting out line Lines { lines: 295..=295 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 106297ms, reverting
+commenting out line Lines { lines: 411..=411 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 112044ms, keeping it commented out
+commenting out line Lines { lines: 100..=102 } in "./tmp/34/kv2/items/setup_v.rs"
+verus succeeded with time: 114561ms, keeping it commented out
+commenting out line Lines { lines: 859..=859 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 116521ms, keeping it commented out
+commenting out line Lines { lines: 710..=710 } in "./tmp/10/journal/entry_v.rs"
+verus failed with time: 113242ms, reverting
+commenting out line Lines { lines: 297..=297 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 104001ms, reverting
+commenting out line Lines { lines: 244..=244 } in "./tmp/32/kv2/items/inv_v.rs"
+verus failed with time: 110665ms, reverting
+commenting out line Lines { lines: 671..=671 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 116092ms, keeping it commented out
+commenting out line Lines { lines: 412..=412 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 115362ms, keeping it commented out
+commenting out line Lines { lines: 111..=111 } in "./tmp/34/kv2/items/setup_v.rs"
+verus succeeded with time: 118233ms, keeping it commented out
+commenting out line Lines { lines: 918..=919 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 113973ms, keeping it commented out
+commenting out line Lines { lines: 714..=714 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 111274ms, keeping it commented out
+commenting out line Lines { lines: 243..=246 } in "./tmp/32/kv2/items/inv_v.rs"
+verus failed with time: 109111ms, reverting
+commenting out line Lines { lines: 298..=298 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 114654ms, keeping it commented out
+commenting out line Lines { lines: 672..=673 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 113860ms, keeping it commented out
+commenting out line Lines { lines: 413..=413 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 111105ms, keeping it commented out
+commenting out line Lines { lines: 112..=114 } in "./tmp/34/kv2/items/setup_v.rs"
+verus failed with time: 106602ms, reverting
+minimization of ./tmp/34/kv2/items/setup_v.rs is completed
+minimization of ./tmp/35/kv2/items/spec_v.rs is completed
+commenting out line Lines { lines: 920..=921 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 111754ms, keeping it commented out
+commenting out line Lines { lines: 248..=248 } in "./tmp/32/kv2/items/inv_v.rs"
+verus failed with time: 110813ms, reverting
+commenting out line Lines { lines: 716..=716 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 112918ms, keeping it commented out
+commenting out line Lines { lines: 299..=299 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 118430ms, keeping it commented out
+commenting out line Lines { lines: 414..=414 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 115664ms, keeping it commented out
+commenting out line Lines { lines: 674..=675 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 120013ms, keeping it commented out
+commenting out line Lines { lines: 134..=138 } in "./tmp/36/kv2/items/start_v.rs"
+verus failed with time: 107417ms, reverting
+commenting out line Lines { lines: 931..=931 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 112694ms, keeping it commented out
+commenting out line Lines { lines: 956..=956 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 9826ms, reverting
+commenting out line Lines { lines: 249..=249 } in "./tmp/32/kv2/items/inv_v.rs"
+verus succeeded with time: 112905ms, keeping it commented out
+commenting out line Lines { lines: 718..=718 } in "./tmp/10/journal/entry_v.rs"
+verus succeeded with time: 113900ms, keeping it commented out
+minimization of ./tmp/10/journal/entry_v.rs is completed
+minimization of ./tmp/37/kv2/keys/mod.rs is completed
+commenting out line Lines { lines: 292..=300 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 106863ms, reverting
+commenting out line Lines { lines: 973..=973 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 9009ms, reverting
+commenting out line Lines { lines: 992..=992 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 6704ms, reverting
+commenting out line Lines { lines: 415..=415 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 110328ms, keeping it commented out
+commenting out line Lines { lines: 669..=676 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 107878ms, reverting
+commenting out line Lines { lines: 152..=152 } in "./tmp/36/kv2/items/start_v.rs"
+verus failed with time: 99862ms, reverting
+commenting out line Lines { lines: 289..=289 } in "./tmp/32/kv2/items/inv_v.rs"
+verus succeeded with time: 117820ms, keeping it commented out
+commenting out line Lines { lines: 283..=301 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 115132ms, reverting
+commenting out line Lines { lines: 67..=67 } in "./tmp/38/kv2/keys/abort_v.rs"
+verus succeeded with time: 124554ms, keeping it commented out
+commenting out line Lines { lines: 1002..=1002 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 121554ms, keeping it commented out
+commenting out line Lines { lines: 416..=416 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 118540ms, keeping it commented out
+commenting out line Lines { lines: 710..=710 } in "./tmp/9/journal/commit_v.rs"
+verus succeeded with time: 119524ms, keeping it commented out
+commenting out line Lines { lines: 153..=153 } in "./tmp/36/kv2/items/start_v.rs"
+verus succeeded with time: 112289ms, keeping it commented out
+commenting out line Lines { lines: 291..=291 } in "./tmp/32/kv2/items/inv_v.rs"
+verus succeeded with time: 116829ms, keeping it commented out
+minimization of ./tmp/32/kv2/items/inv_v.rs is completed
+commenting out line Lines { lines: 307..=307 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 116655ms, keeping it commented out
+commenting out line Lines { lines: 68..=69 } in "./tmp/38/kv2/keys/abort_v.rs"
+verus succeeded with time: 114583ms, keeping it commented out
+commenting out line Lines { lines: 1003..=1004 } in "./tmp/23/kv2/elements_v.rs"
+verus failed with time: 110133ms, reverting
+commenting out line Lines { lines: 417..=417 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 115691ms, keeping it commented out
+commenting out line Lines { lines: 712..=715 } in "./tmp/9/journal/commit_v.rs"
+verus failed with time: 114929ms, reverting
+minimization of ./tmp/9/journal/commit_v.rs is completed
+commenting out line Lines { lines: 154..=154 } in "./tmp/36/kv2/items/start_v.rs"
+verus succeeded with time: 120698ms, keeping it commented out
+minimization of ./tmp/36/kv2/items/start_v.rs is completed
+minimization of ./tmp/41/kv2/keys/impl_v.rs is completed
+commenting out line Lines { lines: 308..=308 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 107498ms, reverting
+commenting out line Lines { lines: 54..=54 } in "./tmp/39/kv2/keys/commit_v.rs"
+verus succeeded with time: 118090ms, keeping it commented out
+commenting out line Lines { lines: 123..=123 } in "./tmp/38/kv2/keys/abort_v.rs"
+verus succeeded with time: 110989ms, keeping it commented out
+commenting out line Lines { lines: 1005..=1006 } in "./tmp/23/kv2/elements_v.rs"
+verus succeeded with time: 117968ms, keeping it commented out
+minimization of ./tmp/23/kv2/elements_v.rs is completed
+commenting out line Lines { lines: 119..=134 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 112763ms, reverting
+commenting out line Lines { lines: 423..=423 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 116934ms, keeping it commented out
+commenting out line Lines { lines: 465..=465 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 119232ms, keeping it commented out
+commenting out line Lines { lines: 309..=309 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 111502ms, keeping it commented out
+commenting out line Lines { lines: 129..=130 } in "./tmp/38/kv2/keys/abort_v.rs"
+verus succeeded with time: 114570ms, keeping it commented out
+minimization of ./tmp/38/kv2/keys/abort_v.rs is completed
+commenting out line Lines { lines: 60..=61 } in "./tmp/39/kv2/keys/commit_v.rs"
+verus succeeded with time: 115677ms, keeping it commented out
+minimization of ./tmp/39/kv2/keys/commit_v.rs is completed
+minimization of ./tmp/45/kv2/keys/spec_v.rs is completed
+commenting out line Lines { lines: 155..=155 } in "./tmp/43/kv2/keys/recover_v.rs"
+verus succeeded with time: 114107ms, keeping it commented out
+commenting out line Lines { lines: 458..=460 } in "./tmp/16/journal/start_v.rs"
+commenting out line Lines { lines: 216..=216 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 115878ms, keeping it commented out
+verus failed with time: 109363ms, reverting
+commenting out line Lines { lines: 466..=466 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 108041ms, keeping it commented out
+commenting out line Lines { lines: 312..=312 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 110164ms, keeping it commented out
+commenting out line Lines { lines: 187..=190 } in "./tmp/43/kv2/keys/recover_v.rs"
+verus failed with time: 106080ms, reverting
+minimization of ./tmp/43/kv2/keys/recover_v.rs is completed
+minimization of ./tmp/47/kv2/lists/mod.rs is completed
+commenting out line Lines { lines: 280..=284 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 111085ms, reverting
+commenting out line Lines { lines: 108..=108 } in "./tmp/44/kv2/keys/setup_v.rs"
+verus succeeded with time: 130292ms, keeping it commented out
+commenting out line Lines { lines: 69..=69 } in "./tmp/46/kv2/keys/start_v.rs"
+verus succeeded with time: 130220ms, keeping it commented out
+commenting out line Lines { lines: 478..=478 } in "./tmp/16/journal/start_v.rs"
+verus succeeded with time: 115735ms, keeping it commented out
+commenting out line Lines { lines: 464..=467 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 118553ms, keeping it commented out
+commenting out line Lines { lines: 306..=313 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 104041ms, reverting
+commenting out line Lines { lines: 114..=118 } in "./tmp/44/kv2/keys/setup_v.rs"
+verus failed with time: 108351ms, reverting
+commenting out line Lines { lines: 259..=259 } in "./tmp/48/kv2/lists/abort_v.rs"
+verus failed with time: 113553ms, reverting
+commenting out line Lines { lines: 486..=489 } in "./tmp/16/journal/start_v.rs"
+verus failed with time: 110256ms, reverting
+minimization of ./tmp/16/journal/start_v.rs is completed
+commenting out line Lines { lines: 380..=380 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 120892ms, keeping it commented out
+commenting out line Lines { lines: 192..=193 } in "./tmp/46/kv2/keys/start_v.rs"
+verus succeeded with time: 119820ms, keeping it commented out
+commenting out line Lines { lines: 480..=480 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 107432ms, reverting
+commenting out line Lines { lines: 305..=314 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 105288ms, reverting
+commenting out line Lines { lines: 257..=260 } in "./tmp/48/kv2/lists/abort_v.rs"
+verus failed with time: 111396ms, reverting
+commenting out line Lines { lines: 122..=122 } in "./tmp/44/kv2/keys/setup_v.rs"
+verus succeeded with time: 117152ms, keeping it commented out
+commenting out line Lines { lines: 383..=383 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 108371ms, reverting
+commenting out line Lines { lines: 130..=130 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 116087ms, keeping it commented out
+commenting out line Lines { lines: 197..=197 } in "./tmp/46/kv2/keys/start_v.rs"
+verus succeeded with time: 116523ms, keeping it commented out
+commenting out line Lines { lines: 479..=482 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 109519ms, reverting
+commenting out line Lines { lines: 321..=323 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 108753ms, reverting
+commenting out line Lines { lines: 121..=124 } in "./tmp/44/kv2/keys/setup_v.rs"
+verus failed with time: 108559ms, reverting
+commenting out line Lines { lines: 267..=267 } in "./tmp/48/kv2/lists/abort_v.rs"
+verus succeeded with time: 116503ms, keeping it commented out
+commenting out line Lines { lines: 387..=387 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 108710ms, reverting
+commenting out line Lines { lines: 131..=131 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 113597ms, keeping it commented out
+commenting out line Lines { lines: 140..=140 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 8752ms, reverting
+commenting out line Lines { lines: 194..=198 } in "./tmp/46/kv2/keys/start_v.rs"
+verus succeeded with time: 118842ms, keeping it commented out
+commenting out line Lines { lines: 483..=485 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 112631ms, reverting
+commenting out line Lines { lines: 294..=294 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 9511ms, reverting
+commenting out line Lines { lines: 345..=345 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 107839ms, reverting
+commenting out line Lines { lines: 268..=268 } in "./tmp/48/kv2/lists/abort_v.rs"
+verus succeeded with time: 110774ms, keeping it commented out
+commenting out line Lines { lines: 125..=125 } in "./tmp/44/kv2/keys/setup_v.rs"
+verus succeeded with time: 114745ms, keeping it commented out
+commenting out line Lines { lines: 388..=388 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 116773ms, keeping it commented out
+commenting out line Lines { lines: 486..=488 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 109705ms, reverting
+commenting out line Lines { lines: 199..=199 } in "./tmp/46/kv2/keys/start_v.rs"
+verus succeeded with time: 113871ms, keeping it commented out
+commenting out line Lines { lines: 298..=298 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 118772ms, keeping it commented out
+commenting out line Lines { lines: 374..=374 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 109053ms, keeping it commented out
+commenting out line Lines { lines: 271..=271 } in "./tmp/48/kv2/lists/abort_v.rs"
+verus succeeded with time: 113680ms, keeping it commented out
+commenting out line Lines { lines: 177..=177 } in "./tmp/44/kv2/keys/setup_v.rs"
+verus succeeded with time: 112039ms, keeping it commented out
+commenting out line Lines { lines: 385..=389 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 111115ms, reverting
+commenting out line Lines { lines: 213..=217 } in "./tmp/46/kv2/keys/start_v.rs"
+verus failed with time: 105065ms, reverting
+commenting out line Lines { lines: 299..=301 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 107459ms, reverting
+commenting out line Lines { lines: 491..=491 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 120074ms, keeping it commented out
+commenting out line Lines { lines: 377..=377 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 106616ms, keeping it commented out
+commenting out line Lines { lines: 313..=313 } in "./tmp/48/kv2/lists/abort_v.rs"
+verus succeeded with time: 108776ms, keeping it commented out
+commenting out line Lines { lines: 178..=180 } in "./tmp/44/kv2/keys/setup_v.rs"
+verus failed with time: 110466ms, reverting
+minimization of ./tmp/44/kv2/keys/setup_v.rs is completed
+commenting out line Lines { lines: 398..=398 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 116566ms, keeping it commented out
+commenting out line Lines { lines: 232..=232 } in "./tmp/46/kv2/keys/start_v.rs"
+verus succeeded with time: 119350ms, keeping it commented out
+commenting out line Lines { lines: 309..=310 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 109873ms, reverting
+commenting out line Lines { lines: 492..=492 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 109703ms, reverting
+commenting out line Lines { lines: 380..=380 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 112919ms, keeping it commented out
+commenting out line Lines { lines: 315..=315 } in "./tmp/48/kv2/lists/abort_v.rs"
+verus succeeded with time: 110239ms, keeping it commented out
+commenting out line Lines { lines: 149..=149 } in "./tmp/50/kv2/lists/commit_v.rs"
+verus succeeded with time: 115750ms, keeping it commented out
+commenting out line Lines { lines: 399..=399 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 114154ms, keeping it commented out
+commenting out line Lines { lines: 490..=494 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 104848ms, reverting
+commenting out line Lines { lines: 311..=313 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 108375ms, reverting
+commenting out line Lines { lines: 233..=233 } in "./tmp/46/kv2/keys/start_v.rs"
+verus succeeded with time: 115676ms, keeping it commented out
+commenting out line Lines { lines: 315..=315 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 9163ms, reverting
+commenting out line Lines { lines: 381..=381 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 112377ms, keeping it commented out
+commenting out line Lines { lines: 321..=322 } in "./tmp/48/kv2/lists/abort_v.rs"
+verus succeeded with time: 115396ms, keeping it commented out
+minimization of ./tmp/48/kv2/lists/abort_v.rs is completed
+commenting out line Lines { lines: 165..=165 } in "./tmp/50/kv2/lists/commit_v.rs"
+verus succeeded with time: 117590ms, keeping it commented out
+commenting out line Lines { lines: 497..=497 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 103229ms, reverting
+commenting out line Lines { lines: 466..=466 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 116049ms, keeping it commented out
+commenting out line Lines { lines: 234..=234 } in "./tmp/46/kv2/keys/start_v.rs"
+verus succeeded with time: 110074ms, keeping it commented out
+minimization of ./tmp/46/kv2/keys/start_v.rs is completed
+minimization of ./tmp/52/kv2/lists/impl_v.rs is completed
+commenting out line Lines { lines: 318..=319 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 116306ms, keeping it commented out
+commenting out line Lines { lines: 351..=351 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 10262ms, reverting
+commenting out line Lines { lines: 438..=438 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 116381ms, keeping it commented out
+commenting out line Lines { lines: 135..=135 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 113622ms, keeping it commented out
+commenting out line Lines { lines: 496..=499 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 104112ms, reverting
+commenting out line Lines { lines: 207..=207 } in "./tmp/50/kv2/lists/commit_v.rs"
+verus succeeded with time: 114124ms, keeping it commented out
+commenting out line Lines { lines: 472..=472 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 113403ms, keeping it commented out
+commenting out line Lines { lines: 481..=481 } in "./tmp/53/kv2/lists/inv_v.rs"
+verus succeeded with time: 112546ms, keeping it commented out
+minimization of ./tmp/53/kv2/lists/inv_v.rs is completed
+commenting out line Lines { lines: 355..=355 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 111626ms, keeping it commented out
+commenting out line Lines { lines: 439..=439 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 111794ms, keeping it commented out
+commenting out line Lines { lines: 501..=507 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 103504ms, reverting
+commenting out line Lines { lines: 137..=138 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 110036ms, keeping it commented out
+commenting out line Lines { lines: 218..=218 } in "./tmp/50/kv2/lists/commit_v.rs"
+verus succeeded with time: 108729ms, keeping it commented out
+commenting out line Lines { lines: 473..=473 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 119679ms, keeping it commented out
+commenting out line Lines { lines: 57..=57 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 116326ms, keeping it commented out
+commenting out line Lines { lines: 356..=358 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 109250ms, reverting
+commenting out line Lines { lines: 440..=440 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 111325ms, reverting
+commenting out line Lines { lines: 509..=509 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 109016ms, keeping it commented out
+commenting out line Lines { lines: 209..=220 } in "./tmp/50/kv2/lists/commit_v.rs"
+verus failed with time: 103631ms, reverting
+commenting out line Lines { lines: 174..=174 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 112776ms, keeping it commented out
+commenting out line Lines { lines: 476..=476 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 117519ms, keeping it commented out
+commenting out line Lines { lines: 58..=60 } in "./tmp/54/kv2/lists/read_v.rs"
+verus failed with time: 111900ms, reverting
+commenting out line Lines { lines: 366..=367 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 116922ms, keeping it commented out
+commenting out line Lines { lines: 441..=441 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 115987ms, keeping it commented out
+commenting out line Lines { lines: 510..=510 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 112677ms, keeping it commented out
+commenting out line Lines { lines: 175..=177 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus failed with time: 103557ms, reverting
+commenting out line Lines { lines: 226..=227 } in "./tmp/50/kv2/lists/commit_v.rs"
+verus succeeded with time: 111849ms, keeping it commented out
+minimization of ./tmp/50/kv2/lists/commit_v.rs is completed
+commenting out line Lines { lines: 479..=479 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 110882ms, keeping it commented out
+commenting out line Lines { lines: 85..=85 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 114662ms, keeping it commented out
+commenting out line Lines { lines: 437..=442 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 105081ms, reverting
+commenting out line Lines { lines: 368..=370 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 116226ms, keeping it commented out
+commenting out line Lines { lines: 372..=372 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 12613ms, reverting
+commenting out line Lines { lines: 698..=698 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 109272ms, keeping it commented out
+commenting out line Lines { lines: 138..=138 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus failed with time: 103689ms, reverting
+commenting out line Lines { lines: 200..=200 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 111239ms, keeping it commented out
+commenting out line Lines { lines: 483..=483 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 105617ms, reverting
+commenting out line Lines { lines: 108..=108 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 114459ms, keeping it commented out
+commenting out line Lines { lines: 444..=444 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 115526ms, keeping it commented out
+commenting out line Lines { lines: 396..=396 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 118234ms, keeping it commented out
+commenting out line Lines { lines: 167..=170 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus failed with time: 99786ms, reverting
+commenting out line Lines { lines: 214..=214 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 109687ms, keeping it commented out
+commenting out line Lines { lines: 699..=699 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 113391ms, keeping it commented out
+commenting out line Lines { lines: 487..=487 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 107219ms, reverting
+commenting out line Lines { lines: 109..=109 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 112620ms, keeping it commented out
+commenting out line Lines { lines: 445..=445 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 114692ms, keeping it commented out
+commenting out line Lines { lines: 398..=399 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 112747ms, keeping it commented out
+commenting out line Lines { lines: 171..=171 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus succeeded with time: 107248ms, keeping it commented out
+commenting out line Lines { lines: 752..=752 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 112063ms, keeping it commented out
+commenting out line Lines { lines: 215..=215 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 115227ms, keeping it commented out
+commenting out line Lines { lines: 488..=488 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 109262ms, keeping it commented out
+commenting out line Lines { lines: 143..=143 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 115330ms, keeping it commented out
+commenting out line Lines { lines: 446..=446 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 104488ms, reverting
+commenting out line Lines { lines: 405..=405 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 112373ms, keeping it commented out
+commenting out line Lines { lines: 186..=189 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus failed with time: 103642ms, reverting
+commenting out line Lines { lines: 764..=771 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 105103ms, reverting
+commenting out line Lines { lines: 255..=255 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 113166ms, keeping it commented out
+commenting out line Lines { lines: 485..=489 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 103769ms, reverting
+commenting out line Lines { lines: 156..=156 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 117902ms, keeping it commented out
+commenting out line Lines { lines: 447..=447 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 113578ms, keeping it commented out
+commenting out line Lines { lines: 406..=406 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 114354ms, keeping it commented out
+commenting out line Lines { lines: 190..=190 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus succeeded with time: 116644ms, keeping it commented out
+commenting out line Lines { lines: 772..=772 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 110448ms, keeping it commented out
+commenting out line Lines { lines: 256..=258 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 111991ms, keeping it commented out
+commenting out line Lines { lines: 496..=496 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 110440ms, keeping it commented out
+commenting out line Lines { lines: 443..=448 } in "./tmp/7/common/util_v.rs"
+verus failed with time: 108872ms, reverting
+commenting out line Lines { lines: 157..=158 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 117405ms, keeping it commented out
+commenting out line Lines { lines: 407..=407 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 109557ms, keeping it commented out
+commenting out line Lines { lines: 203..=208 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus failed with time: 108286ms, reverting
+commenting out line Lines { lines: 775..=779 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus failed with time: 103397ms, reverting
+commenting out line Lines { lines: 288..=289 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 110858ms, keeping it commented out
+commenting out line Lines { lines: 497..=497 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 113913ms, keeping it commented out
+commenting out line Lines { lines: 449..=449 } in "./tmp/7/common/util_v.rs"
+verus succeeded with time: 120453ms, keeping it commented out
+minimization of ./tmp/7/common/util_v.rs is completed
+commenting out line Lines { lines: 159..=161 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 116729ms, keeping it commented out
+commenting out line Lines { lines: 202..=209 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus failed with time: 105407ms, reverting
+commenting out line Lines { lines: 780..=780 } in "./tmp/42/kv2/keys/inv_v.rs"
+verus succeeded with time: 102444ms, keeping it commented out
+minimization of ./tmp/42/kv2/keys/inv_v.rs is completed
+commenting out line Lines { lines: 401..=408 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 115781ms, keeping it commented out
+commenting out line Lines { lines: 303..=303 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 115489ms, keeping it commented out
+commenting out line Lines { lines: 579..=579 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 113083ms, keeping it commented out
+commenting out line Lines { lines: 193..=194 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 113540ms, keeping it commented out
+commenting out line Lines { lines: 70..=70 } in "./tmp/56/kv2/lists/setup_v.rs"
+verus succeeded with time: 114894ms, keeping it commented out
+commenting out line Lines { lines: 73..=81 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 103950ms, reverting
+commenting out line Lines { lines: 210..=210 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus succeeded with time: 113762ms, keeping it commented out
+commenting out line Lines { lines: 410..=410 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 111226ms, keeping it commented out
+commenting out line Lines { lines: 526..=526 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 11021ms, reverting
+commenting out line Lines { lines: 302..=304 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 110125ms, keeping it commented out
+commenting out line Lines { lines: 597..=597 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 109651ms, keeping it commented out
+commenting out line Lines { lines: 197..=198 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 111756ms, keeping it commented out
+commenting out line Lines { lines: 71..=71 } in "./tmp/56/kv2/lists/setup_v.rs"
+verus succeeded with time: 117300ms, keeping it commented out
+commenting out line Lines { lines: 83..=83 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 109960ms, reverting
+commenting out line Lines { lines: 212..=217 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus failed with time: 109552ms, reverting
+commenting out line Lines { lines: 528..=528 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 115927ms, keeping it commented out
+commenting out line Lines { lines: 673..=673 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 102085ms, keeping it commented out
+commenting out line Lines { lines: 334..=334 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus succeeded with time: 118249ms, keeping it commented out
+commenting out line Lines { lines: 393..=393 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus failed with time: 12713ms, reverting
+commenting out line Lines { lines: 401..=401 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus failed with time: 13879ms, reverting
+commenting out line Lines { lines: 199..=199 } in "./tmp/54/kv2/lists/read_v.rs"
+verus failed with time: 105304ms, reverting
+commenting out line Lines { lines: 211..=218 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus failed with time: 101243ms, reverting
+commenting out line Lines { lines: 84..=84 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 110307ms, keeping it commented out
+commenting out line Lines { lines: 75..=75 } in "./tmp/56/kv2/lists/setup_v.rs"
+verus succeeded with time: 111696ms, keeping it commented out
+commenting out line Lines { lines: 529..=529 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 116397ms, keeping it commented out
+commenting out line Lines { lines: 674..=674 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 109455ms, keeping it commented out
+commenting out line Lines { lines: 419..=419 } in "./tmp/51/kv2/lists/delete_v.rs"
+verus failed with time: 103042ms, reverting
+minimization of ./tmp/51/kv2/lists/delete_v.rs is completed
+minimization of ./tmp/58/kv2/lists/spec_v.rs is completed
+commenting out line Lines { lines: 200..=200 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 113134ms, keeping it commented out
+commenting out line Lines { lines: 219..=219 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus succeeded with time: 113979ms, keeping it commented out
+commenting out line Lines { lines: 111..=113 } in "./tmp/56/kv2/lists/setup_v.rs"
+verus succeeded with time: 109864ms, keeping it commented out
+commenting out line Lines { lines: 85..=85 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 114764ms, keeping it commented out
+commenting out line Lines { lines: 546..=546 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 111359ms, keeping it commented out
+commenting out line Lines { lines: 676..=676 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 112484ms, keeping it commented out
+commenting out line Lines { lines: 110..=110 } in "./tmp/59/kv2/lists/start_v.rs"
+verus succeeded with time: 107066ms, keeping it commented out
+commenting out line Lines { lines: 217..=218 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 112221ms, keeping it commented out
+commenting out line Lines { lines: 263..=266 } in "./tmp/55/kv2/lists/recover_v.rs"
+verus failed with time: 104558ms, reverting
+minimization of ./tmp/55/kv2/lists/recover_v.rs is completed
+commenting out line Lines { lines: 124..=124 } in "./tmp/56/kv2/lists/setup_v.rs"
+verus succeeded with time: 111736ms, keeping it commented out
+commenting out line Lines { lines: 86..=86 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 113779ms, keeping it commented out
+commenting out line Lines { lines: 561..=561 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 111744ms, keeping it commented out
+commenting out line Lines { lines: 679..=679 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 108413ms, keeping it commented out
+commenting out line Lines { lines: 684..=684 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 10991ms, reverting
+commenting out line Lines { lines: 111..=111 } in "./tmp/59/kv2/lists/start_v.rs"
+verus succeeded with time: 113295ms, keeping it commented out
+commenting out line Lines { lines: 219..=219 } in "./tmp/54/kv2/lists/read_v.rs"
+verus failed with time: 105277ms, reverting
+commenting out line Lines { lines: 173..=173 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 109696ms, keeping it commented out
+commenting out line Lines { lines: 125..=127 } in "./tmp/56/kv2/lists/setup_v.rs"
+verus failed with time: 102217ms, reverting
+minimization of ./tmp/56/kv2/lists/setup_v.rs is completed
+commenting out line Lines { lines: 87..=87 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 113885ms, keeping it commented out
+commenting out line Lines { lines: 682..=682 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 97914ms, reverting
+commenting out line Lines { lines: 686..=686 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 112061ms, keeping it commented out
+commenting out line Lines { lines: 220..=220 } in "./tmp/59/kv2/lists/start_v.rs"
+verus failed with time: 111291ms, reverting
+commenting out line Lines { lines: 230..=230 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 115965ms, keeping it commented out
+commenting out line Lines { lines: 174..=174 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 118704ms, keeping it commented out
+commenting out line Lines { lines: 265..=265 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 117511ms, keeping it commented out
+commenting out line Lines { lines: 93..=93 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 111904ms, keeping it commented out
+commenting out line Lines { lines: 686..=686 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 102261ms, reverting
+commenting out line Lines { lines: 687..=687 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 114267ms, keeping it commented out
+commenting out line Lines { lines: 221..=221 } in "./tmp/59/kv2/lists/start_v.rs"
+verus succeeded with time: 109324ms, keeping it commented out
+commenting out line Lines { lines: 229..=231 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 112365ms, keeping it commented out
+commenting out line Lines { lines: 266..=268 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 106178ms, reverting
+commenting out line Lines { lines: 278..=280 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 109311ms, reverting
+commenting out line Lines { lines: 94..=94 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 113604ms, keeping it commented out
+commenting out line Lines { lines: 687..=687 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 115220ms, keeping it commented out
+commenting out line Lines { lines: 697..=697 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 115626ms, keeping it commented out
+commenting out line Lines { lines: 322..=326 } in "./tmp/59/kv2/lists/start_v.rs"
+verus failed with time: 100958ms, reverting
+commenting out line Lines { lines: 261..=261 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 114618ms, keeping it commented out
+commenting out line Lines { lines: 282..=282 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 111819ms, keeping it commented out
+commenting out line Lines { lines: 272..=272 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 116528ms, keeping it commented out
+commenting out line Lines { lines: 95..=95 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 108861ms, keeping it commented out
+commenting out line Lines { lines: 684..=688 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 102950ms, reverting
+commenting out line Lines { lines: 371..=372 } in "./tmp/59/kv2/lists/start_v.rs"
+verus failed with time: 104925ms, reverting
+commenting out line Lines { lines: 712..=712 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 111797ms, keeping it commented out
+commenting out line Lines { lines: 283..=284 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 111598ms, keeping it commented out
+commenting out line Lines { lines: 294..=294 } in "./tmp/54/kv2/lists/read_v.rs"
+verus succeeded with time: 117512ms, keeping it commented out
+minimization of ./tmp/54/kv2/lists/read_v.rs is completed
+commenting out line Lines { lines: 273..=273 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 116628ms, keeping it commented out
+commenting out line Lines { lines: 89..=97 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 116950ms, keeping it commented out
+commenting out line Lines { lines: 697..=697 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 116626ms, keeping it commented out
+commenting out line Lines { lines: 403..=403 } in "./tmp/59/kv2/lists/start_v.rs"
+verus succeeded with time: 114696ms, keeping it commented out
+minimization of ./tmp/59/kv2/lists/start_v.rs is completed
+minimization of ./tmp/63/kv2/recover_v.rs is completed
+commenting out line Lines { lines: 810..=810 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 111241ms, keeping it commented out
+minimization of ./tmp/64/kv2/rwkv_t.rs is completed
+commenting out line Lines { lines: 290..=290 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 100680ms, reverting
+commenting out line Lines { lines: 117..=117 } in "./tmp/62/kv2/lists/util_v.rs"
+verus succeeded with time: 111189ms, keeping it commented out
+commenting out line Lines { lines: 274..=274 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 112857ms, keeping it commented out
+commenting out line Lines { lines: 88..=98 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 106350ms, reverting
+commenting out line Lines { lines: 276..=276 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 10535ms, reverting
+commenting out line Lines { lines: 698..=698 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 114486ms, keeping it commented out
+commenting out line Lines { lines: 811..=811 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 113228ms, keeping it commented out
+commenting out line Lines { lines: 788..=788 } in "./tmp/65/kv2/rwkv_v.rs"
+verus succeeded with time: 114602ms, keeping it commented out
+minimization of ./tmp/65/kv2/rwkv_v.rs is completed
+minimization of ./tmp/66/kv2/rwlock_t.rs is completed
+commenting out line Lines { lines: 937..=937 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 10967ms, reverting
+commenting out line Lines { lines: 291..=291 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 97526ms, reverting
+commenting out line Lines { lines: 118..=119 } in "./tmp/62/kv2/lists/util_v.rs"
+verus succeeded with time: 113472ms, keeping it commented out
+commenting out line Lines { lines: 99..=99 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 109102ms, keeping it commented out
+commenting out line Lines { lines: 321..=321 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 114600ms, keeping it commented out
+commenting out line Lines { lines: 717..=717 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 115340ms, keeping it commented out
+commenting out line Lines { lines: 89..=89 } in "./tmp/67/kv2/setup_v.rs"
+verus succeeded with time: 110403ms, keeping it commented out
+commenting out line Lines { lines: 948..=948 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 108594ms, keeping it commented out
+commenting out line Lines { lines: 296..=296 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 106671ms, keeping it commented out
+commenting out line Lines { lines: 120..=120 } in "./tmp/62/kv2/lists/util_v.rs"
+verus succeeded with time: 115776ms, keeping it commented out
+commenting out line Lines { lines: 103..=103 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 115240ms, keeping it commented out
+commenting out line Lines { lines: 322..=322 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 117205ms, keeping it commented out
+commenting out line Lines { lines: 723..=723 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 113813ms, keeping it commented out
+commenting out line Lines { lines: 949..=949 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 105789ms, keeping it commented out
+commenting out line Lines { lines: 129..=129 } in "./tmp/67/kv2/setup_v.rs"
+verus succeeded with time: 114645ms, keeping it commented out
+commenting out line Lines { lines: 297..=298 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 101074ms, reverting
+commenting out line Lines { lines: 231..=231 } in "./tmp/67/kv2/setup_v.rs"
+verus failed with time: 9982ms, reverting
+commenting out line Lines { lines: 104..=104 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 104994ms, reverting
+commenting out line Lines { lines: 155..=155 } in "./tmp/62/kv2/lists/util_v.rs"
+verus succeeded with time: 112831ms, keeping it commented out
+commenting out line Lines { lines: 323..=325 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 112246ms, reverting
+commenting out line Lines { lines: 728..=728 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 113792ms, keeping it commented out
+commenting out line Lines { lines: 953..=953 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 112635ms, keeping it commented out
+commenting out line Lines { lines: 299..=301 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 106079ms, reverting
+commenting out line Lines { lines: 235..=237 } in "./tmp/67/kv2/setup_v.rs"
+verus failed with time: 102690ms, reverting
+commenting out line Lines { lines: 129..=129 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 113839ms, keeping it commented out
+commenting out line Lines { lines: 156..=156 } in "./tmp/62/kv2/lists/util_v.rs"
+verus succeeded with time: 117849ms, keeping it commented out
+commenting out line Lines { lines: 352..=352 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 116381ms, keeping it commented out
+commenting out line Lines { lines: 729..=729 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus succeeded with time: 115134ms, keeping it commented out
+commenting out line Lines { lines: 238..=242 } in "./tmp/67/kv2/setup_v.rs"
+verus failed with time: 101822ms, reverting
+commenting out line Lines { lines: 959..=959 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 114370ms, keeping it commented out
+commenting out line Lines { lines: 424..=424 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 114658ms, keeping it commented out
+commenting out line Lines { lines: 130..=130 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 116880ms, keeping it commented out
+commenting out line Lines { lines: 161..=161 } in "./tmp/62/kv2/lists/util_v.rs"
+verus succeeded with time: 114703ms, keeping it commented out
+commenting out line Lines { lines: 730..=730 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 106687ms, reverting
+commenting out line Lines { lines: 353..=353 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 113768ms, keeping it commented out
+commenting out line Lines { lines: 243..=248 } in "./tmp/67/kv2/setup_v.rs"
+verus failed with time: 109991ms, reverting
+commenting out line Lines { lines: 967..=967 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 108430ms, keeping it commented out
+commenting out line Lines { lines: 464..=464 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 115442ms, keeping it commented out
+commenting out line Lines { lines: 974..=974 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 10392ms, reverting
+commenting out line Lines { lines: 222..=242 } in "./tmp/62/kv2/lists/util_v.rs"
+verus failed with time: 108376ms, reverting
+commenting out line Lines { lines: 127..=131 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 114122ms, keeping it commented out
+commenting out line Lines { lines: 727..=731 } in "./tmp/40/kv2/keys/crud_v.rs"
+verus failed with time: 104567ms, reverting
+minimization of ./tmp/40/kv2/keys/crud_v.rs is completed
+commenting out line Lines { lines: 377..=377 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 108538ms, keeping it commented out
+commenting out line Lines { lines: 249..=254 } in "./tmp/67/kv2/setup_v.rs"
+verus failed with time: 106060ms, reverting
+commenting out line Lines { lines: 465..=467 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 110160ms, reverting
+commenting out line Lines { lines: 978..=978 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 116218ms, keeping it commented out
+commenting out line Lines { lines: 244..=266 } in "./tmp/62/kv2/lists/util_v.rs"
+verus failed with time: 102134ms, reverting
+commenting out line Lines { lines: 295..=295 } in "./tmp/62/kv2/lists/util_v.rs"
+verus failed with time: 10906ms, reverting
+commenting out line Lines { lines: 147..=147 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 114923ms, keeping it commented out
+commenting out line Lines { lines: 353..=353 } in "./tmp/68/kv2/shardkv_t.rs"
+verus succeeded with time: 116701ms, keeping it commented out
+commenting out line Lines { lines: 378..=378 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 123457ms, keeping it commented out
+commenting out line Lines { lines: 256..=256 } in "./tmp/67/kv2/setup_v.rs"
+verus succeeded with time: 113677ms, keeping it commented out
+minimization of ./tmp/67/kv2/setup_v.rs is completed
+minimization of ./tmp/69/kv2/shardkv_v.rs is completed
+commenting out line Lines { lines: 490..=490 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 108981ms, keeping it commented out
+commenting out line Lines { lines: 1074..=1074 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 108250ms, keeping it commented out
+commenting out line Lines { lines: 151..=151 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 105325ms, reverting
+commenting out line Lines { lines: 306..=306 } in "./tmp/62/kv2/lists/util_v.rs"
+verus succeeded with time: 116213ms, keeping it commented out
+minimization of ./tmp/62/kv2/lists/util_v.rs is completed
+minimization of ./tmp/71/kv2/spec_t.rs is completed
+commenting out line Lines { lines: 441..=441 } in "./tmp/68/kv2/shardkv_t.rs"
+verus succeeded with time: 112709ms, keeping it commented out
+minimization of ./tmp/68/kv2/shardkv_t.rs is completed
+commenting out line Lines { lines: 56..=56 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 104495ms, reverting
+commenting out line Lines { lines: 379..=379 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 118716ms, keeping it commented out
+commenting out line Lines { lines: 501..=501 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 108910ms, keeping it commented out
+commenting out line Lines { lines: 1091..=1091 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 106804ms, reverting
+commenting out line Lines { lines: 150..=153 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 104576ms, reverting
+commenting out line Lines { lines: 88..=98 } in "./tmp/72/kv2/start_v.rs"
+verus succeeded with time: 117289ms, keeping it commented out
+commenting out line Lines { lines: 50..=50 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 116837ms, keeping it commented out
+commenting out line Lines { lines: 107..=107 } in "./tmp/72/kv2/start_v.rs"
+verus failed with time: 10545ms, reverting
+commenting out line Lines { lines: 57..=57 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 118141ms, keeping it commented out
+commenting out line Lines { lines: 380..=381 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 120420ms, keeping it commented out
+commenting out line Lines { lines: 1092..=1092 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 102125ms, reverting
+commenting out line Lines { lines: 541..=541 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 114073ms, keeping it commented out
+commenting out line Lines { lines: 154..=156 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 107777ms, reverting
+commenting out line Lines { lines: 54..=56 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 106086ms, reverting
+commenting out line Lines { lines: 113..=113 } in "./tmp/72/kv2/start_v.rs"
+verus succeeded with time: 116041ms, keeping it commented out
+commenting out line Lines { lines: 65..=67 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 112907ms, reverting
+commenting out line Lines { lines: 1108..=1108 } in "./tmp/49/kv2/lists/append_v.rs"
+verus failed with time: 110803ms, reverting
+commenting out line Lines { lines: 431..=431 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 115738ms, keeping it commented out
+commenting out line Lines { lines: 542..=544 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 110245ms, reverting
+commenting out line Lines { lines: 157..=159 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 102912ms, reverting
+commenting out line Lines { lines: 59..=59 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 111130ms, keeping it commented out
+commenting out line Lines { lines: 117..=117 } in "./tmp/72/kv2/start_v.rs"
+verus succeeded with time: 116595ms, keeping it commented out
+commenting out line Lines { lines: 70..=73 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 112757ms, reverting
+commenting out line Lines { lines: 1113..=1117 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 119708ms, keeping it commented out
+commenting out line Lines { lines: 432..=432 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 119177ms, keeping it commented out
+commenting out line Lines { lines: 571..=572 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 118500ms, keeping it commented out
+commenting out line Lines { lines: 160..=162 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 100737ms, reverting
+commenting out line Lines { lines: 64..=66 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 99905ms, reverting
+commenting out line Lines { lines: 74..=74 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 100327ms, reverting
+commenting out line Lines { lines: 121..=121 } in "./tmp/72/kv2/start_v.rs"
+verus succeeded with time: 112851ms, keeping it commented out
+commenting out line Lines { lines: 1118..=1118 } in "./tmp/49/kv2/lists/append_v.rs"
+verus succeeded with time: 119868ms, keeping it commented out
+minimization of ./tmp/49/kv2/lists/append_v.rs is completed
+minimization of ./tmp/74/pmem/mod.rs is completed
+minimization of ./tmp/75/pmem/mmap_pmemfile_t.rs is completed
+minimization of ./tmp/76/pmem/crashinv_t.rs is completed
+commenting out line Lines { lines: 433..=434 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 119360ms, keeping it commented out
+minimization of ./tmp/77/pmem/crc_t.rs is completed
+minimization of ./tmp/78/pmem/hamming_t.rs is completed
+commenting out line Lines { lines: 611..=611 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 119741ms, keeping it commented out
+commenting out line Lines { lines: 163..=163 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 111748ms, reverting
+commenting out line Lines { lines: 41..=99 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 107547ms, reverting
+commenting out line Lines { lines: 75..=75 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 108789ms, keeping it commented out
+commenting out line Lines { lines: 122..=122 } in "./tmp/72/kv2/start_v.rs"
+verus succeeded with time: 107880ms, keeping it commented out
+commenting out line Lines { lines: 44..=44 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 113759ms, reverting
+commenting out line Lines { lines: 435..=436 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 118120ms, keeping it commented out
+commenting out line Lines { lines: 622..=622 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 118768ms, keeping it commented out
+commenting out line Lines { lines: 166..=166 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 109520ms, keeping it commented out
+commenting out line Lines { lines: 195..=195 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 113132ms, keeping it commented out
+commenting out line Lines { lines: 98..=98 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 108302ms, keeping it commented out
+commenting out line Lines { lines: 123..=123 } in "./tmp/72/kv2/start_v.rs"
+verus succeeded with time: 110830ms, keeping it commented out
+commenting out line Lines { lines: 137..=137 } in "./tmp/72/kv2/start_v.rs"
+verus failed with time: 12045ms, reverting
+commenting out line Lines { lines: 155..=155 } in "./tmp/72/kv2/start_v.rs"
+verus failed with time: 10635ms, reverting
+commenting out line Lines { lines: 40..=45 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 109242ms, reverting
+commenting out line Lines { lines: 161..=161 } in "./tmp/72/kv2/start_v.rs"
+verus failed with time: 8875ms, reverting
+commenting out line Lines { lines: 623..=625 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 106360ms, reverting
+commenting out line Lines { lines: 438..=440 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 113383ms, keeping it commented out
+commenting out line Lines { lines: 167..=167 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 104753ms, reverting
+commenting out line Lines { lines: 169..=169 } in "./tmp/72/kv2/start_v.rs"
+verus failed with time: 8720ms, reverting
+commenting out line Lines { lines: 196..=196 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 112438ms, keeping it commented out
+commenting out line Lines { lines: 100..=100 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 102217ms, reverting
+commenting out line Lines { lines: 99..=99 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 109443ms, reverting
+commenting out line Lines { lines: 165..=169 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 107390ms, reverting
+commenting out line Lines { lines: 652..=653 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 117730ms, keeping it commented out
+commenting out line Lines { lines: 477..=478 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 118765ms, keeping it commented out
+commenting out line Lines { lines: 171..=171 } in "./tmp/72/kv2/start_v.rs"
+verus succeeded with time: 118966ms, keeping it commented out
+minimization of ./tmp/72/kv2/start_v.rs is completed
+minimization of ./tmp/80/pmem/pmemmock_t.rs is completed
+minimization of ./tmp/81/pmem/pmemspec_t.rs is completed
+commenting out line Lines { lines: 108..=108 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 107577ms, keeping it commented out
+commenting out line Lines { lines: 223..=223 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 116486ms, keeping it commented out
+commenting out line Lines { lines: 110..=110 } in "./tmp/79/pmem/hamming_v.rs"
+verus succeeded with time: 116101ms, keeping it commented out
+commenting out line Lines { lines: 172..=172 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 110700ms, reverting
+commenting out line Lines { lines: 701..=701 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 118572ms, keeping it commented out
+commenting out line Lines { lines: 32..=32 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 110892ms, reverting
+commenting out line Lines { lines: 479..=480 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 120083ms, keeping it commented out
+commenting out line Lines { lines: 716..=716 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 9730ms, reverting
+commenting out line Lines { lines: 733..=733 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 8860ms, reverting
+commenting out line Lines { lines: 740..=740 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 9188ms, reverting
+commenting out line Lines { lines: 106..=109 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 102229ms, reverting
+commenting out line Lines { lines: 224..=224 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 108509ms, keeping it commented out
+commenting out line Lines { lines: 796..=796 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 10800ms, reverting
+commenting out line Lines { lines: 112..=112 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 102341ms, reverting
+commenting out line Lines { lines: 171..=174 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 105948ms, reverting
+commenting out line Lines { lines: 33..=33 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 105518ms, reverting
+commenting out line Lines { lines: 483..=484 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 118328ms, keeping it commented out
+commenting out line Lines { lines: 158..=226 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 105494ms, reverting
+commenting out line Lines { lines: 118..=118 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 113740ms, keeping it commented out
+commenting out line Lines { lines: 804..=804 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 106779ms, reverting
+commenting out line Lines { lines: 862..=862 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 11478ms, reverting
+commenting out line Lines { lines: 866..=866 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 11574ms, reverting
+commenting out line Lines { lines: 113..=113 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 103407ms, reverting
+commenting out line Lines { lines: 183..=183 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 111114ms, keeping it commented out
+commenting out line Lines { lines: 34..=34 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 102803ms, reverting
+commenting out line Lines { lines: 485..=485 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 112937ms, reverting
+commenting out line Lines { lines: 120..=120 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 112063ms, keeping it commented out
+commenting out line Lines { lines: 239..=240 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 113895ms, keeping it commented out
+commenting out line Lines { lines: 872..=872 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 106100ms, reverting
+commenting out line Lines { lines: 919..=919 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 12221ms, reverting
+commenting out line Lines { lines: 131..=131 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 100943ms, reverting
+commenting out line Lines { lines: 920..=920 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 9897ms, reverting
+commenting out line Lines { lines: 35..=35 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 98676ms, reverting
+commenting out line Lines { lines: 181..=184 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 104421ms, reverting
+commenting out line Lines { lines: 493..=494 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 112631ms, keeping it commented out
+commenting out line Lines { lines: 255..=257 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 102623ms, reverting
+commenting out line Lines { lines: 122..=122 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 115120ms, keeping it commented out
+commenting out line Lines { lines: 132..=132 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 109649ms, reverting
+commenting out line Lines { lines: 945..=946 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 112806ms, keeping it commented out
+commenting out line Lines { lines: 36..=36 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 111017ms, reverting
+commenting out line Lines { lines: 193..=193 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 110964ms, keeping it commented out
+commenting out line Lines { lines: 258..=260 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 109138ms, keeping it commented out
+commenting out line Lines { lines: 495..=495 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 116027ms, keeping it commented out
+commenting out line Lines { lines: 123..=123 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 107399ms, keeping it commented out
+commenting out line Lines { lines: 145..=145 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 104008ms, reverting
+commenting out line Lines { lines: 947..=947 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus failed with time: 110057ms, reverting
+commenting out line Lines { lines: 37..=37 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 108344ms, reverting
+commenting out line Lines { lines: 195..=195 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 110501ms, keeping it commented out
+commenting out line Lines { lines: 285..=285 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 114330ms, keeping it commented out
+commenting out line Lines { lines: 496..=496 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 114025ms, keeping it commented out
+commenting out line Lines { lines: 124..=124 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 119519ms, keeping it commented out
+commenting out line Lines { lines: 147..=147 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 103808ms, reverting
+commenting out line Lines { lines: 38..=38 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 104789ms, reverting
+commenting out line Lines { lines: 1027..=1027 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 111853ms, keeping it commented out
+commenting out line Lines { lines: 196..=196 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 110272ms, keeping it commented out
+commenting out line Lines { lines: 508..=509 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 110271ms, reverting
+commenting out line Lines { lines: 286..=286 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 114335ms, keeping it commented out
+commenting out line Lines { lines: 116..=125 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 103207ms, reverting
+commenting out line Lines { lines: 150..=150 } in "./tmp/79/pmem/hamming_v.rs"
+verus succeeded with time: 113892ms, keeping it commented out
+commenting out line Lines { lines: 39..=39 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 108840ms, reverting
+commenting out line Lines { lines: 1038..=1038 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 115080ms, keeping it commented out
+commenting out line Lines { lines: 197..=197 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 112201ms, keeping it commented out
+commenting out line Lines { lines: 510..=510 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 105497ms, keeping it commented out
+commenting out line Lines { lines: 263..=287 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 109119ms, reverting
+commenting out line Lines { lines: 114..=129 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 105577ms, reverting
+commenting out line Lines { lines: 152..=152 } in "./tmp/79/pmem/hamming_v.rs"
+verus succeeded with time: 115486ms, keeping it commented out
+commenting out line Lines { lines: 40..=40 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 110030ms, reverting
+commenting out line Lines { lines: 190..=198 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 104637ms, reverting
+commenting out line Lines { lines: 1039..=1039 } in "./tmp/60/kv2/lists/trim_v.rs"
+verus succeeded with time: 116734ms, keeping it commented out
+minimization of ./tmp/60/kv2/lists/trim_v.rs is completed
+minimization of ./tmp/83/pmem/pmcopy_t.rs is completed
+minimization of ./tmp/84/pmem/power_t.rs is completed
+commenting out line Lines { lines: 571..=571 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 107530ms, reverting
+commenting out line Lines { lines: 137..=137 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 108878ms, keeping it commented out
+commenting out line Lines { lines: 339..=343 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 112877ms, keeping it commented out
+commenting out line Lines { lines: 156..=156 } in "./tmp/79/pmem/hamming_v.rs"
+verus succeeded with time: 113731ms, keeping it commented out
+commenting out line Lines { lines: 41..=41 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 105175ms, reverting
+commenting out line Lines { lines: 201..=201 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 110755ms, keeping it commented out
+commenting out line Lines { lines: 115..=117 } in "./tmp/85/pmem/power_sound_t.rs"
+verus succeeded with time: 112220ms, keeping it commented out
+commenting out line Lines { lines: 584..=584 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 109210ms, keeping it commented out
+commenting out line Lines { lines: 134..=141 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 110018ms, reverting
+commenting out line Lines { lines: 344..=346 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 107331ms, reverting
+commenting out line Lines { lines: 189..=189 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 105376ms, reverting
+commenting out line Lines { lines: 42..=42 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 109905ms, reverting
+commenting out line Lines { lines: 203..=203 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 111647ms, keeping it commented out
+commenting out line Lines { lines: 119..=121 } in "./tmp/85/pmem/power_sound_t.rs"
+verus failed with time: 104064ms, reverting
+minimization of ./tmp/85/pmem/power_sound_t.rs is completed
+minimization of ./tmp/86/pmem/power_v.rs is completed
+minimization of ./tmp/87/pmem/traits_t.rs is completed
+commenting out line Lines { lines: 585..=585 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 119669ms, keeping it commented out
+commenting out line Lines { lines: 144..=144 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 113398ms, keeping it commented out
+commenting out line Lines { lines: 371..=371 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 113881ms, keeping it commented out
+commenting out line Lines { lines: 193..=193 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 108189ms, reverting
+commenting out line Lines { lines: 43..=43 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 105661ms, reverting
+commenting out line Lines { lines: 115..=115 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus succeeded with time: 108884ms, keeping it commented out
+commenting out line Lines { lines: 204..=204 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 113801ms, keeping it commented out
+commenting out line Lines { lines: 594..=594 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 114706ms, reverting
+commenting out line Lines { lines: 145..=145 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 111488ms, keeping it commented out
+commenting out line Lines { lines: 372..=372 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 111027ms, keeping it commented out
+commenting out line Lines { lines: 198..=198 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 105785ms, reverting
+commenting out line Lines { lines: 44..=44 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 106158ms, reverting
+commenting out line Lines { lines: 117..=117 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus failed with time: 104615ms, reverting
+commenting out line Lines { lines: 205..=205 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 112557ms, keeping it commented out
+commenting out line Lines { lines: 349..=373 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 104350ms, reverting
+commenting out line Lines { lines: 147..=147 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 109860ms, keeping it commented out
+commenting out line Lines { lines: 605..=605 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 117251ms, keeping it commented out
+commenting out line Lines { lines: 199..=199 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 107769ms, reverting
+commenting out line Lines { lines: 45..=45 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 108773ms, reverting
+commenting out line Lines { lines: 116..=118 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus failed with time: 108175ms, reverting
+commenting out line Lines { lines: 207..=207 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus succeeded with time: 110948ms, keeping it commented out
+commenting out line Lines { lines: 425..=429 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 107405ms, keeping it commented out
+commenting out line Lines { lines: 149..=149 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 117326ms, keeping it commented out
+commenting out line Lines { lines: 613..=613 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 118477ms, keeping it commented out
+commenting out line Lines { lines: 196..=200 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 110354ms, reverting
+commenting out line Lines { lines: 46..=46 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 107087ms, reverting
+commenting out line Lines { lines: 135..=135 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus succeeded with time: 112290ms, keeping it commented out
+commenting out line Lines { lines: 199..=208 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 108966ms, reverting
+commenting out line Lines { lines: 430..=432 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 102377ms, reverting
+commenting out line Lines { lines: 150..=150 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 111913ms, reverting
+commenting out line Lines { lines: 47..=47 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 110589ms, reverting
+commenting out line Lines { lines: 204..=204 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 111601ms, reverting
+commenting out line Lines { lines: 631..=632 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 118304ms, keeping it commented out
+commenting out line Lines { lines: 136..=136 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus failed with time: 108822ms, reverting
+commenting out line Lines { lines: 186..=210 } in "./tmp/57/kv2/lists/slots_v.rs"
+verus failed with time: 105287ms, reverting
+minimization of ./tmp/57/kv2/lists/slots_v.rs is completed
+commenting out line Lines { lines: 457..=457 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 109862ms, keeping it commented out
+commenting out line Lines { lines: 152..=152 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 109387ms, reverting
+commenting out line Lines { lines: 203..=205 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 111679ms, reverting
+commenting out line Lines { lines: 48..=48 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 112636ms, reverting
+commenting out line Lines { lines: 633..=634 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 121928ms, keeping it commented out
+commenting out line Lines { lines: 137..=137 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus succeeded with time: 110147ms, keeping it commented out
+commenting out line Lines { lines: 58..=58 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus succeeded with time: 114382ms, keeping it commented out
+commenting out line Lines { lines: 458..=458 } in "./tmp/73/kv2/util_v.rs"
+verus succeeded with time: 118841ms, keeping it commented out
+commenting out line Lines { lines: 142..=153 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 101898ms, reverting
+commenting out line Lines { lines: 209..=209 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 107017ms, reverting
+commenting out line Lines { lines: 49..=49 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 109027ms, reverting
+commenting out line Lines { lines: 635..=637 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 114191ms, keeping it commented out
+commenting out line Lines { lines: 142..=142 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus succeeded with time: 108419ms, keeping it commented out
+commenting out line Lines { lines: 71..=71 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus succeeded with time: 113630ms, keeping it commented out
+commenting out line Lines { lines: 435..=459 } in "./tmp/73/kv2/util_v.rs"
+verus failed with time: 104584ms, reverting
+minimization of ./tmp/73/kv2/util_v.rs is completed
+minimization of ./tmp/90/pmem/pmem_async_spec_t.rs is completed
+minimization of ./tmp/91/testkv_v.rs is completed
+commenting out line Lines { lines: 131..=154 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 102879ms, reverting
+commenting out line Lines { lines: 221..=221 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 105197ms, reverting
+commenting out line Lines { lines: 50..=50 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 105448ms, reverting
+commenting out line Lines { lines: 638..=639 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 109505ms, keeping it commented out
+commenting out line Lines { lines: 143..=143 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus succeeded with time: 107277ms, keeping it commented out
+commenting out line Lines { lines: 98..=98 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus succeeded with time: 107464ms, keeping it commented out
+commenting out line Lines { lines: 156..=158 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 89989ms, reverting
+commenting out line Lines { lines: 235..=236 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 95631ms, reverting
+commenting out line Lines { lines: 51..=51 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 95273ms, reverting
+commenting out line Lines { lines: 141..=144 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus failed with time: 102826ms, reverting
+commenting out line Lines { lines: 640..=640 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 105173ms, reverting
+commenting out line Lines { lines: 101..=101 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus failed with time: 99816ms, reverting
+commenting out line Lines { lines: 160..=163 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 95452ms, reverting
+commenting out line Lines { lines: 247..=247 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 95971ms, reverting
+commenting out line Lines { lines: 52..=52 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 95664ms, reverting
+commenting out line Lines { lines: 145..=145 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus failed with time: 99976ms, reverting
+commenting out line Lines { lines: 652..=652 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 102572ms, keeping it commented out
+commenting out line Lines { lines: 187..=188 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus succeeded with time: 104332ms, keeping it commented out
+commenting out line Lines { lines: 170..=170 } in "./tmp/70/kv2/slots_v.rs"
+verus succeeded with time: 101343ms, keeping it commented out
+commenting out line Lines { lines: 285..=285 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 93658ms, reverting
+commenting out line Lines { lines: 53..=53 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 94209ms, reverting
+commenting out line Lines { lines: 757..=757 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 100016ms, reverting
+commenting out line Lines { lines: 150..=150 } in "./tmp/88/pmem/pmem_async_equiv_t.rs"
+verus succeeded with time: 104449ms, keeping it commented out
+minimization of ./tmp/88/pmem/pmem_async_equiv_t.rs is completed
+commenting out line Lines { lines: 210..=210 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus succeeded with time: 102530ms, keeping it commented out
+commenting out line Lines { lines: 167..=175 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 95701ms, reverting
+commenting out line Lines { lines: 292..=292 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 90225ms, reverting
+commenting out line Lines { lines: 54..=54 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 89811ms, reverting
+commenting out line Lines { lines: 761..=761 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 94682ms, keeping it commented out
+commenting out line Lines { lines: 777..=777 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 9982ms, reverting
+commenting out line Lines { lines: 213..=213 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus failed with time: 88776ms, reverting
+commenting out line Lines { lines: 165..=176 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 87583ms, reverting
+commenting out line Lines { lines: 299..=299 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 87344ms, reverting
+commenting out line Lines { lines: 55..=55 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 89017ms, reverting
+commenting out line Lines { lines: 779..=779 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 84536ms, reverting
+commenting out line Lines { lines: 179..=189 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 86597ms, reverting
+commenting out line Lines { lines: 222..=222 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus succeeded with time: 95841ms, keeping it commented out
+commenting out line Lines { lines: 313..=313 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 93137ms, reverting
+commenting out line Lines { lines: 56..=56 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 90201ms, reverting
+commenting out line Lines { lines: 780..=780 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 96012ms, keeping it commented out
+commenting out line Lines { lines: 205..=205 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 85302ms, reverting
+commenting out line Lines { lines: 223..=223 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus succeeded with time: 94802ms, keeping it commented out
+commenting out line Lines { lines: 57..=57 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 91056ms, reverting
+commenting out line Lines { lines: 328..=328 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 91465ms, reverting
+commenting out line Lines { lines: 209..=211 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 83344ms, reverting
+commenting out line Lines { lines: 799..=799 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 99527ms, keeping it commented out
+commenting out line Lines { lines: 224..=224 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus succeeded with time: 94258ms, keeping it commented out
+commenting out line Lines { lines: 329..=330 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 86312ms, reverting
+commenting out line Lines { lines: 68..=70 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 88034ms, reverting
+commenting out line Lines { lines: 237..=239 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 87278ms, reverting
+commenting out line Lines { lines: 800..=800 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 96910ms, keeping it commented out
+commenting out line Lines { lines: 83..=85 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 88840ms, reverting
+commenting out line Lines { lines: 228..=228 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus succeeded with time: 96783ms, keeping it commented out
+commenting out line Lines { lines: 331..=331 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 90778ms, reverting
+commenting out line Lines { lines: 256..=258 } in "./tmp/70/kv2/slots_v.rs"
+verus failed with time: 84585ms, reverting
+minimization of ./tmp/70/kv2/slots_v.rs is completed
+commenting out line Lines { lines: 346..=346 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 84879ms, reverting
+commenting out line Lines { lines: 80..=87 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 85722ms, reverting
+commenting out line Lines { lines: 332..=332 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus failed with time: 86261ms, reverting
+commenting out line Lines { lines: 813..=821 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 93659ms, keeping it commented out
+commenting out line Lines { lines: 348..=348 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 81028ms, reverting
+commenting out line Lines { lines: 354..=354 } in "./tmp/89/pmem/pmem_async_equiv_v.rs"
+verus failed with time: 82376ms, reverting
+minimization of ./tmp/89/pmem/pmem_async_equiv_v.rs is completed
+commenting out line Lines { lines: 97..=99 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 83965ms, reverting
+commenting out line Lines { lines: 827..=827 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 86209ms, keeping it commented out
+commenting out line Lines { lines: 349..=349 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 77242ms, reverting
+commenting out line Lines { lines: 110..=112 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 74020ms, reverting
+commenting out line Lines { lines: 828..=828 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 79768ms, keeping it commented out
+commenting out line Lines { lines: 838..=838 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 6669ms, reverting
+commenting out line Lines { lines: 1035..=1035 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 6467ms, reverting
+commenting out line Lines { lines: 358..=358 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 71905ms, reverting
+commenting out line Lines { lines: 327..=327 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 76088ms, keeping it commented out
+commenting out line Lines { lines: 1037..=1037 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 79759ms, keeping it commented out
+commenting out line Lines { lines: 359..=359 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 73821ms, reverting
+commenting out line Lines { lines: 331..=331 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 81112ms, keeping it commented out
+commenting out line Lines { lines: 1038..=1040 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 76014ms, reverting
+commenting out line Lines { lines: 377..=377 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 71467ms, reverting
+commenting out line Lines { lines: 348..=348 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 74584ms, reverting
+commenting out line Lines { lines: 1049..=1049 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 73014ms, reverting
+commenting out line Lines { lines: 1054..=1054 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 6936ms, reverting
+commenting out line Lines { lines: 387..=387 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 72950ms, reverting
+commenting out line Lines { lines: 349..=349 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 73857ms, reverting
+commenting out line Lines { lines: 1063..=1063 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 80784ms, keeping it commented out
+commenting out line Lines { lines: 394..=394 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 77960ms, reverting
+commenting out line Lines { lines: 350..=350 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 79925ms, keeping it commented out
+commenting out line Lines { lines: 1069..=1069 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 84574ms, keeping it commented out
+commenting out line Lines { lines: 411..=411 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 73623ms, reverting
+commenting out line Lines { lines: 351..=351 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 81965ms, keeping it commented out
+commenting out line Lines { lines: 1070..=1070 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 78984ms, keeping it commented out
+commenting out line Lines { lines: 431..=431 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 72030ms, reverting
+commenting out line Lines { lines: 360..=360 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 75638ms, reverting
+commenting out line Lines { lines: 1071..=1071 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 80613ms, keeping it commented out
+commenting out line Lines { lines: 440..=440 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 76908ms, reverting
+commenting out line Lines { lines: 361..=361 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 72795ms, reverting
+commenting out line Lines { lines: 441..=441 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 76168ms, reverting
+commenting out line Lines { lines: 1072..=1072 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 81910ms, keeping it commented out
+commenting out line Lines { lines: 362..=362 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 81901ms, keeping it commented out
+commenting out line Lines { lines: 457..=457 } in "./tmp/79/pmem/hamming_v.rs"
+verus failed with time: 73675ms, reverting
+minimization of ./tmp/79/pmem/hamming_v.rs is completed
+commenting out line Lines { lines: 1073..=1073 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 76025ms, reverting
+commenting out line Lines { lines: 1184..=1184 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 8769ms, reverting
+commenting out line Lines { lines: 363..=363 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 78559ms, keeping it commented out
+commenting out line Lines { lines: 1192..=1192 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 78021ms, keeping it commented out
+commenting out line Lines { lines: 436..=436 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 78280ms, keeping it commented out
+commenting out line Lines { lines: 1198..=1198 } in "./tmp/61/kv2/lists/update_v.rs"
+verus succeeded with time: 73952ms, keeping it commented out
+commenting out line Lines { lines: 492..=492 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 76808ms, keeping it commented out
+commenting out line Lines { lines: 1227..=1227 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 83868ms, reverting
+commenting out line Lines { lines: 496..=496 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 66569ms, reverting
+commenting out line Lines { lines: 1232..=1234 } in "./tmp/61/kv2/lists/update_v.rs"
+verus failed with time: 81441ms, reverting
+minimization of ./tmp/61/kv2/lists/update_v.rs is completed
+commenting out line Lines { lines: 494..=497 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 71276ms, reverting
+commenting out line Lines { lines: 498..=498 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 65568ms, keeping it commented out
+commenting out line Lines { lines: 504..=504 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 61134ms, reverting
+commenting out line Lines { lines: 501..=505 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 65646ms, reverting
+commenting out line Lines { lines: 506..=506 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 68170ms, keeping it commented out
+commenting out line Lines { lines: 535..=552 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 59886ms, reverting
+commenting out line Lines { lines: 593..=593 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 68416ms, keeping it commented out
+commenting out line Lines { lines: 594..=597 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 63862ms, reverting
+commenting out line Lines { lines: 620..=630 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 62313ms, reverting
+commenting out line Lines { lines: 706..=707 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 63147ms, keeping it commented out
+commenting out line Lines { lines: 718..=722 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 66602ms, keeping it commented out
+commenting out line Lines { lines: 731..=731 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 69400ms, keeping it commented out
+commenting out line Lines { lines: 732..=732 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 68529ms, keeping it commented out
+commenting out line Lines { lines: 739..=741 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 69512ms, keeping it commented out
+commenting out line Lines { lines: 753..=753 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus succeeded with time: 67162ms, keeping it commented out
+commenting out line Lines { lines: 784..=784 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 63141ms, reverting
+commenting out line Lines { lines: 782..=785 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 64737ms, reverting
+commenting out line Lines { lines: 790..=790 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 68202ms, reverting
+commenting out line Lines { lines: 786..=791 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 64763ms, reverting
+commenting out line Lines { lines: 806..=816 } in "./tmp/82/pmem/pmemutil_v.rs"
+verus failed with time: 65244ms, reverting
+minimization of ./tmp/82/pmem/pmemutil_v.rs is completed
