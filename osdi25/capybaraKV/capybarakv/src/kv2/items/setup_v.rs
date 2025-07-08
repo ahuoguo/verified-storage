@@ -58,7 +58,7 @@ where
             Self::recover(pm@.read_state, Set::<u64>::empty(), *sm) == Some(ItemTableSnapshot::<I>::init()),
             seqs_match_except_in_range(old(pm)@.read_state, pm@.read_state, sm.table.start as int, sm.table.end as int),
     {
-        assert(Self::recover(pm@.read_state, Set::<u64>::empty(), *sm) =~= Some(ItemTableSnapshot::<I>::init()));
+//        assert(Self::recover(pm@.read_state, Set::<u64>::empty(), *sm) =~= Some(ItemTableSnapshot::<I>::init()));
     }
     
     pub exec fn setup(
@@ -94,9 +94,9 @@ where
         broadcast use pmcopy_axioms;
     
         let item_size = size_of::<I>();
-        assert(item_size == I::spec_size_of()) by {
-            broadcast use pmcopy_axioms;
-        }
+//        assert(item_size == I::spec_size_of()) by {
+//            broadcast use pmcopy_axioms;
+//        }
     
         let row_item_end = CheckedU64::new(size_of::<I>() as u64);
         let row_item_crc_end = row_item_end.add_value(size_of::<u64>() as u64);
@@ -105,7 +105,7 @@ where
         let table_size = num_rows.mul_checked(&row_item_crc_end);
         let end = start.add_checked(&table_size);
     
-        assert(end@ - min_start == Self::spec_space_needed_for_setup(*ps, min_start as nat));
+//        assert(end@ - min_start == Self::spec_space_needed_for_setup(*ps, min_start as nat));
         assert(table_size@ >= row_item_crc_end@) by {
             vstd::arithmetic::mul::lemma_mul_ordering(ps.max_keys as int, row_item_crc_end@ as int);
         }
@@ -139,4 +139,3 @@ where
 }
 
 }
-

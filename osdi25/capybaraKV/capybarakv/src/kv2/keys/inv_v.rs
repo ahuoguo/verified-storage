@@ -458,10 +458,10 @@ impl<K> KeyMemoryMapping<K>
             self.key_info.dom().finite(), 
             self.key_info.dom().len() == sm.table.num_rows - free_list.len(),
     {
-        assert forall|pos: int| 0 <= pos < free_list.len() implies self.row_info.contains_key(#[trigger] free_list[pos]) by {
-            assert(self.row_info[free_list[pos]] is InFreeList);
-            assert(self.row_info.contains_key(free_list[pos]));
-        }
+//        assert forall|pos: int| 0 <= pos < free_list.len() implies self.row_info.contains_key(#[trigger] free_list[pos]) by {
+////            assert(self.row_info[free_list[pos]] is InFreeList);
+////            assert(self.row_info.contains_key(free_list[pos]));
+//        }
 
         let free_row_addrs = Set::<u64>::new(
             |row_addr: u64| self.row_info.contains_key(row_addr) && self.row_info[row_addr] is InFreeList
@@ -485,7 +485,7 @@ impl<K> KeyMemoryMapping<K>
         }
 
         assert(valid_row_addrs.len() == free_row_addrs.len() + key_row_addrs.len()) by {
-            assert(free_row_addrs.disjoint(key_row_addrs));
+//            assert(free_row_addrs.disjoint(key_row_addrs));
             assert(free_row_addrs + key_row_addrs =~= valid_row_addrs);
             vstd::set_lib::lemma_set_disjoint_lens(free_row_addrs, key_row_addrs);
         }
@@ -503,8 +503,8 @@ impl<K> KeyMemoryMapping<K>
             );
         }
     
-        assert(self.key_info.dom().len() == sm.table.num_rows - free_list.len());
-        assert(self.as_recovery_mapping().key_info.dom() =~= self.key_info.dom());
+//        assert(self.key_info.dom().len() == sm.table.num_rows - free_list.len());
+//        assert(self.as_recovery_mapping().key_info.dom() =~= self.key_info.dom());
     }
 }
 
@@ -692,8 +692,8 @@ impl<K> KeyInternalView<K>
             if next_self is Some {
                 let next_self = next_self.unwrap();
                 if next_self.valid(sm) {
-                    assert(next_self.free_list.len() >= self.free_list.len());
-                    assert(forall|i: int| 0 <= i < self.free_list.len() ==> next_self.free_list[i] == self.free_list[i]);
+//                    assert(next_self.free_list.len() >= self.free_list.len());
+//                    assert(forall|i: int| 0 <= i < self.free_list.len() ==> next_self.free_list[i] == self.free_list[i]);
                     next_self.lemma_apply_undo_records_only_appends_to_free_list(undo_records.drop_last(), sm);
                 }
             }
@@ -746,7 +746,7 @@ where
         broadcast use broadcast_seqs_match_in_range_can_narrow_range;
         broadcast use group_validate_row_addr;
 
-        assert(self.valid(new_jv));
+//        assert(self.valid(new_jv));
     }
 
     pub proof fn lemma_valid_implications(&self, jv: JournalView)
@@ -766,7 +766,7 @@ where
                 .as_recovery_mapping()
                 .lemma_corresponds_implies_equals_new(jv.durable_state, self@.sm);
         }
-        assert(Self::recover(jv.durable_state, self@.sm) =~= Some(self@.durable));
+//        assert(Self::recover(jv.durable_state, self@.sm) =~= Some(self@.durable));
 
         if self@.tentative is Some {
             assert(Self::recover(jv.commit_state, self@.sm) is Some) by {
@@ -774,11 +774,10 @@ where
                     .as_recovery_mapping()
                     .lemma_corresponds_implies_equals_new(jv.commit_state, self@.sm);
             }
-            assert(Self::recover(jv.commit_state, self@.sm) =~= self@.tentative);
+//            assert(Self::recover(jv.commit_state, self@.sm) =~= self@.tentative);
         }
     }
 
 }
 
 }
-

@@ -143,7 +143,7 @@ where
                 None => {},
                 Some(list_addr) => {
                     let old_entry = self.m.remove(&list_addr);
-                    assert(old_entry is Some);
+//                    assert(old_entry is Some);
                     let new_entry = old_entry.unwrap().commit();
                     self.m.insert(list_addr, new_entry);
                 },
@@ -159,7 +159,7 @@ where
             self.internal_view().m == old(self).internal_view().commit().m,
     {
         self.update_m_to_reflect_commit_of_modifications();
-        assert(self.internal_view().m =~= old(self).internal_view().commit().m);
+//        assert(self.internal_view().m =~= old(self).internal_view().commit().m);
     }
 
     pub exec fn commit(
@@ -201,7 +201,7 @@ where
 
         broadcast use broadcast_seqs_match_in_range_can_narrow_range;
 
-        assert(self.internal_view() =~= old(self).internal_view().commit());
+//        assert(self.internal_view() =~= old(self).internal_view().commit());
 
         assert(self.valid(jv_after_commit)) by {
             let jv_committed = JournalView{
@@ -212,7 +212,7 @@ where
                 journaled_addrs: Set::<int>::empty(),
                 ..jv_before_commit
             };
-            assert(self.valid(jv_committed));
+//            assert(self.valid(jv_committed));
             self.lemma_valid_depends_only_on_my_area(jv_committed, jv_after_commit);
         }
 
@@ -220,10 +220,9 @@ where
             self.internal_view().lemma_corresponds_implication_for_free_list_length(self.sm);
         }
 
-        assert(self@ =~= (ListTableView{ durable: old(self)@.tentative.unwrap(), used_slots: self@.used_slots,
-                                         ..old(self)@ }));
+//        assert(self@ =~= (ListTableView{ durable: old(self)@.tentative.unwrap(), used_slots: self@.used_slots,
+//                                         ..old(self)@ }));
     }
 }
 
 }
-

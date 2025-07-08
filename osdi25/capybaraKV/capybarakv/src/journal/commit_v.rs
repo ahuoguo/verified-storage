@@ -57,7 +57,7 @@ where
                                                                   self.entries@.len() as int);
         }
         assert(self.entries@ =~= self.entries@.take(self.entries@.len() as int));
-        assert(entry == self.entries@[current_entry_index as int]);
+//        assert(entry == self.entries@[current_entry_index as int]);
     }
 
     #[inline]
@@ -131,12 +131,12 @@ where
         let tracked perm = perm_factory.grant_permission();
         self.powerpm.serialize_and_write::<PermFactory::Perm, u64>(current_pos, &entry.start, Tracked(perm));
         crc_digest.write(&entry.start);
-        assert(crc_digest.bytes_in_digest() ==
-               self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
-                                              current_pos + u64::spec_size_of())) by {
-            lemma_concatenate_subranges(self.powerpm@.read_state, self.sm.journal_entries_start as int,
-                                        current_pos as int, current_pos + u64::spec_size_of());
-        }
+//        assert(crc_digest.bytes_in_digest() ==
+//               self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
+//                                              current_pos + u64::spec_size_of())) by {
+//            lemma_concatenate_subranges(self.powerpm@.read_state, self.sm.journal_entries_start as int,
+//                                        current_pos as int, current_pos + u64::spec_size_of());
+//        }
     
         // Next, write the `num_bytes` field of the entry.
     
@@ -144,12 +144,12 @@ where
         let tracked perm = perm_factory.grant_permission();
         self.powerpm.serialize_and_write::<PermFactory::Perm, u64>(num_bytes_addr, &num_bytes, Tracked(perm));
         crc_digest.write(&num_bytes);
-        assert(crc_digest.bytes_in_digest() ==
-               self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
-                                              num_bytes_addr + u64::spec_size_of())) by {
-            lemma_concatenate_subranges(self.powerpm@.read_state, self.sm.journal_entries_start as int,
-                                        num_bytes_addr as int, num_bytes_addr + u64::spec_size_of());
-        }
+//        assert(crc_digest.bytes_in_digest() ==
+//               self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
+//                                              num_bytes_addr + u64::spec_size_of())) by {
+//            lemma_concatenate_subranges(self.powerpm@.read_state, self.sm.journal_entries_start as int,
+//                                        num_bytes_addr as int, num_bytes_addr + u64::spec_size_of());
+//        }
     
         // Next, write the `bytes_to_write` field of the entry.
     
@@ -158,12 +158,12 @@ where
         let tracked perm = perm_factory.grant_permission();
         self.powerpm.write::<PermFactory::Perm>(bytes_to_write_addr, bytes_to_write_as_slice, Tracked(perm));
         crc_digest.write_bytes(bytes_to_write_as_slice);
-        assert(crc_digest.bytes_in_digest() ==
-                  self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
-                                                 bytes_to_write_addr + num_bytes)) by {
-            lemma_concatenate_subranges(self.powerpm@.read_state, self.sm.journal_entries_start as int,
-                                        bytes_to_write_addr as int, bytes_to_write_addr + num_bytes);
-        }
+//        assert(crc_digest.bytes_in_digest() ==
+//                  self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
+//                                                 bytes_to_write_addr + num_bytes)) by {
+//            lemma_concatenate_subranges(self.powerpm@.read_state, self.sm.journal_entries_start as int,
+//                                        bytes_to_write_addr as int, bytes_to_write_addr + num_bytes);
+//        }
     
         let next_pos = bytes_to_write_addr + num_bytes;
         assert(parse_journal_entries(self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
@@ -173,10 +173,10 @@ where
                                                                    current_pos as int);
             let new_entries_bytes = self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
                                                                    next_pos as int);
-            assert(old_entries_bytes ==
-                   old(self).powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
-                                                     current_pos as int)) by {
-            }
+//            assert(old_entries_bytes ==
+//                   old(self).powerpm@.read_state.subrange(self.sm.journal_entries_start as int,
+//                                                     current_pos as int)) by {
+//            }
             assert(new_entries_bytes =~= old_entries_bytes + entry.start.spec_to_bytes()
                                          + num_bytes.spec_to_bytes() + entry.bytes_to_write@);
             assert(parse_journal_entries(new_entries_bytes) ==
@@ -184,8 +184,8 @@ where
                 lemma_parse_journal_entries_append(old_entries_bytes,
                                                    self.entries@.take(current_entry_index as int), entry@);
             }
-            assert(self.entries@.take(current_entry_index as int).push(entry@) =~=
-                   self.entries@.take(current_entry_index + 1));
+//            assert(self.entries@.take(current_entry_index as int).push(entry@) =~=
+//                   self.entries@.take(current_entry_index + 1));
         }
 
         proof {
@@ -231,9 +231,9 @@ where
         let end_pos = current_pos + self.journal_length;
         let ghost original_durable_state = self.powerpm@.durable_state;
         let ghost original_read_state = self.powerpm@.read_state;
-        assert(self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int, current_pos as int)
-               =~= Seq::<u8>::empty());
-        assert(self.entries@.take(current_entry_index as int) =~= Seq::<JournalEntry>::empty());
+//        assert(self.powerpm@.read_state.subrange(self.sm.journal_entries_start as int, current_pos as int)
+//               =~= Seq::<u8>::empty());
+//        assert(self.entries@.take(current_entry_index as int) =~= Seq::<JournalEntry>::empty());
         let mut crc_digest = CrcDigest::new();
         proof {
             lemma_space_needed_for_journal_entries_list_zero_iff_journal_empty(self.entries@);
@@ -275,7 +275,7 @@ where
             }
             current_entry_index = current_entry_index + 1;
         }
-        assert(self.entries@ == self.entries@.take(current_entry_index as int));
+//        assert(self.entries@ == self.entries@.take(current_entry_index as int));
         crc_digest.sum64()
     }
 
@@ -403,8 +403,8 @@ where
                                   self.sm.app_area_end as int)
         }) by {
             let s = desired_state;
-            assert(recover_committed_cdb(s, self.sm) == Some(true));
-            assert(recover_storage_state(s, self.sm) == apply_journal_entries(s, self.entries@, self.sm));
+//            assert(recover_committed_cdb(s, self.sm) == Some(true));
+//            assert(recover_storage_state(s, self.sm) == apply_journal_entries(s, self.entries@, self.sm));
             lemma_apply_journal_entries_maintains_matching_app_areas(original_read_state, s, self.vm@,
                                                                      self.sm, self.entries@);
         }
@@ -414,7 +414,7 @@ where
                                                               cdb.spec_to_bytes())
             implies perm.permits(self.powerpm@.durable_state, s) by {
             assert(s == self.powerpm@.durable_state || s == desired_state) by {
-                assert(self.sm.committed_cdb_start as int % const_persistence_chunk_size() == 0);
+//                assert(self.sm.committed_cdb_start as int % const_persistence_chunk_size() == 0);
                 lemma_only_two_crash_states_introduced_by_aligned_chunk_write(s, self.powerpm@.durable_state,
                                                                               self.sm.committed_cdb_start as int,
                                                                               cdb.spec_to_bytes());
@@ -423,7 +423,7 @@ where
 
         let complete = self.powerpm.serialize_and_write::<Perm, u64>(self.sm.committed_cdb_start, &cdb, Tracked(perm));
         self.powerpm.flush();
-        assert(self.powerpm@.read_state == desired_state);
+//        assert(self.powerpm@.read_state == desired_state);
         self.status = Ghost(JournalStatus::Committed);
         complete
     }
@@ -499,14 +499,14 @@ where
         let entry: &ConcreteJournalEntry = &self.entries.entries[num_entries_installed];
         let ghost entries_bytes = recover_journal_entries_bytes(self.powerpm@.durable_state, self.sm,
                                                                 self.journal_length).unwrap();
-        assert(parse_journal_entries(entries_bytes) == Some(self.entries@));
+//        assert(parse_journal_entries(entries_bytes) == Some(self.entries@));
         
         proof {
             lemma_addresses_in_entry_dont_affect_recovery(self.powerpm@.durable_state, self.vm@, self.sm,
                                                           entries_bytes, self.entries@, num_entries_installed as int);
-            assert(entry@.fits(self.sm)) by {
-                lemma_journal_entries_valid_implies_one_valid(self.entries@, self.sm, num_entries_installed as int);
-            }
+//            assert(entry@.fits(self.sm)) by {
+//                lemma_journal_entries_valid_implies_one_valid(self.entries@, self.sm, num_entries_installed as int);
+//            }
             assert forall|s| can_result_from_partial_write(s, self.powerpm@.durable_state, entry.start as int,
                                                       entry.bytes_to_write@)
                 implies #[trigger] perm_factory.permits(self.powerpm@.durable_state, s) by {
@@ -515,7 +515,7 @@ where
                     entry@.addrs(),
                     |s| recover_journal(s),
                 );
-                assert(recover_journal(s) == recover_journal(self.powerpm@.durable_state));
+//                assert(recover_journal(s) == recover_journal(self.powerpm@.durable_state));
             }
         }
         let tracked perm = perm_factory.grant_permission();
@@ -528,11 +528,11 @@ where
                     |s| recover_journal(s),
                 );
             }
-            assert(Some(self.powerpm@.read_state) == apply_journal_entry(old(self).powerpm@.read_state, entry@, self.sm));
-            assert(recover_journal(self.powerpm@.durable_state) == recover_journal(old(self).powerpm@.durable_state));
-            assert(recover_journal_length(self.powerpm@.durable_state, self.sm) == Some(self.journal_length));
+//            assert(Some(self.powerpm@.read_state) == apply_journal_entry(old(self).powerpm@.read_state, entry@, self.sm));
+//            assert(recover_journal(self.powerpm@.durable_state) == recover_journal(old(self).powerpm@.durable_state));
+//            assert(recover_journal_length(self.powerpm@.durable_state, self.sm) == Some(self.journal_length));
     
-            assert(self.entries@.skip(num_entries_installed as int)[0] =~= self.entries@[num_entries_installed as int]);
+//            assert(self.entries@.skip(num_entries_installed as int)[0] =~= self.entries@[num_entries_installed as int]);
             assert(self.entries@.skip(num_entries_installed as int).skip(1)
                    =~= self.entries@.skip(num_entries_installed + 1));
             lemma_apply_journal_entries_doesnt_change_size(self@.read_state, self.entries@, self.sm);
@@ -629,9 +629,9 @@ where
             self.install_journal_entry_during_commit::<PermFactory>(num_entries_installed, Ghost(old(self).powerpm@.read_state),
                                                                     Ghost(original_commit_state), Ghost(desired_commit_state),
                                                                     Tracked(perm_factory));
-            assert(self.entries@.skip(num_entries_installed as int)
-                   =~= seq![self.entries@[num_entries_installed as int]]
-                       + self.entries@.skip(num_entries_installed + 1));
+//            assert(self.entries@.skip(num_entries_installed as int)
+//                   =~= seq![self.entries@[num_entries_installed as int]]
+//                       + self.entries@.skip(num_entries_installed + 1));
 
             num_entries_installed = num_entries_installed + 1;
         }
@@ -651,25 +651,25 @@ where
         broadcast use broadcast_seqs_match_in_range_can_narrow_range;
         
         lemma_apply_journal_entries_some_iff_journal_entries_valid(self.powerpm@.read_state, self.entries@, self.sm);
-        assert({
-            &&& recover_committed_cdb(self.powerpm@.read_state, self.sm) == Some(false)
-            &&& recovers_to(self.powerpm@.read_state, self.vm@, self.sm, self.constants)
-        }) by {
-            assert(recover_version_metadata(self.powerpm@.durable_state) ==
-                   recover_version_metadata(self.powerpm@.read_state));
-            assert(recover_static_metadata(self.powerpm@.durable_state, self.vm@) ==
-                   recover_static_metadata(self.powerpm@.read_state, self.vm@));
-            assert(recover_committed_cdb(self.powerpm@.durable_state, self.sm) ==
-                   recover_committed_cdb(self.powerpm@.read_state, self.sm));
-        }
+//        assert({
+//            &&& recover_committed_cdb(self.powerpm@.read_state, self.sm) == Some(false)
+//            &&& recovers_to(self.powerpm@.read_state, self.vm@, self.sm, self.constants)
+//        }) by {
+////            assert(recover_version_metadata(self.powerpm@.durable_state) ==
+////                   recover_version_metadata(self.powerpm@.read_state));
+////            assert(recover_static_metadata(self.powerpm@.durable_state, self.vm@) ==
+////                   recover_static_metadata(self.powerpm@.read_state, self.vm@));
+////            assert(recover_committed_cdb(self.powerpm@.durable_state, self.sm) ==
+////                   recover_committed_cdb(self.powerpm@.read_state, self.sm));
+//        }
 
         assert(recovers_to(self@.commit_state, self.vm@, self.sm, self.constants)) by {
             lemma_apply_journal_entries_only_affects_app_area(self.powerpm@.read_state, self.vm@, self.sm, self.entries@);
-            assert(recover_version_metadata(self.powerpm@.read_state) == recover_version_metadata(self@.commit_state));
-            assert(recover_static_metadata(self.powerpm@.read_state, self.vm@) ==
-                   recover_static_metadata(self@.commit_state, self.vm@));
-            assert(recover_committed_cdb(self.powerpm@.read_state, self.sm) ==
-                   recover_committed_cdb(self@.commit_state, self.sm));
+//            assert(recover_version_metadata(self.powerpm@.read_state) == recover_version_metadata(self@.commit_state));
+//            assert(recover_static_metadata(self.powerpm@.read_state, self.vm@) ==
+//                   recover_static_metadata(self@.commit_state, self.vm@));
+//            assert(recover_committed_cdb(self.powerpm@.read_state, self.sm) ==
+//                   recover_committed_cdb(self@.commit_state, self.sm));
         }
     }
 
@@ -704,7 +704,7 @@ where
         let complete = self.mark_journal_committed::<Perm>(
             Ghost(old(self).powerpm@.durable_state), Ghost(old(self).powerpm@.read_state),
             Ghost(old(self)@.commit_state), Tracked(perm));
-        assert(perm.completed(complete@));
+//        assert(perm.completed(complete@));
         self.install_journal_entries_during_commit::<PermFactory>(Ghost(old(self)@.commit_state), Tracked(perm_factory));
         assert forall|s1: Seq<u8>, s2: Seq<u8>| spec_recovery_equivalent_for_app(s1, s2)
                    implies #[trigger] perm_factory.permits(s1, s2) by {

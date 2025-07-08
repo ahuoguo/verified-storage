@@ -44,7 +44,7 @@ where
             let js1 = r1.state;
             let r2 = Journal::<PM>::recover(s2).unwrap();
             let js2 = r2.state;
-            assert(r1.constants == r2.constants);
+//            assert(r1.constants == r2.constants);
             if jc.app_program_guid != KVSTORE_PROGRAM_GUID || jc.app_version_number != KVSTORE_PROGRAM_VERSION_NUMBER {
             }
             else if jc.app_area_start + KvStaticMetadata::spec_size_of() + u64::spec_size_of() > jc.app_area_end {
@@ -53,7 +53,7 @@ where
                 }
             }
             else {
-                assert(states_match_in_static_metadata_area(js1, js2, jc));
+//                assert(states_match_in_static_metadata_area(js1, js2, jc));
                 lemma_recover_static_metadata_depends_only_on_its_area::<K, I, L>(js1, js2, jc);
                 match recover_static_metadata::<K, I, L>(js1, jc) {
                     None => {},
@@ -189,8 +189,8 @@ where
                 ListTable::<PM, L>::lemma_recover_depends_only_on_my_area(
                     self.journal@.commit_state, js2, keys.list_addrs(), sm.lists
                 );
-                assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
-                assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.tentative }));
+//                assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//                assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.tentative }));
             } else {
                 lemma_recover_static_metadata_depends_only_on_its_area::<K, I, L>(self.journal@.durable_state, js1, jc);
                 lemma_recover_static_metadata_depends_only_on_its_area::<K, I, L>(self.journal@.durable_state,
@@ -217,8 +217,8 @@ where
                 ListTable::<PM, L>::lemma_recover_depends_only_on_my_area(
                     self.journal@.durable_state, js2, self.lists@.durable.m.dom(), sm.lists
                 );
-                assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
-                assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//                assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//                assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
             }
         }
     }
@@ -233,8 +233,8 @@ where
         self.keys.lemma_valid_implications(self.journal@);
         self.items.lemma_valid_implications(self.journal@);
         self.lists.lemma_valid_implications(self.journal@);
-        assert(Self::recover(self.journal@.durable_state) =~=
-               Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//        assert(Self::recover(self.journal@.durable_state) =~=
+//               Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
     }
 
     pub(super) proof fn lemma_prepare_for_key_table_update(&self) -> (result: Self)
@@ -252,9 +252,9 @@ where
         assert(KeyTable::<PM, K>::recover(js, sm.keys) == Some(self.keys@.durable)) by {
             self.keys.lemma_valid_implications(self.journal@);
         }
-        assert(Self::recover(js) == Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable })) by {
-            self.lemma_inv_implies_recover_works();
-        }
+//        assert(Self::recover(js) == Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable })) by {
+//            self.lemma_inv_implies_recover_works();
+//        }
 
         broadcast use broadcast_seqs_match_in_range_can_narrow_range;
         assert forall|s1: Seq<u8>, s2: Seq<u8>| {
@@ -279,8 +279,8 @@ where
             ListTable::<PM, L>::lemma_recover_depends_only_on_my_area(
                 js, js2, self.lists@.durable.m.dom(), sm.lists
             );
-            assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
-            assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//            assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//            assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
         }
 
         *self
@@ -333,11 +333,11 @@ where
         let ghost js = self.journal@.durable_state;
         let ghost sm = self.sm@;
 
-        assert(ItemTable::<PM, I>::recover(js, self.items@.durable.m.dom(), sm.items) ==
-               Some(self.items@.durable)) by
-        {
-            self.items.lemma_valid_implications(self.journal@);
-        }
+//        assert(ItemTable::<PM, I>::recover(js, self.items@.durable.m.dom(), sm.items) ==
+//               Some(self.items@.durable)) by
+//        {
+//            self.items.lemma_valid_implications(self.journal@);
+//        }
         assert(Self::recover(js) == Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable })) by {
             self.lemma_inv_implies_recover_works();
         }
@@ -365,8 +365,8 @@ where
             ListTable::<PM, L>::lemma_recover_depends_only_on_my_area(
                 js, js2, self.lists@.durable.m.dom(), sm.lists
             );
-            assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
-            assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//            assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//            assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
         }
 
         *self
@@ -419,11 +419,11 @@ where
         let ghost js = self.journal@.durable_state;
         let ghost sm = self.sm@;
 
-        assert(ListTable::<PM, L>::recover(js, self.lists@.durable.m.dom(), sm.lists) ==
-               Some(self.lists@.durable)) by
-        {
-            self.lists.lemma_valid_implications(self.journal@);
-        }
+//        assert(ListTable::<PM, L>::recover(js, self.lists@.durable.m.dom(), sm.lists) ==
+//               Some(self.lists@.durable)) by
+//        {
+//            self.lists.lemma_valid_implications(self.journal@);
+//        }
         assert(Self::recover(js) == Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable })) by {
             self.lemma_inv_implies_recover_works();
         }
@@ -451,8 +451,8 @@ where
             ItemTable::<PM, I>::lemma_recover_depends_only_on_my_area(
                 js, js2, self.items@.durable.m.dom(), sm.items
             );
-            assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
-            assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//            assert(Self::recover(s1) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
+//            assert(Self::recover(s2) =~= Some(RecoveredKvStore::<K, I, L>{ ps: self@.ps, kv: self@.durable }));
         }
 
         *self

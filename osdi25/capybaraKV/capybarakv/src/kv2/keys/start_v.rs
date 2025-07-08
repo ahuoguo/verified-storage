@@ -64,7 +64,7 @@ where
             }
     {
         let ghost recovery_mapping = KeyRecoveryMapping::<K>::new(journal@.read_state, *sm).unwrap();
-        assert(recovery_mapping.corresponds(journal@.read_state, *sm));
+//        assert(recovery_mapping.corresponds(journal@.read_state, *sm));
 
         let mut m = HashMap::<K, ConcreteKeyInfo>::new();
         let mut free_list = Vec::<u64>::new();
@@ -227,9 +227,9 @@ where
         };
 
         let ghost recovered_state = Self::recover(journal@.read_state, *sm).unwrap();
-        assert(keys@.durable =~= recovered_state);
-        assert(item_addrs@ =~= recovered_state.item_addrs());
-        assert(list_addrs@.to_set() =~= recovered_state.list_addrs());
+//        assert(keys@.durable =~= recovered_state);
+//        assert(item_addrs@ =~= recovered_state.item_addrs());
+//        assert(list_addrs@.to_set() =~= recovered_state.list_addrs());
 
         proof {
             memory_mapping.lemma_corresponds_implication_for_free_list_length(free_list@, *sm);
@@ -240,4 +240,3 @@ where
 }
 
 }
-

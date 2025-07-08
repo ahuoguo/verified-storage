@@ -102,7 +102,7 @@ where
     
             let cdb_addr = row_addr + sm.row_cdb_start;
             pm.serialize_and_write::<u64>(cdb_addr, &cdb_false);
-            assert(recover_cdb(pm@.read_state, row_addr + sm.row_cdb_start) == Some(false));
+//            assert(recover_cdb(pm@.read_state, row_addr + sm.row_cdb_start) == Some(false));
     
             row_index = row_index + 1;
             row_addr = row_addr + sm.table.row_size;
@@ -116,10 +116,10 @@ where
     
         let ghost mapping = KeyRecoveryMapping::<K>::new_empty(sm.table);
         assert(KeyRecoveryMapping::<K>::new(pm@.read_state, *sm) == Some(mapping)) by {
-            assert(mapping.corresponds(pm@.read_state, *sm));
+//            assert(mapping.corresponds(pm@.read_state, *sm));
             mapping.lemma_corresponds_implies_equals_new(pm@.read_state, *sm);
         }
-        assert(mapping.as_snapshot() =~= KeyTableSnapshot::<K>::init());
+//        assert(mapping.as_snapshot() =~= KeyTableSnapshot::<K>::init());
     }
     
     pub exec fn setup(
@@ -171,7 +171,7 @@ where
         let space_required = CheckedU64::new(num_rows).mul_checked(&row_key_crc_end);
         let end = start.add_checked(&space_required);
     
-        assert(end@ - min_start@ == Self::spec_space_needed_for_setup(*ps, min_start as nat));
+//        assert(end@ - min_start@ == Self::spec_space_needed_for_setup(*ps, min_start as nat));
         assert(space_required@ >= row_key_crc_end@) by {
             vstd::arithmetic::mul::lemma_mul_ordering(num_rows as int, row_key_crc_end@ as int);
         }
@@ -208,4 +208,3 @@ where
 }
 
 }
-

@@ -144,13 +144,13 @@ verus! {
         assert(s.remove(i) == s1 + s2.drop_first());
 
         sum_concat(s1, s2);
-        assert(sum(s) == sum(s1) + sum(s2));
+//        assert(sum(s) == sum(s1) + sum(s2));
         sum_concat(s1, s2.drop_first());
-        assert(sum(s.remove(i)) == sum(s1) + sum(s2.drop_first()));
+//        assert(sum(s.remove(i)) == sum(s1) + sum(s2.drop_first()));
 
         s2.lemma_fold_right_alt(|i, s: nat| { s+i as nat }, 0);
         s2.drop_first().lemma_fold_right_alt(|i, s: nat| { s+i as nat }, 0);
-        assert(sum(s2) == s2[0] + sum(s2.drop_first()));
+//        assert(sum(s2) == s2[0] + sum(s2.drop_first()));
     }
 
     pub proof fn sum_indexes(s: Seq<nat>, idx: Seq<int>)

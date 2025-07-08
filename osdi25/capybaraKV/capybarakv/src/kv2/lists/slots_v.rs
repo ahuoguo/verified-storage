@@ -78,26 +78,26 @@ impl<L> ListTableInternalView<L>
             }
             self.lemma_corresponds_implies_sum_lengths_equals_num_pos_tuples(sm, pos - 1);
             assert(prefix.drop_last() == s.take(pos - 1));
-            assert(prefix.last() == s[pos - 1]);
-            assert(prefix.drop_last().fold_left(0, f) == tups_prev.len());
-            assert(prefix.fold_left(0, f) == tups_prev.len() + m[s[pos - 1]].len());
-            assert(m[s[pos - 1]].len() == tups_cur.len());
+//            assert(prefix.last() == s[pos - 1]);
+//            assert(prefix.drop_last().fold_left(0, f) == tups_prev.len());
+//            assert(prefix.fold_left(0, f) == tups_prev.len() + m[s[pos - 1]].len());
+//            assert(m[s[pos - 1]].len() == tups_cur.len());
             assert(tups_prev + tups_cur =~= tups) by {
                 assert forall|tup: (u64, int)| #[trigger] tups.contains(tup) implies (tups_prev + tups_cur).contains(tup) by {
                     let head = tup.0;
                     let j = choose|j: int| 0 <= j < s.take(pos).len() && s.take(pos)[j] == head;
                     if j < pos - 1 {
-                        assert(s[j] == head);
+//                        assert(s[j] == head);
                         assert(s.take(pos - 1)[j] == head);
-                        assert(s.take(pos - 1).contains(head));
+//                        assert(s.take(pos - 1).contains(head));
                     }
                 }
             }
-            assert(tups_prev.disjoint(tups_cur));
+//            assert(tups_prev.disjoint(tups_cur));
             lemma_set_disjoint_lens(tups_prev, tups_cur);
         }
         else {
-            assert(prefix =~= Seq::<u64>::empty());
+//            assert(prefix =~= Seq::<u64>::empty());
             assert(tups =~= Set::<(u64, int)>::empty());
         }
     }
@@ -121,11 +121,11 @@ impl<L> ListTableInternalView<L>
         let m = self.durable_mapping.as_snapshot().m;
         let addr_to_len = |total: int, head: u64| total + m[head].len();
 
-        assert forall|pos: int| 0 <= pos < self.free_list.len() implies
-            self.row_info.contains_key(#[trigger] self.free_list[pos]) by {
-            assert(self.row_info[self.free_list[pos]] is InFreeList);
-            assert(self.row_info.contains_key(self.free_list[pos]));
-        }
+//        assert forall|pos: int| 0 <= pos < self.free_list.len() implies
+//            self.row_info.contains_key(#[trigger] self.free_list[pos]) by {
+////            assert(self.row_info[self.free_list[pos]] is InFreeList);
+////            assert(self.row_info.contains_key(self.free_list[pos]));
+//        }
 
         let free_row_addrs = Set::<u64>::new(
             |row_addr: u64| self.row_info.contains_key(row_addr) && self.row_info[row_addr] is InFreeList
@@ -141,7 +141,7 @@ impl<L> ListTableInternalView<L>
                             self.durable_mapping.row_info[row_addr].pos == 0
         );
 
-        assert(m.dom() == self.durable_mapping.list_elements.dom());
+//        assert(m.dom() == self.durable_mapping.list_elements.dom());
         let list_heads = m.dom().to_seq();
 
         assert(valid_row_addrs.finite() && valid_row_addrs.len() == sm.table.num_rows) by {
@@ -160,7 +160,7 @@ impl<L> ListTableInternalView<L>
         assert(list_head_addrs =~= m.dom());
 
         assert(valid_row_addrs.len() == free_row_addrs.len() + list_row_addrs.len()) by {
-            assert(free_row_addrs.disjoint(list_row_addrs));
+//            assert(free_row_addrs.disjoint(list_row_addrs));
             assert(free_row_addrs + list_row_addrs =~= valid_row_addrs);
             vstd::set_lib::lemma_set_disjoint_lens(free_row_addrs, list_row_addrs);
         }
@@ -187,21 +187,21 @@ impl<L> ListTableInternalView<L>
             assert forall|tup: (u64, int)| #[trigger] tups.contains(tup)
                 implies list_row_addrs.contains(f(tup)) && g(f(tup)) == tup by {
                 let (head, i) = tup;
-                assert(list_heads.contains(head));
+//                assert(list_heads.contains(head));
                 lemma_set_to_seq_contains_iff_set_contains(m.dom(), head);
-                assert(m.dom().contains(head));
-                assert(self.durable_mapping.list_info.contains_key(head));
-                assert(self.row_info.contains_key(self.durable_mapping.list_info[head][i]));
+//                assert(m.dom().contains(head));
+//                assert(self.durable_mapping.list_info.contains_key(head));
+//                assert(self.row_info.contains_key(self.durable_mapping.list_info[head][i]));
             }
             assert forall|row_addr: u64| #[trigger] list_row_addrs.contains(row_addr)
                 implies tups.contains(g(row_addr)) && f(g(row_addr)) == row_addr by {
-                assert(self.durable_mapping.row_info.contains_key(row_addr));
+//                assert(self.durable_mapping.row_info.contains_key(row_addr));
                 let (head, i) = g(row_addr);
-                assert(self.durable_mapping.list_info.contains_key(head));
-                assert(0 <= i < self.durable_mapping.list_info[head].len());
-                assert(self.durable_mapping.list_info[head][i] == row_addr);
+//                assert(self.durable_mapping.list_info.contains_key(head));
+//                assert(0 <= i < self.durable_mapping.list_info[head].len());
+//                assert(self.durable_mapping.list_info[head][i] == row_addr);
                 lemma_set_to_seq_contains_iff_set_contains(m.dom(), head);
-                assert(list_heads.contains(head));
+//                assert(list_heads.contains(head));
             }
             lemma_bijection_makes_sets_have_equal_size(tups, list_row_addrs, f, g);
         }
@@ -209,4 +209,3 @@ impl<L> ListTableInternalView<L>
 }
 
 }
-

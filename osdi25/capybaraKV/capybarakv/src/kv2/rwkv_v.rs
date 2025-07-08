@@ -782,7 +782,7 @@ where
             invariant_resource: Tracked(rwlock_res),
             kv: kv,
         };
-        assert(pred.inv(kv_internal));
+//        assert(pred.inv(kv_internal));
         let lock = RwLockWithPredicate::<ConcurrentKvStoreInternal<PM, K, I, L>, ConcurrentKvStorePredicate>::new(
             kv_internal, Ghost(pred)
         );

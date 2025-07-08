@@ -165,7 +165,7 @@ impl<L> ListRecoveryMapping<L>
             self.list_info[head][pos] == other.list_info[head][pos] by {
             self.lemma_uniqueness_element(other, s, list_addrs, sm, head, pos);
         }
-        assert(other.list_info[head] =~= self.list_info[head]);
+//        assert(other.list_info[head] =~= self.list_info[head]);
     }
 
     pub(super) proof fn lemma_uniqueness_elements(self, other: Self, s: Seq<u8>, list_addrs: Set<u64>,
@@ -184,7 +184,7 @@ impl<L> ListRecoveryMapping<L>
             self.list_elements[head][pos] == other.list_elements[head][pos] by {
             self.lemma_uniqueness_element(other, s, list_addrs, sm, head, pos);
         }
-        assert(other.list_elements[head] =~= self.list_elements[head]);
+//        assert(other.list_elements[head] =~= self.list_elements[head]);
     }
 
     pub(super) proof fn lemma_uniqueness(self, other: Self, s: Seq<u8>, list_addrs: Set<u64>,
@@ -204,7 +204,7 @@ impl<L> ListRecoveryMapping<L>
                 self.lemma_uniqueness_list(other, s, list_addrs, sm, head);
             }
         }
-        assert(self.row_info =~= other.row_info);
+//        assert(self.row_info =~= other.row_info);
         assert(self.list_elements =~= other.list_elements) by {
             assert forall|head: u64| #[trigger] self.list_elements.contains_key(head) implies {
                 &&& other.list_elements.contains_key(head)
@@ -213,7 +213,7 @@ impl<L> ListRecoveryMapping<L>
                 self.lemma_uniqueness_elements(other, s, list_addrs, sm, head);
             }
         }
-        assert(self =~= other);
+//        assert(self =~= other);
     }
 
     pub(super) proof fn lemma_corresponds_implies_equals_new(
